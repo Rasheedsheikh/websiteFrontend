@@ -1,0 +1,49 @@
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+}
+.formmain{
+    justify-content: center;
+    width:80%;
+    margin: auto;
+}
+.submit{
+    margin-left:90%;
+    /* border: 1px solid blue; */
+    justify-content: end;
+    margin-top: 5%;
+}
+.buttonsub{
+    border: 1px solid #FE602F;
+    color: white;
+    justify-content: center;
+    background-color:#FE602F;
+    margin-top: 20px;
+    height: 40px;
+width: 138px;
+margin-left: 20px;
+/* left: 415px; */
+/* top: 279px; */
+border-radius: 0px;
+
+    
+}
+.custom-file-upload {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color:  #FE602F;
+    border-radius: 5px;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #FE602F;
+  }
+  
+  #file-upload {
+    display: none;
+  }

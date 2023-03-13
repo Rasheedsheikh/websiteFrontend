@@ -1,0 +1,123 @@
+{
+  "Careers":{
+  "NavRoutes":[
+    "Home",
+    "Services",
+    "Jobs",
+    "Career",
+    "About",
+    "Industries"
+],
+"functions":[{
+  "name":"Job Openings"
+
+}],
+"header":
+  [{"title1":"why work with",
+  "title2":"Value heath",
+  "desc":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "img":"https://i.pinimg.com/736x/4c/44/39/4c443992f6106654fc270b3ca708d29e.jpg"
+
+  }],
+
+"jobs":[{
+  "title":" Front end Developer",
+  "Experience":"2 to 5 Years",
+  "jobtype":"Full time",
+  "Location":"Coimbatore",
+  "desc": "Build website architecture and aesthetics with WordPress Ability to create custom WordPress sites, troubleshoot & improvise the existing websites, and provide training and support as needed. Resolve vulnerability and security issues"
+  },{
+    "title":" Front end Developer",
+  "Experience":"2 to 5 Years",
+  "jobtype":"Full time",
+  "Location":"Coimbatore",
+  "desc": "Build website architecture and aesthetics with WordPress Ability to create custom WordPress sites, troubleshoot & improvise the existing websites, and provide training and support as needed. Resolve vulnerability and security issues"
+  },
+  {
+    "title":" Front end Developer",
+  "Experience":"2 to 5 Years",
+  "jobtype":"Full time",
+  "Location":"Coimbatore",
+  "desc": "Build website architecture and aesthetics with WordPress Ability to create custom WordPress sites, troubleshoot & improvise the existing websites, and provide training and support as needed. Resolve vulnerability and security issues"
+  
+},
+  {
+    "title":" Front end Developer",
+  "Experience":"2 to 5 Years",
+  "jobtype":"Full time",
+  "Location":"Coimbatore",
+  "desc": "Build website architecture and aesthetics with WordPress Ability to create custom WordPress sites, troubleshoot & improvise the existing websites, and provide training and support as needed. Resolve vulnerability and security issues"
+  }
+  
+],
+"apply":{
+  "details":[
+  {
+    "title":["Front end Developer"],
+  "Experience":["2 to 5 Years"],
+  "jobtype":["Full time"],
+  "Location":["Coimbatore"],   
+  "jobFunction":["Engineering and Technology"],
+  "Education":["Bachelor's Preferred"],
+  "Schedule":["9AM TO 6PM"],
+  "desc":["Determining the structure and design of web pages.",
+          "Determining the structure and design of web pages.",
+          "Determining the structure and design of web pages.",
+          "Determining the structure and design of web pages.",
+          "Determining the structure and design of web pages.",
+          "Determining the structure and design of web pages."]
+          
+  }
+  ]
+},
+"Learn":[{
+  "title":"Life Sciences",
+  "desc":[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  ],
+  "img":"https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-grey_651396-974.jpg?w=2000"
+
+},
+{
+  "title":"Emerging biotech",
+  "desc":[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  ],
+  "img":"https://img.freepik.com/free-photo/portrait-young-handsome-smiling-businessman-holding-laptop-hands-typing-browsing-web-pages-isolated-white-background_1150-63603.jpg"
+
+},
+{
+  "title":"Providers",
+  "desc":[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  ],
+  "img":"https://i.pinimg.com/736x/4c/44/39/4c443992f6106654fc270b3ca708d29e.jpg"
+
+},
+{
+  "title":"Payer",
+  "desc":[
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  ],
+  "img":"https://i.pinimg.com/736x/4c/44/39/4c443992f6106654fc270b3ca708d29e.jpg"
+
+}
+]
+
+  
+
+}
+
+}

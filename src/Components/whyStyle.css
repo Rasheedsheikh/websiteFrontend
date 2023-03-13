@@ -1,0 +1,95 @@
+
+
+.why-main-box{
+    width: 99%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    /* padding-bottom: 20px; */
+}
+
+.why-main-box h1{
+     margin-left: 13%;
+    /* border: 1px solid red; */
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 60px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+
+.why-main-box-1{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 0%;
+    margin: auto;
+    gap: 10px;
+}
+
+.why-text-box{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 0px;
+}
+
+.why-text-box div{
+    margin-top: 20px;
+}
+
+.why-oranged{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: orangered;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 20px;
+margin: auto;
+
+/* identical to box height */
+}
+
+.why-oranged p{
+    /* margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center; */
+    margin-top: 23px;
+}
+
+.why-img-box img{
+    width: 429px;
+    height: auto;
+}
+
+@media all and (min-width: 320px) and (max-width:480px){
+    
+    .why-main-box-1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0%;
+        margin: auto;
+        gap: 0px;
+    }
+
+    .why-main-box.reverse > .why-text-box{
+        grid-column: 2;
+
+    }
+
+    .why-main-box.reverse > .why-img-box{
+        grid-column: 1;
+        
+    }
+}
