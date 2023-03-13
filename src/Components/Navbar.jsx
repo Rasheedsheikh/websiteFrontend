@@ -30,7 +30,7 @@ const Navbar=()=>{
                     {data?.Total?.NavRoutes?.map((e, i) => (
                         <div key={i}>
                      <Link style={{textDecoration:"none", color:"#000000"}} to={e.path}><div  >{e.name}</div></Link> 
-                        //    { console.log(e,i)}
+                           {/* { console.log(e,i)} */}
                         </div>
                     ))}
                 </div>

@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 // import db from "../db.json";
 import "./Apply.css";
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 const Apply=()=>{
     const {id}=useParams()
     // const navigate= useNavigate()
     const[data, setData]=useState([])
-    const[step, setStep]=useState(1)
+    // const[step, setStep]=useState(1)
+
     useEffect(()=>{
        show()
     },[])
+
     const show= async()=>{
         try{
           let res= await fetch(`http://localhost:2233/jobs/${id}`)

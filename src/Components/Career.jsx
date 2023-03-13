@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import db from "../db.json"
 import './Career.css';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom"
@@ -46,7 +46,8 @@ const [open1, setOpen] = React.useState(false);
   //   check box function
 
   const handleChange = (event) => {
-    setChecked(event.target.checked);
+    // setChecked(event.target.checked);
+    setChecked(checked)
   };
   const names = [
     "Analytics",
@@ -56,30 +57,30 @@ const [open1, setOpen] = React.useState(false);
     "Marketing",
   ];
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   // const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+  // const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const[ element, setElement]=useState(null);
 const[checked,setChecked]=useState(false);
-  const handleCheckboxChange = (event) => {
-    const checkboxValue = event.target.value;
-    const isSelected = event.target.checked;
+  // const handleCheckboxChange = (event) => {
+  //   const checkboxValue = event.target.value;
+  //   const isSelected = event.target.checked;
 
-    if (isSelected) {
-      setSelectedCheckboxes([...selectedCheckboxes, checkboxValue]);
-    } else {
-      setSelectedCheckboxes(
-        selectedCheckboxes.filter((value) => value !== checkboxValue)
-      );
-    }
-  };
+  //   if (isSelected) {
+  //     setSelectedCheckboxes([...selectedCheckboxes, checkboxValue]);
+  //   } else {
+  //     setSelectedCheckboxes(
+  //       selectedCheckboxes.filter((value) => value !== checkboxValue)
+  //     );
+  //   }
+  // };
 
   // const filteredData = data.filter(item => item.name.includes(searchQuery));
 
-  const routeChange = (path) => {
+  // const routeChange = (path) => {
 
-    navigate(path);
-  }
+  //   navigate(path);
+  // }
   useEffect(() => {
     show()
 
@@ -129,7 +130,7 @@ useEffect(()=>{
             <div className="headerdesc"> {e.desc}</div>
           </div>
           <div>
-          <img style={{ height: "320.1400146484375px", width: "450.79998779296875px", borderRadius: "0px",marginTop:"10px" }} src="images/career.jpg" />
+          <img style={{ height: "320.1400146484375px", width: "450.79998779296875px", borderRadius: "0px",marginTop:"10px" }} src="images/career.jpg"  alt=""/>
           </div>
           </div>
         

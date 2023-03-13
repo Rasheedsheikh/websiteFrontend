@@ -269,8 +269,7 @@ top: 1179px;
   /* flex-wrap: wrap; */
   
   /* width:90%; */
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
- */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 
 
 }
@@ -663,7 +662,7 @@ color: #555555;
   margin-top: 50%;
 }
 
-.carousel-control-prev-icon {
+/* .carousel-control-prev-icon {
 
   background-image: url("");
 
@@ -673,7 +672,7 @@ color: #555555;
 
   background-image: url("");
 
-}
+} */
 
  /* .abso1{
   background-color: #C5C5C5;
