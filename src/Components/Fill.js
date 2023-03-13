@@ -1,34 +1,34 @@
 import React, { useState } from "react";
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import "./Fill.css";
-import { Grid, MenuItem, Typography } from "@material-ui/core";
+import { Grid,  Typography } from "@material-ui/core";
 import { Stack } from "@mui/material";
 // import React from "react";
 import "./Fillm.css";
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import {
+// import {
 
-  withStyles,
+//   withStyles,
 
-} from '@material-ui/core/styles';
+// } from '@material-ui/core/styles';
 import { useParams } from "react-router-dom";
-import { createTheme } from '@mui/material/styles';
+// import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
-  status: {
-    danger: '#e53e3e',
-  },
-  palette: {
-    primary: {
-      main: '#0971f1',
-      darker: '#053e85',
-    },
-    neutral: {
-      main: '#64748B',
-      contrastText: '#fff',
-    },
-  },
-});
+// const theme = createTheme({
+//   status: {
+//     danger: '#e53e3e',
+//   },
+//   palette: {
+//     primary: {
+//       main: '#0971f1',
+//       darker: '#053e85',
+//     },
+//     neutral: {
+//       main: '#64748B',
+//       contrastText: '#fff',
+//     },
+//   },
+// });
 
 
 // const CssTextField = withStyles({
@@ -59,10 +59,10 @@ const Fill = () => {
   })
   // const[k, setK]=useState("")
 
-  const uploadResume = (e) => {
+  // const uploadResume = (e) => {
 
 
-  }
+  // }
 
   const { id } = useParams()
 
@@ -254,7 +254,7 @@ const Fill = () => {
                   autoComplete="something-unsupported"
                   name="FirstName"
 
-                  // value={FirstName}
+                  value={FirstName}
                   required 
 
                   fullWidth

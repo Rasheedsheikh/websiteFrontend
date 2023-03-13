@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import db from "../db.json";
+// import db from "../db.json";
 import "./Apply.css";
 import { Link, useNavigate, useParams } from "react-router-dom"
 
 const Apply=()=>{
     const {id}=useParams()
-    const navigate= useNavigate()
+    // const navigate= useNavigate()
     const[data, setData]=useState([])
     const[step, setStep]=useState(1)
     useEffect(()=>{
@@ -25,7 +25,7 @@ const Apply=()=>{
     return(
         <div  className="mainApply">
         {data?.map((e,i)=>(
-            <div className="Applymain">
+            <div  key={i} className="Applymain">
                 <div className="ApplytitleMain">
                <div className="Applytitle">{e.title}</div>
                <Link to={`/fill/${id}`}><div><button className="button2" >Apply</button></div></Link>
@@ -48,10 +48,10 @@ const Apply=()=>{
             <div>
                 <div>Full Job Description</div>
                {e.desc2.map((el,i)=>(
-                <>
+                <div>
                <ul><li> {el}
                </li></ul>
-                </>
+                </div>
                ))}
             </div>
             </div>

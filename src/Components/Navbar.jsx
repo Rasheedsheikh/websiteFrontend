@@ -28,8 +28,10 @@ const Navbar=()=>{
 
                 <div className="NavRight">
                     {data?.Total?.NavRoutes?.map((e, i) => (
-                     <Link style={{textDecoration:"none", color:"#000000"}} to={e.path}><div>{e.name}</div></Link> 
+                        <div key={i}>
+                     <Link style={{textDecoration:"none", color:"#000000"}} to={e.path}><div  >{e.name}</div></Link> 
                         //    { console.log(e,i)}
+                        </div>
                     ))}
                 </div>
             </div>

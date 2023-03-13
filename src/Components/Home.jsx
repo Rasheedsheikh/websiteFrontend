@@ -4,51 +4,51 @@ import React, { useEffect, useState } from "react";
 import './style.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { borderRadius } from "@mui/system";
-import Why from "./Why";
-import { Button, TextField } from "@mui/material";
+// import { borderRadius } from "@mui/system";
+// import Why from "./Why";
+import {  TextField } from "@mui/material";
 import { Stack } from "@mui/material";
-import {  Grid, MenuItem,  Typography } from "@material-ui/core";
+import {  Grid } from "@material-ui/core";
 import "./Fill.css";
 import "./intro.css";
 import "./whyStyle.css"
 
-import {
+// import {
 
-    withStyles,
+//     withStyles,
 
-} from '@material-ui/core/styles';
+// } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
-import { textDecoration } from "@chakra-ui/react";
+// import { textDecoration } from "@chakra-ui/react";
 // import Why from "./why";
 
-const CssTextField = withStyles({
-    root: {
-        '& label.Mui-focused': {
-            color: '#FE602F',
-        },
-        // '& .MuiInput-underline': {
-        //   // borderBottomColor: '#FE602F',
-        // },
-        '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-                backgroundColor: "white",
-            },
-            '&:hover fieldset': {
-                // borderColor: '#FE602F',
-            },
-            '&.Mui-focused fieldset': {
-                // borderColor: '#FE602F',
-            },
-            root: {
-                '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#FE602F',
-                },
-            },
+// const CssTextField = withStyles({
+//     root: {
+//         '& label.Mui-focused': {
+//             color: '#FE602F',
+//         },
+//         // '& .MuiInput-underline': {
+//         //   // borderBottomColor: '#FE602F',
+//         // },
+//         '& .MuiOutlinedInput-root': {
+//             '& fieldset': {
+//                 backgroundColor: "white",
+//             },
+//             '&:hover fieldset': {
+//                 // borderColor: '#FE602F',
+//             },
+//             '&.Mui-focused fieldset': {
+//                 // borderColor: '#FE602F',
+//             },
+//             root: {
+//                 '& .MuiOutlinedInput-notchedOutline': {
+//                     borderColor: '#FE602F',
+//                 },
+//             },
 
-        },
-    },
-})(TextField);
+//         },
+//     },
+// })(TextField);
 
 const Home = () => {
     const [data, setData1]= useState([])
@@ -79,8 +79,10 @@ const Home = () => {
 
                 <div className="NavRight">
                     {data?.Total?.NavRoutes?.map((e, i) => (
+                        <div key={i}>
                        <Link style={{textDecoration:"none", color:"#000000"}} to={e.path}><div>{e.name}</div></Link> 
-                        //    { console.log(e,i)}
+                          {/* { console.log(e,i)} */}
+                        </div>
                     ))}
                 </div>
             </div>
@@ -133,18 +135,18 @@ const Home = () => {
 </div>
 
 <div className="top-stip">
-    <img src="./images/strips.jpg" width="140px" height="130px"  />
+    <img src="./images/strips.jpg"  alt ="" width="140px" height="130px"  />
 </div>
 
 <div className="top-img">
-    <img src="./images/img-1.jpg" width="520px" height="370px"  />
+    <img src="./images/img-1.jpg" alt="" width="520px" height="370px"  />
 </div>
 
 </div>
 
             <div className="Service">
                 {data?.Total?.Services?.what?.map((e, i) => (
-                    <div>
+                    <div key={i}>
                         <div className="ServiceMain">{e.title}</div>
                               
                         <div className="serviceDual">{e.desc}</div>
@@ -160,7 +162,7 @@ const Home = () => {
 
                 {/* {data?.Total.Services.shapes.map((e, i) => ( */}
                 {data?.Total?.Services?.shapes?.map((obj, i) => (
-                    <div className="shapes1" style={i%2==1?{backgroundColor:"#F5F5F5",border:"none"}:{backgroundColor:"white"}}>
+                    <div   key={i} className="shapes1" style={i%2===1?{backgroundColor:"#F5F5F5",border:"none"}:{backgroundColor:"white"}}>
                         <div className="numb">{obj.number}</div>
 
                         <div className="abso">
@@ -169,7 +171,7 @@ const Home = () => {
 
                             <div>
                                 {obj?.desc?.map((el, i) => (
-                                    <div className="service-desc">
+                                    <div  key={i} className="service-desc">
                                         <ul >
                                             <li>{el}
                                             </li></ul></div>
@@ -184,17 +186,17 @@ const Home = () => {
 
             <div>
                 {data?.Total?.Industries?.heading?.map((e, i) => (
-                    <>
-                        <div className="Indus-heading"> {e}</div>
+                    <div key={i} >
+                        <div  className="Indus-heading"> {e}</div>
 
-                    </>
+                    </div>
                 ))}
             </div>
 
             <div className="Indus-insder-cont">
                 {data?.Total?.Industries?.insider?.map((e, i) => (
-                    <div className="Indus-insder-cont-child">
-                        <div><img className="insiderimg" src={e.img} /></div>
+                    <div  key={i} className="Indus-insder-cont-child">
+                        <div><img className="insiderimg" src={e.img} alt=""/></div>
                         <div className="indus-title"> {e.title}</div>
                         <div className="indus-desc"> {e.desc}</div>
                       <Link to="/learn">  <div> <button className="buttons">Learn More</button></div>
@@ -206,7 +208,7 @@ const Home = () => {
             <div className="Solution">
                 <div className="Solution-heading-cont">
                     {data?.Total?.Solutions?.heading?.map((e, i) => (
-                        <div className="solu-back">
+                        <div  key={i} className="solu-back">
                             <div className="sol-heading-title">
                                 <div className="sol-heading-title-div"> {e.title}</div>
                             </div>
@@ -221,8 +223,8 @@ const Home = () => {
 
                 <div className="Solution-images" >
                     {data?.Total?.Solutions?.Images?.map((e, i) => (
-                        <div className="sol-img-abs" >
-                            <div className="solImgdiv"><img style={{ width: "250px", height: "230px" }} src={e.img} /> </div>
+                        <div   key={i} className="sol-img-abs" >
+                            <div className="solImgdiv"><img style={{ width: "250px", height: "230px" }} src={e.img} alt=""/> </div>
                             <div className="solution-images-title">{e.title}</div>
                         </div>
                     ))}
@@ -231,10 +233,10 @@ const Home = () => {
             </div>
 
             {data?.Total?.Testimonials?.main?.map((e, i) => (
-                <>
-                    <div className="testimo-title">{e.title}</div>
+                <div key={i}>
+                    <div   className="testimo-title">{e.title}</div>
                     <center >
-                        <img className="testimoImg" style={{ width: "180px", height: "150px", borderRadius: "45%" }} src={e.img} /></center>
+                        <img className="testimoImg" style={{ width: "180px", height: "150px", borderRadius: "45%" }} src={e.img} alt="" /></center>
                     <div className="carouse">
                         <Carousel 
                           showThumbs={true}
@@ -243,7 +245,7 @@ const Home = () => {
                           dynamicHeight={false} >
                             {e?.slide.map((el, i) =>
                             (
-                                <div style={{width:"85%",justifyContent:"center",margin:"auto",marginTop:"3%"}}>
+                                <div  key={i} style={{width:"85%",justifyContent:"center",margin:"auto",marginTop:"3%"}}>
                                     <div className="slider-desc">{el.desc}</div>
                                     <div className="slider-role-name" style={{marginTop:"5%"}}>
                                     <div>{el.name}</div>
@@ -256,12 +258,12 @@ const Home = () => {
                         </Carousel>
                     </div>
 
-                </>
+                </div>
             ))}
 
             <div className='why-main-box'>
                  {data?.Total?.Testimonials?.why?.map((e, i) => (
-                    <div  >
+                    <div  key={i} >
 
                      
                         <h1>{e.title}</h1>
@@ -271,12 +273,12 @@ const Home = () => {
                                 <div>
                                   
                                             {e?.desc?.map((el,i) => (
-                                                    <>
+                                                    <div key={i}>
                                             <div className='why-text-box'>
                 <div className='why-oranged'><p>{el.number}</p></div>
                 <div>{el.detail}   </div>
                 </div>
-                                                     </>
+                                                     </div>
                                                 ))
                                             }
                                         
@@ -302,15 +304,15 @@ const Home = () => {
                 <div>
                     {data?.Total?.community?.map((e, i) => (
 
-                        <div className="community-title">
+                        <div   key={i} className="community-title">
                             <div className="community">
 
                                 <div>{e.title}</div>
                             </div>
                             <div className="com-mainParent">
-                                <div><img style={{ width: "500px", height: "740px", marginTop: "15px" }} src={e.IMG} /></div>
+                                <div><img style={{ width: "500px", height: "740px", marginTop: "15px" }} src={e.IMG} alt="" /></div>
                                 {e?.details?.map((el, i) => (
-                                    <div>
+                                    <div  key={i}>
 
                                         <div className="commu-heading">
                                             <div>{el.heading1}</div>
@@ -325,8 +327,8 @@ const Home = () => {
                                         </div>
                                         <div className="commu-images">
                                             {e?.images?.map((element, i) => (
-                                                <div>
-                                                    <div><img style={{ width: "350px", height: "244px" }} src={element} /></div></div>
+                                                <div  key={i}>
+                                                    <div><img style={{ width: "350px", height: "244px" }} src={element} alt=""/></div></div>
                                             ))}
                                         </div>
 
@@ -346,18 +348,18 @@ const Home = () => {
                 <Stack className="contact-parent" flexDirection={"row"}>
                     <Grid container spacing={4}>
                     {data?.Total?.Testimonials?.contact?.map((e, i) => (
-                        <Grid item xl={6} lg={6} md={6} sm={12} xs={12} style={{marginTop:"20px"}}>
+                        <Grid   key={i} item xl={6} lg={6} md={6} sm={12} xs={12} style={{marginTop:"20px"}}>
                             <div className="contact">{e.title}</div>
 
                             {e?.quote?.map((el, i) => (
-                                <div className="contact-quote">
+                                <div key={i} className="contact-quote">
                                     <div>{el.line1}</div>
                                     <div style={{ color: "#FE602F" }}>{el.line2}</div>
                                 </div>
                             ))}
 
                             {e?.address?.map((ele, i) => (
-                                <div className="address">
+                                <div  key={i} className="address">
                                     <div>{ele.line1}</div>
                                     <div>{ele.line2}</div>
                                     <div>{ele.Email}</div>
@@ -534,19 +536,19 @@ const Home = () => {
 
 
                 {data?.Total?.Footer?.map((obj, i) => (
-                    <div className="footerParent">
+                    <div  key={i} className="footerParent">
                         <div className="footerMain">
                             {/* <div><img style={{width:"264px", height:"248px"}} src={e.img}/> </div> */}
                             <div className="footerLeft">
                                 <div>
                                     {obj?.line1?.map((e, i) => (
-                                        <div className="footerline1" >{e}</div>
+                                        <div  key={i} className="footerline1" >{e}</div>
                                     ))}
                                 </div>
 
                                 <div>
                                     {obj?.line2?.map((e, i) => (
-                                        <div className="footerline1" >{e}</div>
+                                        <div key={i} className="footerline1" >{e}</div>
                                     ))}
                                 </div>
                             </div>
@@ -554,7 +556,7 @@ const Home = () => {
                             <div>
 
                                 {obj?.line3?.map((e, i) => (
-                                    <div>
+                                    <div  key={i}>
                                      {/* <div> <img style={{width:"30px", height:"20px"}} src="./Images/n.jpg"/></div> */}
                                     <div className="footerline2">{e}</div>
                                     </div>
@@ -563,13 +565,13 @@ const Home = () => {
 
                             <div>
                                 {obj?.line4?.map((e, i) => (
-                                    <div>
+                                    <div  key={i}>
                                        
                                         <div className="footerline1">{e.title}</div>
                                         <div>
                                             {e?.icons?.map((ele, i) => (
-                                                <div>
-                                                    <img style={{ border: "1px solid white", width: "41.75px", height: "46.5px", backgroundColor: "white", borderRadius: "10px" }} src={ele} />
+                                                <div  key={i}>
+                                                    <img style={{ border: "1px solid white", width: "41.75px", height: "46.5px", backgroundColor: "white", borderRadius: "10px" }} src={ele} alt=""/>
                                                 </div>
                                             ))}
                                         </div>

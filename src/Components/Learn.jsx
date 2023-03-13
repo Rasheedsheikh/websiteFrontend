@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import db from "../db.json"
-import data from "../data.json"
+// import data from "../data.json"
 import "./Learn.css"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -30,7 +30,7 @@ const Learn = () => {
                         <div className="Learn-title">{db?.Careers?.Learn[change].title}</div>
 
                         {db.Careers.Learn[change]?.desc?.map((el, i) => (
-                            <div>
+                            <div  key={i}>
                                 <ul>
                                     <li>  {el}</li>
                                 </ul>
@@ -40,7 +40,7 @@ const Learn = () => {
                     </div>
                     {/* <div className="LearnRight"><img style={{ width: "300px", height: "250px", marginTop: "15%" }} src={db.Careers.Learn[change].img} /></div> */}
                 
-                  <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="images/Group 1175.jpg" /></div>
+                  <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="images/Group 1175.jpg" alt="" /></div>
                 
                 </div>
 

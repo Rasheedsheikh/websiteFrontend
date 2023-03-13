@@ -4,7 +4,7 @@ import './Career.css';
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { Link,useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Checkbox, Grid, Typography } from "@material-ui/core";
 import { Stack } from "@mui/material";
 // import React, { useState } from "react";
@@ -57,7 +57,7 @@ const [open1, setOpen] = React.useState(false);
   ];
 
   const navigate = useNavigate()
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const[ element, setElement]=useState(null);
 const[checked,setChecked]=useState(false);
@@ -120,7 +120,7 @@ useEffect(()=>{
       <Navbar/>
       {db.Careers.header.map((e, i) => (
 
-        <div className="headerMain">
+        <div   key={i} className="headerMain">
           <div className="headerleft">
             <div className="headerlefttitle">
               <div>{e.title1}</div>
@@ -220,7 +220,7 @@ useEffect(()=>{
 
     //         </div>
     //       </div>
-    <div>
+    <div  key={i}>
     <Stack>
       <Stack
         flexDirection={"row"}
@@ -341,7 +341,7 @@ useEffect(()=>{
                         {
                           names?.map((option,index) => {
                             return (
-                              <Stack flexDirection={"row"}>
+                              <Stack   key={i} flexDirection={"row"}>
                                 <FormGroup>
                                   <FormControlLabel
                                     control={
@@ -394,7 +394,7 @@ useEffect(()=>{
 
       {data?.map((e, i) => (
 
-        <div>
+        <div  key={i}>
           <div className="jobparent">
             <div className="jobs">
               <div className="jobTitle">{e.title}</div>
@@ -442,10 +442,10 @@ useEffect(()=>{
       <div>
           <div>Full Job Description</div>
          {element?.desc2.map((el,i)=>(
-          <>
+          < div  key={i}>
          <ul><li> {el}
          </li></ul>
-          </>
+          </div>
          ))}
       </div>
       </div>
