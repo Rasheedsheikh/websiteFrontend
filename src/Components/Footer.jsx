@@ -48,7 +48,7 @@ const Footer=()=>{
                             <div>
                                 {obj?.line4?.map((e, i) => (
                                     <div  key={i}>
-                                        <div> <img src="./Group 1146.jpg" alt=""/></div>
+                                        <div> <img src="./Images/Group 1146.jpg" alt=""/></div>
                                         <div className="footerline1">{e.title}</div>
                                         <div>
                                             {e?.icons?.map((ele, i) => (

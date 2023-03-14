@@ -130,7 +130,7 @@ useEffect(()=>{
             <div className="headerdesc"> {e.desc}</div>
           </div>
           <div>
-          <img style={{ height: "320.1400146484375px", width: "450.79998779296875px", borderRadius: "0px",marginTop:"10px" }} src="images/career.jpg"  alt=""/>
+          <img style={{ height: "320.1400146484375px", width: "450.79998779296875px", borderRadius: "0px",marginTop:"10px" }} src="./Images/career.jpg"  alt=""/>
           </div>
           </div>
         

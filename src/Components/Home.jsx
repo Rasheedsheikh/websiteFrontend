@@ -9,6 +9,7 @@ import { Carousel } from 'react-responsive-carousel';
 import {  TextField } from "@mui/material";
 import { Stack } from "@mui/material";
 import {  Grid } from "@material-ui/core";
+
 import "./Fill.css";
 import "./intro.css";
 import "./whyStyle.css"
@@ -74,7 +75,7 @@ const Home = () => {
         <>
             <div className="Nav">
                 <div className="NavLeft">
-                    <img style={{ width: "253px", height: "50px" }} src="/images/logo (1).jpg" alt="/" />
+                    <img style={{ width: "253px", height: "50px" }} src="./Images/logo (1).jpg" alt="/" />
                 </div>
 
                 <div className="NavRight">
@@ -107,11 +108,11 @@ const Home = () => {
 </div>
 
 <div className="top-stip">
-    <img src="./images/strips.jpg" width="140px" height="130px"  />
+    <img src="./Images/strips.jpg" width="140px" height="130px"  />
 </div>
 
 <div className="top-img">
-    <img src="./images/img-1.jpg" width="520px"   />
+    <img src="./Images/img-1.jpg" width="520px"   />
 </div>
 
 </div> */}
@@ -135,11 +136,11 @@ const Home = () => {
 </div>
 
 <div className="top-stip">
-    <img src="./images/strips.jpg"  alt ="" width="140px" height="130px"  />
+    <img src="./Images/strips.jpg"  alt ="" width="140px" height="130px"  />
 </div>
 
 <div className="top-img">
-    <img src="./images/img-1.jpg" alt="" width="520px" height="370px"  />
+    <img src="./Images/img-1.jpg" alt="" width="520px" height="370px"  />
 </div>
 
 </div>
@@ -288,7 +289,7 @@ const Home = () => {
 
 
                             <div className='why-img-box'>
-                <img src="./images/OBJECTS.jpg" alt="" />
+                <img src="./Images/OBJECTS.jpg" alt="" />
             </div>
                         </div>
                     

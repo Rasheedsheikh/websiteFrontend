@@ -55,7 +55,7 @@ const Why = () => {
             </div>
 
             <div className='why-img-box'>
-                <img src="./images/OBJECTS.jpg" alt="" />
+                <img src="./Images/OBJECTS.jpg" alt="" />
             </div>
             
         </div>

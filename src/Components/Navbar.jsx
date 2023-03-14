@@ -23,7 +23,7 @@ const Navbar=()=>{
         <>
               <div className="Nav">
                 <div className="NavLeft">
-                    <img style={{ width: "253px", height: "50px" }} src="/images/logo (1).jpg" alt="/" />
+                    <img style={{ width: "253px", height: "50px" }} src="./Images/logo (1).jpg" alt="/" />
                 </div>
 
                 <div className="NavRight">

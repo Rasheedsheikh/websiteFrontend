@@ -40,7 +40,7 @@ const Learn = () => {
                     </div>
                     {/* <div className="LearnRight"><img style={{ width: "300px", height: "250px", marginTop: "15%" }} src={db.Careers.Learn[change].img} /></div> */}
                 
-                  <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="images/Group 1175.jpg" alt="" /></div>
+                  <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1175.jpg" alt="" /></div>
                 
                 </div>
 
