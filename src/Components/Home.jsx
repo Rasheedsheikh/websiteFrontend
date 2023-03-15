@@ -13,7 +13,7 @@ import {  Grid } from "@material-ui/core";
 import "./Fill.css";
 import "./intro.css";
 import "./whyStyle.css"
-
+import Config from "../Config";
 // import {
 
 //     withStyles,
@@ -59,7 +59,7 @@ const Home = () => {
 
     const show= async()=>{
             try{
-              let res= await fetch('http://localhost:2233/home')
+              let res= await fetch(`${Config.host}/home`)
               let dataa= await res.json()
               console.log(dataa.data)
               setData1(dataa.data)

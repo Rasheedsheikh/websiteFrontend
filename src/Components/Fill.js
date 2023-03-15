@@ -47,6 +47,8 @@ import { useParams } from "react-router-dom";
 // },
 // )(TextField);
 
+import Config from "../Config";
+
 const Fill = () => {
   const [formData, setFormData] = useState({
     FirstName: "",
@@ -88,7 +90,7 @@ const Fill = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     };
-    fetch('http://localhost:2233/upload', requestOptions)
+    fetch(`${Config.host}/upload`, requestOptions)
 
       .then(data => {
         return data.json();

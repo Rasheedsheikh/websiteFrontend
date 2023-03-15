@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-
+import Config from "../Config";
 const Footer=()=>{
     const [data ,setData1]=useState([])
     useEffect(()=>{
@@ -9,7 +9,7 @@ const Footer=()=>{
 
     const show= async()=>{
             try{
-              let res= await fetch('http://localhost:2233/home')
+              let res= await fetch(`${Config.host}/home`)
               let dataa= await res.json()
               console.log(dataa.data)
               setData1(dataa.data)

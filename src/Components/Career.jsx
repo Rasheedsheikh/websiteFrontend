@@ -15,6 +15,8 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Dialog from '@mui/material/Dialog';
+
+import Config from "../Config";
 const Career = () => {
   const [data, setData] = useState([])
   // const[ searchdata, setSearchdata]=useState([])
@@ -87,7 +89,7 @@ const[checked,setChecked]=useState(false);
   }, [])
   const show = async () => {
     try {
-      let res = await fetch('http://localhost:2233/jobs')
+      let res = await fetch(`${Config.host}/jobs`)
       let data = await res.json()
       console.log(data)
       setData(data)
@@ -101,7 +103,7 @@ const[checked,setChecked]=useState(false);
   const handleImp= async()=>{
     try{
       
-      let res = await fetch(`http://localhost:2233/searchjob?searchTxt=${searchQuery}`)
+      let res = await fetch(`${Config.host}/searchjob?searchTxt=${searchQuery}`)
       let Seardata = await res.json()
       console.log(Seardata)
       setData(Seardata)

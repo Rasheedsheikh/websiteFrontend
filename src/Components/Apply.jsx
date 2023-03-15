@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import db from "../db.json";
 import "./Apply.css";
 import { Link, useParams } from "react-router-dom"
+import Config from "../Config";
 
 const Apply=()=>{
     const {id}=useParams()
@@ -15,7 +16,7 @@ const Apply=()=>{
 
     const show= async()=>{
         try{
-          let res= await fetch(`http://localhost:2233/jobs/${id}`)
+          let res= await fetch(`${Config.host}/jobs/${id}`)
           let data= await res.json()
           console.log(data)
           setData(data)
