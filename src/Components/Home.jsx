@@ -71,7 +71,7 @@ const Home = () => {
     // console.log(db)
 
 
-
+   
 
 
     return (
@@ -129,7 +129,8 @@ const Home = () => {
                     <div className="ifr">
 
                         <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
-                            <source src="./assets/video.mp4" type='video/mp4' />
+                           
+                            <source src="/site/public/assets/video.mp4" type='video/mp4' />
                         </video>
                     </div>
 
