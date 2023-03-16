@@ -51,7 +51,7 @@ const Apply=()=>{
             <div>
                 <div>Full Job Description</div>
                {e.desc2.map((el,i)=>(
-                <div>
+                <div className="req">
                <ul><li> {el}
                </li></ul>
                 </div>

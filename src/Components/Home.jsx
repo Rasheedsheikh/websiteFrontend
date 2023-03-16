@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 // import { Link } from "react-router-dom";
 // import data? from "../data.json"
 import './style.css';
@@ -71,6 +71,9 @@ const Home = () => {
     // console.log(db)
 
 
+
+
+
     return (
         <>
             <div className="Nav">
@@ -81,7 +84,8 @@ const Home = () => {
                 <div className="NavRight">
                     {data?.Total?.NavRoutes?.map((e, i) => (
                         <div key={i}>
-                       <Link style={{textDecoration:"none", color:"#000000"}} to={e.path}><div>{e.name}</div></Link> 
+                       {/* <Link style={{textDecoration:"none", color:"#000000"}} to={e.path} ><div>{e.name}</div></Link>  */}
+                       <a style={{textDecoration:"none", color:"#000000"}} href={e.path}  ><div>{e.name}</div></a> 
                           {/* { console.log(e,i)} */}
                         </div>
                     ))}
@@ -118,16 +122,24 @@ const Home = () => {
 </div> */}
 <div className="main-box-1">
 
-<div className="white-bg">
+<div >
      <div className="white-bg-box-1">
         <h1>THE POWER OF <span className="head-span-class">TECHNOLOGY</span></h1>
      </div>
-     <div className="white-bg-box-2">
-        <div className="orange-circle"></div>
+     <div className="ifr">
+       {/* <iframe style={{height:"350px"}} src="https://drive.google.com/file/d/1msUtqo8VJ1TmY97sAkw69u3ZSpR3fx6J/preview" allowfullscreen></iframe> */}
+       <video className='videoTag' autoPlay loop muted style={{width:"650px",paddingTop:"5px",height:"100%"}}>
+                <source src="./Images/VHS Overview 16.9.mp4"type='video/mp4' />
+              </video>
      </div>
+
+
+     {/* <div className="white-bg-box-2">
+        <div className="orange-circle"></div>
+     </div> */}
 </div>
 
-<div className="black-bg">
+{/* <div className="black-bg">
     
 </div>
 
@@ -141,11 +153,12 @@ const Home = () => {
 
 <div className="top-img">
     <img src="./Images/img-1.jpg" alt="" width="520px" height="370px"  />
-</div>
+</div> */}
+
 
 </div>
 
-            <div className="Service">
+            <div  id="Services" className="Service">
                 {data?.Total?.Services?.what?.map((e, i) => (
                     <div key={i}>
                         <div className="ServiceMain">{e.title}</div>
@@ -173,9 +186,11 @@ const Home = () => {
                             <div>
                                 {obj?.desc?.map((el, i) => (
                                     <div  key={i} className="service-desc">
-                                        <ul >
-                                            <li>{el}
-                                            </li></ul></div>
+                                         {/* <ul style ={{listStyle:'none'}}>
+                                            <li style ={{listStyle:'none'}}>{el}
+                                            </li></ul> */}
+                                            <div style={{margin:"auto",marginLeft:"15px"}}>{el}</div>
+                                            </div>
                                 ))}
 
                             </div>
@@ -185,7 +200,7 @@ const Home = () => {
                 ))}
             </div>
 
-            <div>
+            <div id="Industriess">
                 {data?.Total?.Industries?.heading?.map((e, i) => (
                     <div key={i} >
                         <div  className="Indus-heading"> {e}</div>
@@ -206,7 +221,8 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-            <div className="Solution">
+            <div >
+            <div  id="Solution" className="Solution" >
                 <div className="Solution-heading-cont">
                     {data?.Total?.Solutions?.heading?.map((e, i) => (
                         <div  key={i} className="solu-back">
@@ -225,12 +241,13 @@ const Home = () => {
                 <div className="Solution-images" >
                     {data?.Total?.Solutions?.Images?.map((e, i) => (
                         <div   key={i} className="sol-img-abs" >
-                            <div className="solImgdiv"><img style={{ width: "250px", height: "230px" }} src={e.img} alt=""/> </div>
+                            <div className="solImgdiv"><img style={{ width: "180px", height: "160px" }} src={e.img} alt=""/> </div>
                             <div className="solution-images-title">{e.title}</div>
                         </div>
                     ))}
                 </div>
 
+            </div>
             </div>
 
             {data?.Total?.Testimonials?.main?.map((e, i) => (
@@ -277,7 +294,7 @@ const Home = () => {
                                                     <div key={i}>
                                             <div className='why-text-box'>
                 <div className='why-oranged'><p>{el.number}</p></div>
-                <div>{el.detail}   </div>
+                <div style={{marginTop:"5%"}}>{el.detail}   </div>
                 </div>
                                                      </div>
                                                 ))
@@ -302,7 +319,7 @@ const Home = () => {
 
 
 
-                <div>
+                <div id="Community">
                     {data?.Total?.community?.map((e, i) => (
 
                         <div   key={i} className="community-title">
@@ -323,7 +340,7 @@ const Home = () => {
                                             <div className="commu-desc">{el.desc}</div>
                                         </div>  
                                         <div>
-                                            <center> <button className="buttons" style={{ marginBottom: "10px" }}>Join us</button>
+                                            <center> <Link to="/career"><button className="buttons" style={{ marginBottom: "10px" }}>Join us</button></Link>
                                             </center>
                                         </div>
                                         <div className="commu-images">
