@@ -129,7 +129,7 @@ const Home = () => {
      <div className="ifr">
        {/* <iframe style={{height:"350px"}} src="https://drive.google.com/file/d/1msUtqo8VJ1TmY97sAkw69u3ZSpR3fx6J/preview" allowfullscreen></iframe> */}
        <video className='videoTag' autoPlay loop muted style={{width:"650px",paddingTop:"5px",height:"100%"}}>
-                <source src="./Images/VHS Overview 16.9.mp4"type='video/mp4' />
+                <source src="./Images/video.mp4"type='video/mp4' />
               </video>
      </div>
 
