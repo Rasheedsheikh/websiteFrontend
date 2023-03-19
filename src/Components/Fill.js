@@ -47,8 +47,6 @@ import { useParams } from "react-router-dom";
 // },
 // )(TextField);
 
-import Config from "../Config";
-
 const Fill = () => {
   const [formData, setFormData] = useState({
     FirstName: "",
@@ -70,7 +68,7 @@ const Fill = () => {
 
   const handledetails = (e) => {
     console.log(formData)
-    e.preventDefault()
+    // e.preventDefault()
     const data = {
 
       "FirstName": formData.FirstName,
@@ -90,7 +88,7 @@ const Fill = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     };
-    fetch(`${Config.host}/upload`, requestOptions)
+    fetch('http://localhost:2233/upload', requestOptions)
 
       .then(data => {
         return data.json();
@@ -117,16 +115,34 @@ const Fill = () => {
     ExperienceInYears,
     EducationQualification } = formData;
 
+
+    const uploadResume= async(e)=>{
+    console.log(e.target.files[0].name, e.target.files[0].type)
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(e.target.files[0])
+    };
+    fetch('http://localhost:2233/fileUpload', requestOptions)
+
+      .then(data => {
+        return data.json();
+      })
+      .then(post => {
+        alert("sucesss")
+      });
+    
+    }
+
   return (
     <div className="formmain">
 
-      <form>
+    <div>
         <div className="submit">
           <button
             className="buttonsub"
-            // variant="contained"
-            // component="label"
-            onClick={() => { handledetails() }}
+            
+            onClick={() => handledetails()}
           >
 
             submit
@@ -251,7 +267,7 @@ const Fill = () => {
                   // variant="outlined"
                   // id="firstname"
                   label="First Name"
-                  onChange={e => console.log(e)}
+                  onChange={e => updateFormData(e)}
 
                   autoComplete="something-unsupported"
                   name="FirstName"
@@ -334,35 +350,31 @@ const Fill = () => {
               <Grid item xl={6} lg={6} md={6} sm={12} xs={12}
                 style={{ padding: "20px" }}
                
-
               >
                 <TextField className="text"
                  variant="filled"
                 
-                  // id="experience"
-                  label={"Experience in Years"}
+                  // id="email"
+                  label={"ExperienceInYears"}
                   onChange={e => updateFormData(e)}
                   // autoComplete="something-unsupported"
                   required
+                  name="ExperienceInYears"
                   value={ExperienceInYears}
-                  name={ExperienceInYears}
                   fullWidth
+                >
 
-                />
+                </TextField >
 
               </Grid>
+             
               <Grid item xl={6} lg={6} md={6} sm={12} xs={12}
                 style={{ padding: "20px" }}
                
               >
                 <TextField
                 className="text"
-                  // id="qualification"
-                  // label={"Qualification"}
-                  // onChange={e => updateFormData(e)}
-                  // autoComplete="something-unsupported"
-                  // required
-                  // name="EducationQualification"
+                  
                   variant="filled"
                   value={EducationQualification}
                   onChange={e => updateFormData(e)}
@@ -403,7 +415,7 @@ const Fill = () => {
  Upload Resume
 </label>
 <input id="file-upload" 
-
+onChange={(e)=>uploadResume(e)}
 type="file"/>
 </div>
 
@@ -412,7 +424,7 @@ type="file"/>
             <Typography style={{ fontSize: "14px" }}>5mb max Size</Typography>
           </Stack>
         </Stack>
-      </form>
+      </div>
     </div>
 
 
