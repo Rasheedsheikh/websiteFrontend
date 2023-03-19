@@ -9,47 +9,15 @@ import { Carousel } from 'react-responsive-carousel';
 import { TextField } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Grid } from "@material-ui/core";
+import video from "./video.mp4"
 
 import "./Fill.css";
 import "./intro.css";
 import "./whyStyle.css"
 import Config from "../Config";
-// import {
 
-//     withStyles,
-
-// } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
-// import { textDecoration } from "@chakra-ui/react";
-// import Why from "./why";
 
-// const CssTextField = withStyles({
-//     root: {
-//         '& label.Mui-focused': {
-//             color: '#FE602F',
-//         },
-//         // '& .MuiInput-underline': {
-//         //   // borderBottomColor: '#FE602F',
-//         // },
-//         '& .MuiOutlinedInput-root': {
-//             '& fieldset': {
-//                 backgroundColor: "white",
-//             },
-//             '&:hover fieldset': {
-//                 // borderColor: '#FE602F',
-//             },
-//             '&.Mui-focused fieldset': {
-//                 // borderColor: '#FE602F',
-//             },
-//             root: {
-//                 '& .MuiOutlinedInput-notchedOutline': {
-//                     borderColor: '#FE602F',
-//                 },
-//             },
-
-//         },
-//     },
-// })(TextField);
 
 const Home = () => {
     const [data, setData1] = useState([])
@@ -92,68 +60,48 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* <div className="main-box-1">
-
-<div className="white-bg">
-     <div className="white-bg-box-1">
-        <h1>THE POWER OF <span className="head-span-class">TECHNOLOGY</span></h1>
-     </div>
-     <div className="white-bg-box-2">
-        <div className="orange-circle"></div>
-     </div>
-</div>
-
-<div className="black-bg">
-    
-</div>
-
-<div className="top-text">
-    <p>Today's Healthcare and Life Sciences Companies depend on Technology and Innovation to provide a healthier tomorrow for patients and the entire ecosystem</p>
-</div>
-
-<div className="top-stip">
-    <img src="./Images/strips.jpg" width="140px" height="130px"  />
-</div>
-
-<div className="top-img">
-    <img src="./Images/img-1.jpg" width="520px"   />
-</div>
-
-</div> */}
+          
+            {/* {data?.Total?.index?.map((e, i) => (
+                <>
+                    <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
+                        <source src="{require(e.video)}" type='video/mp4' />
+                    </video>
+                </>
+            ))} */}
             <div className="main-box-1">
 
-                <div >
+                <div>
                     <div className="white-bg-box-1">
                         <h1>THE POWER OF <span className="head-span-class">TECHNOLOGY</span></h1>
                     </div>
                     <div className="ifr">
-
                         <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
-                            <source src="./assets/video.mp4" type='video/mp4' />
+                            <source src={video} type='video/mp4' />
+
                         </video>
                     </div>
 
 
                     {/* <div className="white-bg-box-2">
-        <div className="orange-circle"></div>
-     </div> */}
+                        <div className="orange-circle"></div>
+                    </div> */}
                 </div>
 
                 {/* <div className="black-bg">
-    
-</div>
 
-<div className="top-text">
-    <p>Today's Healthcare and Life Sciences Companies depend on Technology and Innovation to provide a healthier tomorrow for patients and the entire ecosystem</p>
-</div>
+                </div>
 
-<div className="top-stip">
-    <img src="./Images/strips.jpg"  alt ="" width="140px" height="130px"  />
-</div>
+                <div className="top-text">
+                    <p>Today's Healthcare and Life Sciences Companies depend on Technology and Innovation to provide a healthier tomorrow for patients and the entire ecosystem</p>
+                </div>
 
-<div className="top-img">
-    <img src="./Images/img-1.jpg" alt="" width="520px" height="370px"  />
-</div> */}
+                <div className="top-stip">
+                    <img src="./Images/strips.jpg" alt="" width="140px" height="130px" />
+                </div>
+
+                <div className="top-img">
+                    <img src="./Images/img-1.jpg" alt="" width="520px" height="370px" />
+                </div> */}
 
 
             </div>
@@ -355,10 +303,6 @@ const Home = () => {
 
                             </div>
                         </div>
-
-
-
-
                     ))}
                 </div>
 
@@ -385,11 +329,7 @@ const Home = () => {
                                     </div>
                                 ))}
                                 <hr style={{ width: "393px", height: "10px", left: "116px", top: "5969.78px", background: "#FE602F" }} />
-
                             </Grid>
-
-
-
                         ))}
 
                         <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="email">{data?.Total?.Testimonials?.contact &&
@@ -398,8 +338,7 @@ const Home = () => {
                                     width: "70%",
                                     //   marginTop:"80px",
                                     margin: "auto"
-                                    // border: "1px solid blue",
-                                    // height: "100px",
+                                    
                                 }}
 
                             >
@@ -411,7 +350,6 @@ const Home = () => {
                                         style={{ padding: "10px" }}
                                     //  className="textborder"
                                     >
-
 
 
                                         <TextField
@@ -479,41 +417,41 @@ const Home = () => {
 
 
                                     {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}
-                                  style={{padding:"10px"}}
-                                //   className="textborder"
-                      
-                                  >
-                                                           <TextField
-                                                            className="text"
-                                               variant="filled"
-                                                id="email"
-                                                label={"Email"}
-                                                autoComplete="something-unsupported"
-                                                required
-                                                value={""}
-                                                // fullWidth
-                                              />
-                      
-                                  </Grid> */}
+                                        style={{ padding: "10px" }}
+                                    //   className="textborder"
+
+                                    >
+                                        <TextField
+                                            className="text"
+                                            variant="filled"
+                                            id="email"
+                                            label={"Email"}
+                                            autoComplete="something-unsupported"
+                                            required
+                                            value={""}
+                                        // fullWidth
+                                        />
+
+                                    </Grid> */}
 
                                     {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}
-                                  style={{padding:"10px"}}
-                                //   className="textborder"
-                      
-                                  >
-                                                           <TextField
-                                                            className="text"
-                                               variant="filled"
-                                                id="qualification"
-                                                label={"Leave Your Message"}
-                                                autoComplete="something-unsupported"
-                                                required
-                                                value={""}
-                                                fullWidth
-                      
-                                              />
-                      
-                                  </Grid> */}
+                                        style={{ padding: "10px" }}
+                                    //   className="textborder"
+
+                                    >
+                                        <TextField
+                                            className="text"
+                                            variant="filled"
+                                            id="qualification"
+                                            label={"Leave Your Message"}
+                                            autoComplete="something-unsupported"
+                                            required
+                                            value={""}
+                                            fullWidth
+
+                                        />
+
+                                    </Grid> */}
 
                                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}
                                         style={{ padding: "10px" }}

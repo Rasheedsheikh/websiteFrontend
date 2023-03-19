@@ -418,14 +418,15 @@ useEffect(()=>{
           </div>
         </div>
       ))}
-  <Dialog md={6} open={open1} onClose={handleClose1}>
-    {/* {console.log(element,element.length)} */}
+  <Dialog md={12} open={open1} onClose={handleClose1}>
+    {console.log(element,"12345")}
+    
     <>
-  
+  {element &&
       <div className="Applymain">
           <div className="ApplytitleMain">
          <div className="Applytitle">{element?.title}</div>
-         <Link to={`/fill/${id}`}><div><button className="button2" >Apply</button></div></Link>
+         <Link to={`/fill/${element?._id}`}><div><button className="button2" >Apply</button></div></Link>
          </div>
          
          <div className="Applydetails">
@@ -452,6 +453,7 @@ useEffect(()=>{
          ))}
       </div>
       </div>
+}
 
   {/* ))} */}
          
