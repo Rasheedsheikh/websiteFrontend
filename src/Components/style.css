@@ -530,7 +530,8 @@ color: #000000;
 .commu-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  column-gap: 1px;
+  row-gap: 3px;
   margin-top: 5px;
   /* width: 752px; */
 height: 508.66px;
