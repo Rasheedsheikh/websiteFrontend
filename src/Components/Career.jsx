@@ -120,7 +120,7 @@ useEffect(()=>{
   return (
     <>
 
-      <Navbar/>
+      {/* <Navbar/> */}
       {db.Careers.header.map((e, i) => (
 
         <div   key={i} className="headerMain">
