@@ -111,23 +111,21 @@ line-height: 24px;
 list-style-type: none;
 }
 
- .shapes ul li::before {
-  list-style-type: none;
-  content: "\2022";
+ /* .shapes ul li::before { */
+  /* list-style-type: none;
+  content: "\2022"; */
   /* color: #FE602F; */
-  font-weight: bold;
+  /* font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
-}
+  margin-left: -1em; */
+/* } */
 
 .numb {
   /* justify-content: center; */
   text-align: center;
   align-items: center;
   color: #FFFFFF;
-
-  font-size: 30px;
   position: absolute;
   width: 45px;
   height: 48px;
@@ -137,7 +135,7 @@ list-style-type: none;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 23px;
   line-height: 48px;
   /* identical to box height */
 
@@ -145,7 +143,7 @@ list-style-type: none;
 
   background-color: #FE602F;
   border-radius: 50%;
-  top: -9%;
+  top: -10%;
   left: 45%
     /* right:40% */
 
@@ -241,7 +239,7 @@ top: 1179px;
 
 .buttons {
   border: 1px solid orangered;
-  color: orange;
+ 
   background-color: white;
   height: 40px;
   width: 138px;
@@ -250,6 +248,11 @@ top: 1179px;
   border-radius: 0px;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+color: #FE602F;
 }
 
 .buttons:hover {
@@ -268,21 +271,23 @@ top: 1179px;
 
 .insiderimg {
   height: 204.7666015625px;
-  width: 307px;
+  width: 300px;
   left: 43px;
   top: 1862px;
-  border-radius: 6px;
+  
 
 }
 
 .Indus-insder-cont {
   display: grid;
   /* width:95%; */
+  gap:20px;
   grid-template-columns: repeat(4, 1fr);
   /* gap:20px; */
   text-align: center;
   /* height:60%; */
   height: auto;
+  border-radius: 10px;
   /* flex-wrap: wrap; */
   
   /* width:90%; */
@@ -297,6 +302,7 @@ top: 1179px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: auto;
   height:99%;
+  /* width:90% */
 
 }
 
@@ -392,6 +398,7 @@ top: 1179px;
   text-align: center;
 
   color: #222222;
+  margin-top: 10px;
 
 }
 
@@ -471,10 +478,12 @@ color: #000000;
 
 .com-mainParent {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   /* width:95%; */
   margin: auto;
    margin-top: 50px;
+   margin-left: 10px;
+  
   /* width:1338px; */
   /* height:743px  */
   /* border:1px solid red */
@@ -521,7 +530,7 @@ color: #000000;
 .commu-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+  gap: 4px;
   margin-top: 5px;
   /* width: 752px; */
 height: 508.66px;
@@ -803,6 +812,10 @@ iframe::-webkit-media-controls-enclosure {
   display: none !important;
 }
 
+ul li::before{
+  list-style-type: none !important;
+  list-style: none !important;
+}
 
 /* .ytp-chrome-controls .ytp-button{
   display:none !important;

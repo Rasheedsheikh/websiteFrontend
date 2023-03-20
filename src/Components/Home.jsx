@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import data? from "../data.json"
+
 import './style.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-// import { borderRadius } from "@mui/system";
-// import Why from "./Why";
+
 import { TextField } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Grid } from "@material-ui/core";
-import video from "./video.mp4"
+// import video from "./video.mp4"
 
 import "./Fill.css";
 import "./intro.css";
@@ -17,13 +15,16 @@ import "./whyStyle.css"
 import Config from "../Config";
 
 import { Link } from "react-router-dom";
+// import Career from "./Career";
 
 
 const Home = () => {
     const [data, setData1] = useState([])
+    // const [flag, setFlag] = useState(false)
     useEffect(() => {
         show()
     }, [])
+
 
     const show = async () => {
         try {
@@ -60,7 +61,7 @@ const Home = () => {
                 </div>
             </div>
 
-          
+
             {/* {data?.Total?.index?.map((e, i) => (
                 <>
                     <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
@@ -76,33 +77,11 @@ const Home = () => {
                     </div>
                     <div className="ifr">
                         <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
-                            <source src={video} type='video/mp4' />
-
+                            <source src="https://vhs-overview-video.s3.us-east-1.amazonaws.com/VHS%20Overview%2016.9.mp4?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRzBFAiEAkck8pGSN7nBTDTTDhJ9uojAf39sPmA1zNJCoJSGhDU8CIAoJjrUgdQF1%2BRctITkk9HCLLdx1jI8oD02hWOn%2B%2Fy7zKt8DCHEQABoMMzcwNjg3OTU3MjU4IgwibXZ3057q9i%2FeoQEqvANWqpbElJWqa%2Fth33sJu0U6gpElpD4Tgo9TVI3dC6rNtCaiB0QE9v%2F5WLd%2BU5g01YuN7B5MuiVG4B3%2FNu18DoDY4%2B0xfInITj%2BFWiimouSI4yNeIk%2FPGc4wXtju0XmhtIPn2wc7wDFBqTLIWiKrDCYV%2BF84o39iM4%2FjZ9uaiS%2FiUQaRw1s%2BHbT6oarZsBkXxSvTmv5BaubWruhJ%2FdX9WuC3fnvYFu6YYXw61Vj5RQpiWaAmDOyrYm5vKBR8rv8xH2psTdyBC8vFQKsmf%2BOHSFYL5v%2Bu1OZY2UTK4geL8p9%2FwQ1T348lpqe6bDZYzoVEvTUcLy8tk0t5f9xLaRg2eW%2FkNnV8I4Sf7%2BGpOac0CYmjBgqeOvT26auoA%2FIWyysbHNpj%2FFZGh%2FANpQiLwS8F%2FAMwOjU%2Fo0D%2FJaldPOYS5NEFEtKPxbLQRZihMm0%2F%2FXzOS46L%2BrzDA6SZJjufH4EtQX7DesKWH%2BY%2BqLbSP1ZRkXLoi2ktSGhK7t2qU0Gs7JxmzZnqHrrMjl9dxVh7OMb8l%2BYGxLNHjJNigGKatWfj2dEcQLLq6zZ13FwjKchKOAKlLEILnsa1OHSTaTzu4wowjJ%2FgoAY6lAItZsdqnEpG2raqUiLy4vuieQ3TQxxD%2F%2B2GzWU%2BnHREynzSQEo%2BjrmHpqYsKBbMDakJd1puwhSQRn%2FPnxCQM164rGtGBrC4qDqqkBpqMIYvAHS1SwJ6d%2BJYZKSrsWZrvGWUU2q9cZZXxZNgPaFOzLvxkR1QXdk7YOHwpF3ZYmhW9hcmscXklRezDhUJIORaIOXb4CmUDvWyxUEG0MDOYqg4TjWK3gH3Hwm8plDnhFth9x6tiql2goDrRnBHAc2tgbC8Hk%2FsjdBHdBw9dwkZo8SKeTzSfodEpcX06A%2BzAmJfSXD9QjmjfF7fZvmquZ538g2XafQWSvQbScanFrgpIqpz2vIzUEbIyA2RQ9vyNCuq%2FvAxh3E%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230320T075057Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAVMTVZLEFKYV3XIVS%2F20230320%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=485b0017e7e5bcefe923f07f8911172c9442abb4bb82625587469bdf32cc30a9" type='video/mp4' />
                         </video>
                     </div>
 
-
-                    {/* <div className="white-bg-box-2">
-                        <div className="orange-circle"></div>
-                    </div> */}
                 </div>
-
-                {/* <div className="black-bg">
-
-                </div>
-
-                <div className="top-text">
-                    <p>Today's Healthcare and Life Sciences Companies depend on Technology and Innovation to provide a healthier tomorrow for patients and the entire ecosystem</p>
-                </div>
-
-                <div className="top-stip">
-                    <img src="./Images/strips.jpg" alt="" width="140px" height="130px" />
-                </div>
-
-                <div className="top-img">
-                    <img src="./Images/img-1.jpg" alt="" width="520px" height="370px" />
-                </div> */}
-
 
             </div>
 
@@ -202,7 +181,7 @@ const Home = () => {
                 <div key={i}>
                     <div className="testimo-title">{e.title}</div>
                     <center >
-                        <img className="testimoImg" style={{ width: "180px", height: "150px", borderRadius: "45%" }} src={e.img} alt="" /></center>
+                        <img className="testimoImg" style={{ width: "180px", height: "170px", borderRadius: "60%" }} src={e.img} alt="" /></center>
                     <div className="carouse">
                         <Carousel
                             showThumbs={true}
@@ -217,7 +196,7 @@ const Home = () => {
                                         <div>{el.name}</div>
                                         <div>{el.role}</div>
                                     </div>
-                                    <div>{el.at}</div>
+                                    <div style={{ marginBottom: "5%" }}>{el.at}</div>
                                 </div>
                             ))}
 
@@ -338,7 +317,7 @@ const Home = () => {
                                     width: "70%",
                                     //   marginTop:"80px",
                                     margin: "auto"
-                                    
+
                                 }}
 
                             >
@@ -408,50 +387,6 @@ const Home = () => {
                                         />
                                     </Grid>
 
-
-
-
-
-
-
-
-
-                                    {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}
-                                        style={{ padding: "10px" }}
-                                    //   className="textborder"
-
-                                    >
-                                        <TextField
-                                            className="text"
-                                            variant="filled"
-                                            id="email"
-                                            label={"Email"}
-                                            autoComplete="something-unsupported"
-                                            required
-                                            value={""}
-                                        // fullWidth
-                                        />
-
-                                    </Grid> */}
-
-                                    {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}
-                                        style={{ padding: "10px" }}
-                                    //   className="textborder"
-
-                                    >
-                                        <TextField
-                                            className="text"
-                                            variant="filled"
-                                            id="qualification"
-                                            label={"Leave Your Message"}
-                                            autoComplete="something-unsupported"
-                                            required
-                                            value={""}
-                                            fullWidth
-
-                                        />
-
-                                    </Grid> */}
 
                                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}
                                         style={{ padding: "10px" }}
@@ -545,13 +480,16 @@ const Home = () => {
 
 
 
-
+                {/* <div>
+            <Career/>
+          </div> */}
 
             </div>
 
 
+
         </>
-        // <>hi</>
+
 
     )
 }
