@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { TextField } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Grid } from "@material-ui/core";
-import video from "./video.mp4"
+// import video from "./video.mp4"
 
 import "./Fill.css";
 import "./intro.css";
@@ -16,13 +16,24 @@ import Config from "../Config";
 
 import { Link } from "react-router-dom";
 import Career from "./Career";
-import ReactPlayer from "react-player";
+
+import Mapp from "./Mapp";
 
 
 const Home = () => {
     const [data, setData1] = useState([])
     const [flag, setFlag] = useState(false)
-  
+    const [activeItem, setActiveItem] = useState(true)
+
+    const handleItemEnter = (index) => {
+
+        setActiveItem(index);
+    };
+
+    const handleItemLeave = () => {
+        setActiveItem(null);
+    };
+
     useEffect(() => {
         show()
     }, [])
@@ -60,14 +71,31 @@ const Home = () => {
         <>
             <div className="Nav">
                 <div className="NavLeft">
-                    <img style={{ width: "253px", height: "50px" }} src="./Images/logo (1).jpg" alt="/" />
+                    <img style={{ width: "253px", height: "60px", }} src="./Images/Logo SVG(White).png" alt="/" />
                 </div>
 
                 <div className="NavRight">
                     {data?.Total?.NavRoutes?.map((e, i) => (
-                        <div key={i}>
+                        <div key={i} onMouseEnter={() => handleItemEnter(i)}
+                        onMouseLeave={handleItemLeave}
+                        >
+                            
                             {/* <Link style={{textDecoration:"none", color:"#000000"}} to={e.path} ><div>{e.name}</div></Link>  */}
-                            <a style={{ textDecoration: "none", color: "#000000" }} href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}><div>{e.name}</div></a>
+                            <a style={{ textDecoration: "none", color: "#FFFFFF" }} 
+                             
+                            href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}>
+                              <div className="navrightchild">
+                                <div>{e.name}</div>
+                                </div></a>
+
+
+                                {activeItem===i && (
+              <div className="dropdown-menu" style={{ textDecoration: "none"}}>
+                {e?.options.map((option, optionIndex) => (
+                  <div style={{}}className="hoveroptions" key={optionIndex}>{option}</div>
+                ))}
+              </div>
+            )}
                             {/* { console.log(e,i)} */}
                         </div>
                     ))}
@@ -75,24 +103,19 @@ const Home = () => {
             </div>
             {!flag && <div>
 
-                {/* {data?.Total?.index?.map((e, i) => (
-                <>
-                    <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
-                        <source src="{require(e.video)}" type='video/mp4' />
-                    </video>
-                </>
-            ))} */}
-                <div className="main-box-1">
+       
+                <div className="main-box-1" >
 
                     <div>
-                        <div className="white-bg-box-1">
-                            <h1>THE POWER OF <span className="head-span-class">TECHNOLOGY</span></h1>
-                        </div>
-                        <div className="ifr">
-                            <video className='videoTag' autoPlay loop muted style={{ width: "650px", paddingTop: "5px", height: "100%" }}>
+                        {/* <div className="white-bg-box-1">
+                        <div className="POWEROF">THE POWER OF</div>
+                        <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
+                        </div> */}
+                        <div >
+                            <video className='videoTag' autoPlay loop muted style={{ marginTop: "-10%", height: "800px", width: "100%", zIndex: "-2" }}>
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/VHS+Overview+16.9.mp4" type='video/mp4' />
                             </video>
-                         
+
                         </div>
 
                     </div>
@@ -127,10 +150,10 @@ const Home = () => {
                                 <div>
                                     {obj?.desc?.map((el, i) => (
                                         <div key={i} className="service-desc">
-                                            {/* <ul style ={{listStyle:'none'}}>
-                                            <li style ={{listStyle:'none'}}>{el}
-                                            </li></ul> */}
-                                            <div style={{ margin: "auto", marginLeft: "15px" }}>{el}</div>
+                                            <ul style ={{}}>
+                                            <li style ={{}}>{el}
+                                            </li></ul>
+                                            {/* <div style={{ margin: "auto", marginLeft: "15px" }}>{el}</div> */}
                                         </div>
                                     ))}
 
@@ -150,7 +173,7 @@ const Home = () => {
                     ))}
                 </div>
 
-                <div className="Indus-insder-cont">
+                <div style={{ width: "95%", margin: "auto" }} className="Indus-insder-cont">
                     {data?.Total?.Industries?.insider?.map((e, i) => (
                         <div key={i} className="Indus-insder-cont-child">
                             <div><img className="insiderimg" src={e.img} alt="" /></div>
@@ -163,8 +186,8 @@ const Home = () => {
                     ))}
                 </div>
                 <div >
-                    <div id="Solution" className="Solution" >
-                        <div className="Solution-heading-cont">
+                    <div id="Solution" className="Solution" style={{ width: "99%", margin: "auto" }}>
+                        <div className="Solution-heading-cont" >
                             {data?.Total?.Solutions?.heading?.map((e, i) => (
                                 <div key={i} className="solu-back">
                                     <div className="sol-heading-title">
@@ -182,8 +205,9 @@ const Home = () => {
                         <div className="Solution-images" >
                             {data?.Total?.Solutions?.Images?.map((e, i) => (
                                 <div key={i} className="sol-img-abs" >
-                                    <div className="solImgdiv"><img style={{ width: "180px", height: "160px" }} src={e.img} alt="" /> </div>
-                                    <div className="solution-images-title">{e.title}</div>
+                                    <div className="solImgdiv"><img style={{ width: "180px", height: "160px" }} src={e.img} alt="" />
+                                        <div className="solution-images-title">{e.title}</div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -195,7 +219,7 @@ const Home = () => {
                     <div key={i}>
                         <div className="testimo-title">{e.title}</div>
                         <center >
-                            <img className="testimoImg" style={{ width: "180px", height: "170px", borderRadius: "60%" }} src={e.img} alt="" /></center>
+                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%" }} src={e.img} alt="" /></center>
                         <div className="carouse">
                             <Carousel
                                 showThumbs={true}
@@ -220,7 +244,7 @@ const Home = () => {
                     </div>
                 ))}
 
-                <div className='why-main-box'>
+                <div className='why-main-box' style={{ width: "99%", margin: "auto" }}>
                     {data?.Total?.Testimonials?.why?.map((e, i) => (
                         <div key={i} >
 
@@ -300,7 +324,7 @@ const Home = () => {
                     </div>
 
 
-                    <Stack className="contact-parent" flexDirection={"row"}>
+                    <Stack className="contact-parent" flexDirection={"row"} style={{ width: "95%" }}>
                         <Grid container spacing={4}>
                             {data?.Total?.Testimonials?.contact?.map((e, i) => (
                                 <Grid key={i} item xl={6} lg={6} md={6} sm={12} xs={12} style={{ marginTop: "20px" }}>
@@ -435,7 +459,7 @@ const Home = () => {
 
                     <div className="location">
                         <center className="loc-title">Locate us</center>
-                        <img src="https://img.staticmb.com/mbphoto/locality/original_images/2021/Dec/24/71976_MAP.png" alt="/" />
+                        <Mapp />
                     </div>
 
 

@@ -11,6 +11,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 // import Calender from './Components/Calender';
 import Mui from "./Components/Mui"
+import Mapp from './Components/Mapp';
 // import FillMain from './Components/FillMain';
 
 function App() {
@@ -24,12 +25,13 @@ function App() {
         <Route path="/career/:id" element={<Apply/>}/>
        <Route path="/fill/:id" element={<Fill/>}/>
        <Route path="/learn" element={<Learn/>}/>
-       {/* <Route path="/slider" element={<Slider/>}/> */}
+     
        <Route path="/navbar" element={<Navbar/>}/>
        <Route path="/footer" element={<Footer/>}/>
        {/* <Route path="/calender" element={<Calender/>}/> */}
        {/* <Route path="/fillmain" element={<FillMain/>}/> */}
        <Route path="/mui" element={<Mui/>}/>
+       <Route path="/mapp"element={<Mapp/>}/>
 
   </Routes>
     </div>

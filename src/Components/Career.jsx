@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import db from "../db.json"
 import './Career.css';
 // import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom"
 import { Checkbox, Grid, Typography } from "@material-ui/core";
