@@ -11,7 +11,7 @@ const Learn = () => {
     return (
         <>
             
-          <Navbar/>
+          {/* <Navbar/> */}
             <div className="title-tab">
                 <div className="buttonsmain">
                     <button className="button-tab" onClick={() => { setChange(0) }} >Life Sciene</button>
