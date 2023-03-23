@@ -71,31 +71,36 @@ const Home = () => {
         <>
             <div className="Nav">
                 <div className="NavLeft">
-                    <img style={{ width: "253px", height: "60px", }} src="./Images/Logo SVG(White).png" alt="/" />
+                    <img style={{ width: "253px", height: "50px", marginTop:"10px"}} src="./Images/logo (1).jpg" alt="/" />
                 </div>
 
                 <div className="NavRight">
                     {data?.Total?.NavRoutes?.map((e, i) => (
                         <div key={i} onMouseEnter={() => handleItemEnter(i)}
-                        onMouseLeave={handleItemLeave}
+                            onMouseLeave={handleItemLeave}
                         >
-                            
+
                             {/* <Link style={{textDecoration:"none", color:"#000000"}} to={e.path} ><div>{e.name}</div></Link>  */}
-                            <a style={{ textDecoration: "none", color: "#FFFFFF" }} 
-                             
-                            href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}>
-                              <div className="navrightchild">
-                                <div>{e.name}</div>
+                            <a style={{ textDecoration: "none", color: "#FFFFFF" }}
+
+                                href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}>
+                                <div className="navrightchild">
+                                    <div>{e.name}</div>
                                 </div></a>
 
 
-                                {activeItem===i && (
-              <div className="dropdown-menu" style={{ textDecoration: "none"}}>
-                {e?.options.map((option, optionIndex) => (
-                  <div style={{}}className="hoveroptions" key={optionIndex}>{option}</div>
-                ))}
-              </div>
-            )}
+                            {activeItem === i && (
+                                <div  className={activeItem ? "dropdown-menu" : ""} style={{ textDecoration: "none" }}>
+                                    {e?.options.map((option, optionIndex) => (
+                                        <>
+                                        <a style={{textDecoration:"none",color:"#000000"}}  onClick={()=>setActiveItem(null)} href={option.url}>
+                                        <div style={{gap:"10%"}} className="hoveroptions"  key={optionIndex}>{option.label}
+                                        </div>
+                                        </a>
+                                        </>
+                                    ))}
+                                </div>
+                            )}
                             {/* { console.log(e,i)} */}
                         </div>
                     ))}
@@ -103,7 +108,7 @@ const Home = () => {
             </div>
             {!flag && <div>
 
-       
+
                 <div className="main-box-1" >
 
                     <div>
@@ -112,9 +117,11 @@ const Home = () => {
                         <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
                         </div> */}
                         <div >
-                            <video className='videoTag' autoPlay loop muted style={{ marginTop: "-10%", height: "800px", width: "100%", zIndex: "-2" }}>
-                                <source src="https://vhs-overview-video.s3.amazonaws.com/media/VHS+Overview+16.9.mp4" type='video/mp4' />
+                            <video className='videoTag' autoPlay loop muted style={{ marginTop: "-5%", height: "800px", width: "100%", zIndex: "-2" }}>
+                                <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>
+                            <div className="text-overlay">
+                                <div>A leading provider of life scienece and health care solutions</div></div>
 
                         </div>
 
@@ -150,9 +157,9 @@ const Home = () => {
                                 <div>
                                     {obj?.desc?.map((el, i) => (
                                         <div key={i} className="service-desc">
-                                            <ul style ={{}}>
-                                            <li style ={{}}>{el}
-                                            </li></ul>
+                                            <ul style={{}}>
+                                                <li style={{}}>{el}
+                                                </li></ul>
                                             {/* <div style={{ margin: "auto", marginLeft: "15px" }}>{el}</div> */}
                                         </div>
                                     ))}

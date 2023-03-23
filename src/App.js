@@ -12,6 +12,7 @@ import Footer from './Components/Footer';
 // import Calender from './Components/Calender';
 import Mui from "./Components/Mui"
 import Mapp from './Components/Mapp';
+import Learnn from './Components/Learnn';
 // import FillMain from './Components/FillMain';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
        {/* <Route path="/fillmain" element={<FillMain/>}/> */}
        <Route path="/mui" element={<Mui/>}/>
        <Route path="/mapp"element={<Mapp/>}/>
+       <Route path="/learnn"element={<Learnn/>}/>
 
   </Routes>
     </div>
