@@ -7,10 +7,10 @@
   display: flex;
   padding-left: 0;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 68px;
-  z-index: -2;
+  z-index: 1234567890;
   top: 10;
   /* background: rgb(137 123 123 / 50%); */
   /* margin-top: 10px; */
@@ -71,6 +71,9 @@
   /* margin-top: 10px; */
   background-color: #FFFFFF;
   position: fixed;
+  float: bottom;
+}
+
   /* margin-bottom: -2%; */
   /* gap:0px */
   /* font-size: 15px; */
@@ -78,13 +81,14 @@
   /* background: rgb(211 192 192 / 50%); */
 
   /* background-color:rgba({0 -255},{0 -255},{0 -255},[0 - 1]) */
-}
+
 .hoveroptions{
   width:200px;
   height:40px;
   justify-content: center;
   text-align: center;
   font-size: 18px;
+  float: bottom;
   /* overflow: hidden;
   transition: height 0.3s ease; */
   /* height: 100px; */
@@ -105,6 +109,7 @@
   font-size: 2.2rem;
   font-weight: bold;
     background: rgba(56, 55, 55, 0.5);
+    animation: 'slide-in 2s forwards';
   /* text-shadow: 2px 2px black; */
 }
 .text-overlay div{
@@ -119,7 +124,7 @@
   font-size: 28px;
   font-weight: 500;
   line-height: 42px;
-  letter-spacing: 0em; */
+  letter-spacing: 0em; */   
 
 
   text-align: center;
@@ -411,17 +416,18 @@ text-align: center; */
 }
 
 .Solution-images {
-  width: 75%;
+  width: 80%;
   justify-content: center;
   margin: auto;
   text-align: center;
   align-items: center;
   display: grid;
-  column-gap: 80px;
-  row-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
+  /* column-gap: 80px; */
+  row-gap: 40px;
+  grid-template-columns: repeat(5, 1fr);
   border-radius: 10%;
-  margin-top: -90px;
+  margin-top: -70px;
+  /* margin-top: 10px; */
 }
 
 .Solution-images div {
@@ -429,10 +435,7 @@ text-align: center; */
   width: 90%;
 }
 
-.solImgdiv {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background-color: white;
-}
+
 
 .solution-images-title {
   font-family: 'Poppins';

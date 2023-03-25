@@ -14,7 +14,7 @@ import "./intro.css";
 import "./whyStyle.css"
 import Config from "../Config";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Career from "./Career";
 
 import Mapp from "./Mapp";
@@ -24,7 +24,7 @@ const Home = () => {
     const [data, setData1] = useState([])
     const [flag, setFlag] = useState(false)
     const [activeItem, setActiveItem] = useState(true)
-
+    const navigate = useNavigate()
     const handleItemEnter = (index) => {
 
         setActiveItem(index);
@@ -186,8 +186,9 @@ const Home = () => {
                             <div><img className="insiderimg" src={e.img} alt="" /></div>
                             <div className="indus-title"> {e.title}</div>
                             <div className="indus-desc"> {e.desc}</div>
-                            <Link to="/learn">  <div> <button className="buttons">Learn More</button></div>
-                            </Link>
+                            {/* <Link to="/learnn">   */}
+                            <div> <button onClick={()=>navigate("/learnn")} className="buttons">Learn More</button></div>
+                            {/* </Link> */}
 
                         </div>
                     ))}
@@ -198,13 +199,11 @@ const Home = () => {
                             {data?.Total?.Solutions?.heading?.map((e, i) => (
                                 <div key={i} className="solu-back">
                                     <div className="sol-heading-title">
-                                        <div className="sol-heading-title-div"> {e.title}</div>
+                                        <div className="sol-heading-title-div">{e.title}</div>
                                     </div>
                                     <div>
                                         <div className="sol-desc"> {e.desc}</div>
-
                                     </div>
-
                                 </div>
                             ))}
                         </div>
@@ -212,8 +211,8 @@ const Home = () => {
                         <div className="Solution-images" >
                             {data?.Total?.Solutions?.Images?.map((e, i) => (
                                 <div key={i} className="sol-img-abs" >
-                                    <div className="solImgdiv"><img style={{ width: "180px", height: "160px" }} src={e.img} alt="" />
-                                        <div className="solution-images-title">{e.title}</div>
+                                    <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" />
+                                        {/* <div className="solution-images-title">{e.title}</div> */}
                                     </div>
                                 </div>
                             ))}

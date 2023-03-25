@@ -1,5 +1,12 @@
-
-
+*{
+    scroll-behavior: smooth;
+}
+/* 
+window.scroll{
+    top: 2500; 
+    left: 0;
+    behavior: smooth
+  } */
 
 .buttonsmain{
     display: flex;
@@ -11,10 +18,15 @@
     gap:5px;
    
     border-radius: 0px;
-    /* margin: auto; */
+    margin: auto;
     /* text-align: center;
 align-items: center;
 justify-content: center; */
+overflow: hidden;
+position: auto;
+/* width: 100%; */
+z-index: 999;
+
    
     }
 
@@ -32,6 +44,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 22px;
 line-height: 24px;
+
 /* identical to box height */
 
 text-align: center;
@@ -50,16 +63,16 @@ z-index: 1;
         margin-top: 10px;
     }
 
-    .button-ta div :hover{
+    .button-ta a :hover{
          text-decoration: none;
          border: none;
     }
 
     
 .buttonsmain :hover{
-        color:blue;
+        color:#FE602F;
         background-color: white;
-        border:1px solid blue
+        border:1px solid #FE602F
     }
     .title-tab{
        
@@ -69,6 +82,9 @@ z-index: 1;
         /* margin: auto; */
         
         justify-content: center;
+        /* background-color: #f1f1f1; */
+        /* position: fixed;
+        z-index: 999; */
         /* margin: auto; */
         /* margin-left: 10%; */
     }
@@ -79,21 +95,19 @@ font-weight: 700;
 font-size: 36px;
 line-height: 54px;
 /* identical to box height */
-
 text-align: center;
-
 color: #000000;
-
     }
 
-    .ulko ul li::before { 
+   .ulko  ul li::before { 
         list-style-type: none;
          content: "\2022"; 
         color: #FE602F !important; 
         font-weight: bold;
          display: inline-block;
          width: 1em;
-         margin-left: -1em; 
+         margin-left: -0.9em; 
+         margin-top: -1em;
        }
     .LearnFlex{
         display: flex;

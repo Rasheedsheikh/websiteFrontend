@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import db from "../db.json"
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Learnn = () => {
+
+    const[active,setActive]=useState(false)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <>
@@ -37,17 +43,18 @@ const Learnn = () => {
 
                 </div>
                     <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1175.jpg" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
                     </div>
                 </div>
                 </div>
 
 
                 <div id="tab2">
+                <div style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></div>
                 <div className="LearnFlex">
                 {/* <center style={{width:"100px",border:"2px solid #FE602F"}}></center> */}
                 <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px",  }} src="./Images/Group 1175.jpg" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px" }} src="./Images/Group 1173.jpg" alt="" /></div>
                     </div>
 
 
@@ -87,17 +94,18 @@ const Learnn = () => {
 
                 </div>
                     <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1175.jpg" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
                     </div>
                 </div>
                 </div>
 
 
                 <div id="tab4">
+                <div style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></div>
                 <div className="LearnFlex">
-                {/* <center style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></center> */}
+              
                 <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1175.jpg" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Mask group.jpg" alt="" /></div>
                     </div>
                 <div className="LearnLeft">
                     {console.log(db?.Careers?.Learn)}
@@ -116,6 +124,8 @@ const Learnn = () => {
                  
                 </div>
                 </div>
+
+                <Footer/>
 
 
 

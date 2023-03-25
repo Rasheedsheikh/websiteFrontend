@@ -8,6 +8,8 @@ import Footer from "./Footer";
 
 const Learn = () => {
     const [change, setChange] = useState(0)
+
+
     return (
         <>
             
