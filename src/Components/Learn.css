@@ -1,58 +1,90 @@
+*{
+    scroll-behavior: smooth;
+}
 /* 
-
-.Nav{
-    display: flex;
-    padding-left: 0;
-    margin-bottom: 30px;
-    justify-content: space-between; 
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    bottom: 10;
-} */
-
+window.scroll{
+    top: 2500; 
+    left: 0;
+    behavior: smooth
+  } */
 
 .buttonsmain{
     display: flex;
     /* justify-content:space-around ; */
     width:"80%";
     justify-content: center;
-    margin: 0 auto !important   ;
-    /* border: 1px solid red;       */
-    gap:0px;
+    /* margin: 0 auto !important   ; */
+    /*        */
+    gap:5px;
+   
     border-radius: 0px;
+    margin: auto;
+    /* text-align: center;
+align-items: center;
+justify-content: center; */
+overflow: hidden;
+position: auto;
+/* width: 100%; */
+z-index: 999;
+
+   
     }
 
-    .button-tab{
-        border: 1px solid orangered;
+    .button-ta{
+     
         border-radius: 10%;
-        color: orange;
-        background-color: white;
-        height: 50px;
-        width: 239.75px;
-        height: 50px;
+    
+         height: 50px;
+         /* margin-top: 10px !important; */
+         width: 239.75px; 
+        /* height: 100px;  */
         border-radius: 0px;
         font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 22px;
 line-height: 24px;
+
 /* identical to box height */
 
 text-align: center;
+align-items: center;
+justify-content: center;
+/* margin: auto; */
 
-color: #FE602F;
+background-color: #f1f1f1;
+color: #000000;
+position: relative;
+z-index: 1;
+/* margin-top: 20px !important; */
 
     }
+    .button-ta div{
+        margin-top: 10px;
+    }
 
+    .button-ta a :hover{
+         text-decoration: none;
+         border: none;
+    }
+
+    
+.buttonsmain :hover{
+        color:#FE602F;
+        background-color: white;
+        border:1px solid #FE602F
+    }
     .title-tab{
+       
         /* margin: auto; */
         margin-top: 10%;
         align-items: center;
         /* margin: auto; */
         
         justify-content: center;
+        /* background-color: #f1f1f1; */
+        /* position: fixed;
+        z-index: 999; */
         /* margin: auto; */
         /* margin-left: 10%; */
     }
@@ -63,33 +95,50 @@ font-weight: 700;
 font-size: 36px;
 line-height: 54px;
 /* identical to box height */
-
 text-align: center;
-
 color: #000000;
-
     }
+
+   .ulko  ul li::before { 
+        list-style-type: none;
+         content: "\2022"; 
+        color: #FE602F !important; 
+        font-weight: bold;
+         display: inline-block;
+         width: 1em;
+         margin-left: -0.9em; 
+         margin-top: -1em;
+       }
     .LearnFlex{
         display: flex;
-        margin-top: 115px;
-        margin-bottom: 15%;
+        margin: auto;
+        /* margin-top: 115px; */
+        /* margin-bottom: 15%; */
         /* justify-content: space-between; */
         /* gap:92px; */
+        
     }
     .LearnLeft{
     font-family: "poppins";
         width: 650px;
 height: 368px;
 margin-left: 80px;
+margin-top: 2%;
 top: 234px;
-/* border: 1px solid red; */
+
+/*  */
     }
 .LearnRight{
-    margin-left: 15.74%;
-/* margin-right: -31.38%;
-margin-top: 35.62%;
-margin-bottom: 7.35%; */
+    margin-left: 5%;
+    margin-bottom: 7.35%;
+  
 
-/* background: url(portrait-young-handsome-smiling-businessman-holding-laptop-hands-typing-browsing-web-pages-isolated-white-background.png); */
-/* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+
+
+.LearnFlex2{
+    display: flex;
+    margin: auto;
+
 }
