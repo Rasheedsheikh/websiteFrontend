@@ -13,7 +13,8 @@ import Footer from './Components/Footer';
 import Mui from "./Components/Mui"
 import Mapp from './Components/Mapp';
 import Learnn from './Components/Learnn';
-// import FillMain from './Components/FillMain';
+import Careerm from './Components/Careerm';
+
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
        <Route path="/mui" element={<Mui/>}/>
        <Route path="/mapp"element={<Mapp/>}/>
        <Route path="/learnn"element={<Learnn/>}/>
+       <Route path="/careerm" element={<Careerm/>}/>
+      
 
   </Routes>
     </div>
