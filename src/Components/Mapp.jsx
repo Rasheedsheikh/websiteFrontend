@@ -3,11 +3,11 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import "leaflet/dist/leaflet.css"
 const Mapp = () => {
-  const position = [40.7557,73.5876]
+  const position = [40.7887 ,-73.5996 ]
 
   const markerIcon = L.icon({
     iconUrl: 'https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png',
-    iconSize: [20, 20],
+    iconSize: [25, 25],
     iconAnchor: [25, 50],
     popupAnchor: [0, -50]
   });
