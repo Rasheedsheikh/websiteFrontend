@@ -3,6 +3,8 @@ import { useState } from "react";
 import db from "../db.json"
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+import Config from "../Config";
 
 const Learnn = () => {
 
@@ -11,9 +13,44 @@ const Learnn = () => {
         window.scrollTo(0, 0);
       }, []);
 
+
+      const [data ,setData1]=useState([])
+      useEffect(()=>{
+          show()
+      },[])
+  
+      const show= async()=>{
+              try{
+                let res= await fetch(`${Config.host}/home`)
+                let dataa= await res.json()
+                console.log(dataa.data)
+                setData1(dataa.data)
+              }
+              catch(err){
+           console.log(err)
+              }
+            }
+
     return (
         <>
-<Navbar/>
+        <div className="mainlearnn">
+            <div>
+            <div className="Navv" style={{marginTop:"0%"}}>
+                <div className="NavLeft">
+                    <img style={{ width: "253px", height: "50px" }} src="./Images/logo (1).jpg" alt="/" />
+                    {/* <img style={{ width: "253px", height: "50px", }} src="./Images/Logo Value Health 1.svg" alt="/" /> */}
+                </div>
+
+                <div className="NavRight">
+                    {data?.Total?.NavRoutes?.map((e, i) => (
+                        <div key={i}>
+                     <Link style={{textDecoration:"none",color:"black"}} to={e.direct}><div>{e.name}</div></Link> 
+                           {/* { console.log(e,i)} */}
+                        </div>
+                    ))}
+                </div>
+            </div>
+</div>
             <div className="title-tab">
                 <div className="buttonsmain">
                     <div className="button-ta">
@@ -23,12 +60,13 @@ const Learnn = () => {
                     <div className="button-ta"> <a style={{textDecoration:"none" , color:"black"}} href="#tab4"><div>Payers</div></a></div>
                 </div>
             </div>
+            </div>
             <div  style={{border:"1px solid #F1F1F1",marginTop:"15px"}}></div>
             <div id="tab1">
-            <div className="LearnFlex">
+            <div className="LearnFlex1">
                 <div className="LearnLeft">
                     {console.log(db?.Careers?.Learn)}
-                       <center style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></center>
+                       <center style={{width:"100px",border:"2px solid #FE602F"}}></center>
                     <div className="Learn-title">Life Sciences</div>
                     <div className="ulko" style={{gap:"20px"}}>
                         <ul style={{gap:"20px",marginTop:"10px",lineHeight:"30px"}} >
@@ -43,7 +81,7 @@ const Learnn = () => {
 
                 </div>
                     <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "25%",borderRadius:"50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
                     </div>
                 </div>
                 </div>
@@ -51,10 +89,10 @@ const Learnn = () => {
 
                 <div id="tab2">
                 <div style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></div>
-                <div className="LearnFlex">
+                <div className="LearnFlex2">
                 {/* <center style={{width:"100px",border:"2px solid #FE602F"}}></center> */}
                 <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px" }} src="./Images/Group 1173.jpg" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px",marginTop:"15%" }} src="./Images/Group 1173.jpg" alt="" /></div>
                     </div>
 
 
@@ -79,7 +117,7 @@ const Learnn = () => {
 
 
 <div id="tab3">
-                <div className="LearnFlex">
+                <div className="LearnFlex3">
                 <div className="LearnLeft">
                     {console.log(db?.Careers?.Learn)}
                     <center style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></center>
@@ -94,15 +132,15 @@ const Learnn = () => {
 
                 </div>
                     <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
+                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "25%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
                     </div>
                 </div>
                 </div>
 
 
-                <div id="tab4">
+                <div id="tab4" >
                 <div style={{width:"100px",border:"2px solid #FE602F",margin:"auto"}}></div>
-                <div className="LearnFlex">
+                <div className="LearnFlex4">
               
                 <div className="LearnRight">
                         <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Mask group.jpg" alt="" /></div>

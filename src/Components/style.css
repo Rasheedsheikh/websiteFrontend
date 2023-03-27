@@ -7,16 +7,18 @@
   display: flex;
   padding-left: 0;
   justify-content: space-between;
-  position: fixed;
+  /* position: fixed !important; */
   width: 100%;
   height: 68px;
   z-index: 1234567890;
-  top: 10;
+  top: 9999;
   /* background: rgb(137 123 123 / 50%); */
   /* margin-top: 10px; */
   opacity: 100%;
   height:64px;
   background-color: #FFFFFF;
+
+
 
   /* background: rgb(78 74 74 / 50%); */
 
@@ -41,12 +43,25 @@
   font-weight: 400;
   font-size: 16px !important;
   color: black !important;
- 
+  /* background-color: #fff; */
+  /* border: 1px solid #ccc; */
+  /* border-radius: 4px; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+  /* display: none; */
+  /* left: 0; */
+  /* padding: 10px; */
+  /* position: absolute; */
+  /* top: 100%; */
+  /* transition: all 0.3s ease; */
+  /* width: 200px; */
+  /* z-index: 1; */
   
 
  }
  .NavRight .navrightchild :hover{
   border-bottom: 2px solid #FE602F;
+  /* display: block; */
+  /* transform: translateY(20px); */
  }
  .NavRight .navrightchild a.active{
   color: #FE602F;
@@ -71,7 +86,8 @@
   /* margin-top: 10px; */
   background-color: #FFFFFF;
   position: fixed;
-  float: bottom;
+  /* transition: all 0.3s ease; */
+  /* float: bottom; */
 }
 
   /* margin-bottom: -2%; */
@@ -84,11 +100,13 @@
 
 .hoveroptions{
   width:200px;
-  height:40px;
+  height:50px;
   justify-content: center;
   text-align: center;
   font-size: 18px;
   float: bottom;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
   /* overflow: hidden;
   transition: height 0.3s ease; */
   /* height: 100px; */
@@ -109,7 +127,7 @@
   font-size: 2.2rem;
   font-weight: bold;
     background: rgba(56, 55, 55, 0.5);
-    animation: 'slide-in 2s forwards';
+    animation: 'slide-in 3s forwards';
   /* text-shadow: 2px 2px black; */
 }
 .text-overlay div{
@@ -891,3 +909,5 @@ ul li::before {
 .leaflet-control-attribution a {
   display: none !important;
 }
+
+

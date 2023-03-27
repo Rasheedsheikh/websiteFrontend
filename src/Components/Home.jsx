@@ -38,6 +38,23 @@ const Home = () => {
         show()
     }, [])
 
+    const [text, setText] = useState('Initial Text');
+  const texts = ['A leading provider of life scienece and health care solutions', 'Patient support programs and Drug adherence programs',"Decentralized clinical trials & eBenefit verification"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(prevIndex => (prevIndex + 1) % texts.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setText(texts[index]);
+  }, [index]);
+
+
     // useEffect(() => {
     //     console.log({URL: window.location.pathname});
     //     if (window.location.pathname.includes("career")) {
@@ -121,7 +138,9 @@ const Home = () => {
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>
                             <div className="text-overlay">
-                                <div>A leading provider of life scienece and health care solutions</div></div>
+                                {/* <div>A leading provider of life scienece and health care solutions</div> */}
+                                        <div>{text}</div>
+                                </div>
 
                         </div>
 
@@ -311,7 +330,7 @@ const Home = () => {
                                                 <div className="commu-desc">{el.desc}</div>
                                             </div>
                                             <div>
-                                                <center> <Link to="/career"><button className="buttons" style={{ marginBottom: "10px" }}>Join us</button></Link>
+                                                <center> <Link to="/careerm"><button className="buttons" style={{ marginBottom: "10px" }}>Join us</button></Link>
                                                 </center>
                                             </div>
                                             <div className="commu-images">

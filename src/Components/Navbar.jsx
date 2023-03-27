@@ -21,7 +21,7 @@ const Navbar=()=>{
           }
     return(
         <>
-              <div className="Nav">
+              <div className="Nav" style={{top:"0"}}>
                 <div className="NavLeft">
                     <img style={{ width: "253px", height: "50px" }} src="./Images/logo (1).jpg" alt="/" />
                     {/* <img style={{ width: "253px", height: "50px", }} src="./Images/Logo Value Health 1.svg" alt="/" /> */}
@@ -30,7 +30,7 @@ const Navbar=()=>{
                 <div className="NavRight">
                     {data?.Total?.NavRoutes?.map((e, i) => (
                         <div key={i}>
-                     <Link style={{textDecoration:"none",color:"black"}} to={e.path}><div>{e.name}</div></Link> 
+                     <Link style={{textDecoration:"none",color:"black"}} to={e.direct}><div>{e.name}</div></Link> 
                            {/* { console.log(e,i)} */}
                         </div>
                     ))}
