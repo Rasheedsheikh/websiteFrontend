@@ -142,12 +142,16 @@ top: 234px;
 
 
 
-.mainlearnn{
+.title-tab{
 width: 100%;
     background-color: #fff;
-    margin-top: -1.3%;
-    position: fixed;
-    margin-bottom: 20%;
+    /* margin-top: 1.3%; */
+    /* position: fixed; */
+    /* margin-bottom: 20%; */
+   position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top:0;
+  
 
 
 }
@@ -176,7 +180,7 @@ width: 100%;
   .LearnFlex1{
     display: flex;
     margin: auto;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     /* position: absolute; */
     /* margin-bottom: 15%; */
     /* justify-content: space-between; */
