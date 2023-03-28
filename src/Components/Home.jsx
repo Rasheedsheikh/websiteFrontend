@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import './style.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -25,6 +25,8 @@ const Home = () => {
     const [flag, setFlag] = useState(false)
     const [activeItem, setActiveItem] = useState(true)
     const navigate = useNavigate()
+    const videoRef = useRef(null);
+    const [currentTime, setCurrentTime] = useState(0);
     const handleItemEnter = (index) => {
 
         setActiveItem(index);
@@ -38,33 +40,124 @@ const Home = () => {
         show()
     }, [])
 
-    const [text, setText] = useState('Initial Text');
-  const texts = ['A leading provider of life scienece and health care solutions', 'Patient support programs and Drug adherence programs',"Decentralized clinical trials & eBenefit verification"];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prevIndex => (prevIndex + 1) % texts.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    setText(texts[index]);
-  }, [index]);
-
+    const [text, setText] = useState(0);
+    const texts = ['A leading provider of life scienece and health care solutions', 'Patient support programs', "Drug adherence programs", "Decentralized clinical trials", "eBenefit verification", "ePedegree Solutions", "Let Us Drive Patients Outcome Together"];
+    const [index, setIndex] = useState(0);
 
     // useEffect(() => {
-    //     console.log({URL: window.location.pathname});
-    //     if (window.location.pathname.includes("career")) {
-    //         setFlag(true)
-    //     }
-    //     else {
-    //         setFlag(false)
-    //     }
+    //     // const interval = setInterval(() => {
+    //     //   setIndex(prevIndex => (prevIndex + 1) % texts.length);
+    //     // }, 8000);
 
-    // },[])
+    //     // return () => clearInterval(interval);
+
+    //     setTimeout(() => setIndex(0), 1000);
+    //     setTimeout(() => setIndex(1), 10000);
+    //     setTimeout(() => setIndex(2), 15000);
+    //     setTimeout(() => setIndex(3), 18000);
+    //     setTimeout(() => setIndex(4), 22000);
+    //     setTimeout(() => setIndex(5), 27000);
+    //     setTimeout(() => setIndex(6), 32000)
+    // }, []);
+
+    // useEffect(() => {
+    //     setText(texts[index]);
+    // }, [index]);
+
+
+    useEffect(() => {
+        const updateTextElements = () => {
+            const video = videoRef.current;
+            const text1 = document.getElementById("text1");
+            const text2 = document.getElementById("text2");
+            const text3 = document.getElementById("text3");
+            const text4 = document.getElementById("text4");
+            const text5 = document.getElementById("text5");
+            const text6 = document.getElementById("text6");
+            const text7 = document.getElementById("text7");
+
+            if (video.currentTime >= 0 && video.currentTime < 10) {
+                text1.style.display = "block";
+                text2.style.display = "none";
+                text3.style.display = "none";
+                text4.style.display = "none";
+                text5.style.display = "none";
+                text6.style.display = "none";
+                text7.style.display = "none";
+            } else if (video.currentTime >= 10 && video.currentTime < 16) {
+                text1.style.display = "none";
+                text2.style.display = "block";
+                text3.style.display = "none";
+                text4.style.display = "none";
+                text5.style.display = "none";
+                text6.style.display = "none";
+                text7.style.display = "none";
+            } else if (video.currentTime > 16 && video.currentTime < 22) {
+                text1.style.display = "none";
+                text2.style.display = "none";
+                text3.style.display = "block";
+                text4.style.display = "none";
+                text5.style.display = "none";
+                text6.style.display = "none";
+                text7.style.display = "none";
+            }
+            else if (video.currentTime >= 22 && video.currentTime < 27) {
+                text1.style.display = "none";
+                text2.style.display = "none";
+                text3.style.display = "none";
+                text4.style.display = "block";
+                text5.style.display = "none";
+                text6.style.display = "none";
+                text7.style.display = "none";
+            }
+            else if (video.currentTime >= 27 && video.currentTime < 32) {
+                text1.style.display = "none";
+                text2.style.display = "none";
+                text3.style.display = "none";
+                text4.style.display = "none";
+                text5.style.display = "block";
+                text6.style.display = "none";
+                text7.style.display = "none";
+            }
+            else if (video.currentTime >=32 && video.currentTime < 37) {
+                text1.style.display = "none";
+                text2.style.display = "none";
+                text3.style.display = "none";
+                text4.style.display = "none";
+                text5.style.display = "none";
+                text6.style.display = "block";
+                text7.style.display = "none";
+            }
+
+            else if (video.currentTime >= 37) {
+                text1.style.display = "none";
+                text2.style.display = "none";
+                text3.style.display = "none";
+                text4.style.display = "none";
+                text5.style.display = "none";
+                text6.style.display = "none";
+                text7.style.display = "block";
+            }
+
+            else {
+                text1.style.display = "none";
+                text2.style.display = "none";
+                text3.style.display = "none";
+                text4.style.display = "none";
+                text5.style.display = "none";
+                text6.style.display = "none";
+                text7.style.display = "none";
+            }
+        };
+
+        const video = videoRef.current;
+        video.addEventListener('timeupdate', updateTextElements);
+
+        return () => {
+            video.removeEventListener('timeupdate', updateTextElements);
+        };
+    }, []);
+
 
 
     const show = async () => {
@@ -88,7 +181,7 @@ const Home = () => {
         <>
             <div className="Nav">
                 <div className="NavLeft">
-                    <img style={{ width: "253px", height: "50px", marginTop:"10px"}} src="./Images/logo (1).jpg" alt="/" />
+                    <img style={{ width: "253px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
                 </div>
 
                 <div className="NavRight">
@@ -107,13 +200,13 @@ const Home = () => {
 
 
                             {activeItem === i && (
-                                <div  className={activeItem ? "dropdown-menu" : ""} style={{ textDecoration: "none" }}>
+                                <div className={activeItem ? "dropdown-menu" : ""} style={{ textDecoration: "none" }}>
                                     {e?.options.map((option, optionIndex) => (
                                         <>
-                                        <a style={{textDecoration:"none",color:"#000000"}}  onClick={()=>setActiveItem(null)} href={option.url}>
-                                        <div style={{gap:"10%"}} className="hoveroptions"  key={optionIndex}>{option.label}
-                                        </div>
-                                        </a>
+                                            <a style={{ textDecoration: "none", color: "#000000" }} onClick={() => setActiveItem(null)} href={option.url}>
+                                                <div style={{ gap: "10%" }} className="hoveroptions" key={optionIndex}>{option.label}
+                                                </div>
+                                            </a>
                                         </>
                                     ))}
                                 </div>
@@ -134,13 +227,24 @@ const Home = () => {
                         <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
                         </div> */}
                         <div >
-                            <video className='videoTag' autoPlay loop muted style={{ marginTop: "-5%", height: "800px", width: "100%", zIndex: "-2" }}>
+                            <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-5%", height: "800px", width: "100%", zIndex: "-2" }}>
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>
                             <div className="text-overlay">
                                 {/* <div>A leading provider of life scienece and health care solutions</div> */}
-                                        <div>{text}</div>
-                                </div>
+                                {/* <div>{text}</div> */}
+
+
+                                <div id="text1">A leading provider of life scienece and health care solutions</div>
+                                <div id="text2">Patient support programs</div>
+                                <div id="text3">Drug adherence programs</div>
+                                <div id="text4">Decentralized clinical trials</div>
+                                <div id="text5">eBenefit verification</div>
+                                <div id="text6">ePedegree Solutions</div>
+                                <div id="text7">Let Us Drive Patients Outcome Together</div>
+
+
+                            </div>
 
                         </div>
 
@@ -166,7 +270,7 @@ const Home = () => {
 
                     {/* {data?.Total.Services.shapes.map((e, i) => ( */}
                     {data?.Total?.Services?.shapes?.map((obj, i) => (
-                        <div key={i} className="shapes1" style={i % 2 === 1 ? { backgroundColor: "#F5F5F5", border: "none" } : { backgroundColor: "white" }}>
+                        <div key={i} className="shapes1" style={{ backgroundColor: "white" }}>
                             <div className="numb">{obj.number}</div>
 
                             <div className="abso">
@@ -206,7 +310,7 @@ const Home = () => {
                             <div className="indus-title"> {e.title}</div>
                             <div className="indus-desc"> {e.desc}</div>
                             {/* <Link to="/learnn">   */}
-                            <div> <button onClick={()=>navigate("/learnn")} className="buttons">Learn More</button></div>
+                            <div> <button onClick={() => navigate("/learnn")} className="buttons">Learn More</button></div>
                             {/* </Link> */}
 
                         </div>
