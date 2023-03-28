@@ -70,10 +70,10 @@ const Learnn = () => {
                         <div className="Learn-title">Life Sciences</div>
                         <div className="ulko" style={{ gap: "20px" }}>
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }} >
-                                <li> "We are specialised in building patient services solutions using technologies like Sales Force Health Cloud, bespoke solutions and integration with payers and providers application such as EMR, benefit verification and prior authorization for benefits.",</li>
-                                <li> "We help drive life sciences companies in research and development (R&D) by helping them to optimize clinical trials so they can stay ahead of the curve in developing new products and technologies"</li>
-                                <li> "We help them embrace digital technology in order to streamline processes, improve data analysis, and accelerate discovery and development."</li>
-                                <li> "Submission of Investigational New Drug (IND) application or NDA to the regulatory agency and managing all ongoing reporting processes for FDA, MHRA and European Agencies. Help companies to meet IDMP standards and provide accurate and complete information on their products to regulatory agencies."</li>
+                                <li> We are specialised in building patient services solutions using technologies like Sales Force Health Cloud, bespoke solutions and integration with payers and providers application such as EMR, benefit verification and prior authorization for benefits.,</li>
+                                <li> We help drive life sciences companies in research and development (R&D) by helping them to optimize clinical trials so they can stay ahead of the curve in developing new products and technologies</li>
+                                <li> We help them embrace digital technology in order to streamline processes, improve data analysis, and accelerate discovery and development.</li>
+                                <li> Submission of Investigational New Drug (IND) application or NDA to the regulatory agency and managing all ongoing reporting processes for FDA, MHRA and European Agencies. Help companies to meet IDMP standards and provide accurate and complete information on their products to regulatory agencies.</li>
                             </ul>
                         </div>
 
@@ -102,9 +102,9 @@ const Learnn = () => {
                         <div className="Learn-title">Emerging Biotech</div>
                         <div className="ulko" >
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }} >
-                                <li> "Our services to emerging biotechnology companies accelerate them to focus on niche areas and aim to disrupt the market with their cutting-edge research and development efforts."</li>
-                                <li>    "We partner with leading patient services, logistics, distribution and benefit verification companies to build their commercial strategies and augment with technology to increase the speed to market and reduce cost to market.",</li>
-                                <li> "Our Pharma IT in a Box solution allows the emerging biotechnology companies to build a strong technology foundation which can scale as the business scales or sets them apart in their M&A pursuit"</li>
+                                <li> Our services to emerging biotechnology companies accelerate them to focus on niche areas and aim to disrupt the market with their cutting-edge research and development efforts.</li>
+                                <li>    We partner with leading patient services, logistics, distribution and benefit verification companies to build their commercial strategies and augment with technology to increase the speed to market and reduce cost to market.,</li>
+                                <li> Our Pharma IT in a Box solution allows the emerging biotechnology companies to build a strong technology foundation which can scale as the business scales or sets them apart in their M&A pursuit</li>
 
                             </ul>
                         </div>
@@ -124,9 +124,9 @@ const Learnn = () => {
                         <div className="Learn-title">Providers</div>
                         <div className="ulko" >
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }}>
-                                <li>  "We work with large independent facilities, medical services groups and DSO (Dental Services Organization)."</li>
-                                <li> " We provide state of the art digital front door experience to our customer which helps reduce the operating cost and opens up doors for new patients and provides phenomenal service to patients 24/7 every single day.",</li>
-                                <li> "Our SMS based appointment reminder services, referral management, Voice activated front desk service and externalised medical records to patients in a secured way are the few services we are specialised on."</li>
+                                <li>  We work with large independent facilities, medical services groups and DSO (Dental Services Organization).</li>
+                                <li>  We provide state of the art digital front door experience to our customer which helps reduce the operating cost and opens up doors for new patients and provides phenomenal service to patients 24/7 every single day.,</li>
+                                <li> Our SMS based appointment reminder services, referral management, Voice activated front desk service and externalised medical records to patients in a secured way are the few services we are specialised on.</li>
                             </ul>
                         </div>
 
@@ -151,10 +151,10 @@ const Learnn = () => {
                         <div className="Learn-title">Payers</div>
                         <div className="ulko">
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }}>
-                                <li> "We provide solutions to Insurance companies to reduce their service desk cost by providing the benefit summary to many clearing houses in order to enable electronic benefit ", </li>
-                                <li>"verification services and prior authorization services  Our customer development using MERN stack allows payers to provide many bespoke solutions for their customers and agents to seamlessly integrate any workflows such as customer onboarding, claim processing and benefit verification"</li>
-                                <li> "We help them embrace digital technology in order to streamline processes, improve data analysis, and accelerate discovery and development."</li>
-                                <li> "Submission of Investigational New Drug (IND) application or NDA to the regulatory agency and managing all ongoing reporting processes for FDA, MHRA and European Agencies. Help companies to meet IDMP standards and provide accurate and complete information on their products to regulatory agencies."</li>
+                                <li> We provide solutions to Insurance companies to reduce their service desk cost by providing the benefit summary to many clearing houses in order to enable electronic benefit , </li>
+                                <li>verification services and prior authorization services  Our customer development using MERN stack allows payers to provide many bespoke solutions for their customers and agents to seamlessly integrate any workflows such as customer onboarding, claim processing and benefit verification</li>
+                                <li> We help them embrace digital technology in order to streamline processes, improve data analysis, and accelerate discovery and development.</li>
+                                <li> Submission of Investigational New Drug (IND) application or NDA to the regulatory agency and managing all ongoing reporting processes for FDA, MHRA and European Agencies. Help companies to meet IDMP standards and provide accurate and complete information on their products to regulatory agencies.</li>
                             </ul>
                         </div>
 

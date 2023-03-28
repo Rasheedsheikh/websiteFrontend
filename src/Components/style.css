@@ -65,9 +65,7 @@
   /* display: block; */
   /* transform: translateY(20px); */
  }
- .NavRight .navrightchild a.active{
-  color: #FE602F;
- }
+
 
 .NavRight :hover {
   color: #FE602F;
@@ -101,7 +99,7 @@
   
   transition:top 4s;
   -webkit-transition:top 2s;
-
+  transform: translateY(20px);
 
 
 
@@ -156,7 +154,7 @@
   transform: translateY(20px);
   /* transition: all 0.3s ease; */
   content: '';
-  transition: 0.9s;
+  /* transition:  translateY(0.9s) */
   /* overflow: hidden;
   transition: height 0.3s ease; */
   /* height: 100px; */
@@ -169,7 +167,8 @@
 }
 .text-overlay {
   position: absolute;
-  width:700px;
+  width:auto;
+  height:auto;
   top: 70%;
 /* margin-left: 30px; */
   /* transform: translate(-50%, -50%); */
@@ -177,11 +176,12 @@
   font-size: 2.2rem;
   font-weight: bold;
     background: rgba(56, 55, 55, 0.5);
-    animation: 'slide-in 3s forwards';
+    /* animation: 'slide-in 3s forwards'; */
   /* text-shadow: 2px 2px black; */
 }
 .text-overlay div{
   margin-left: 7%;
+  /* margin: auto; */
 }
 
 .ServiceMain {
