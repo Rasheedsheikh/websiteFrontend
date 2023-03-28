@@ -1,5 +1,5 @@
 * {
-  font-family: "roboto";
+  font-family: "nunito";
   scroll-behavior: smooth;
 }
 
@@ -167,8 +167,9 @@
 }
 .text-overlay {
   position: absolute;
-  width:auto;
-  height:auto;
+  width:700px;
+  height:50;
+  /* height:auto; */
   top: 70%;
 /* margin-left: 30px; */
   /* transform: translate(-50%, -50%); */
@@ -182,6 +183,11 @@
 .text-overlay div{
   margin-left: 7%;
   /* margin: auto; */
+}
+.vidtx{
+  /* margin-right: -1%; */
+  display: none;
+  /* margin-left: 10%; */
 }
 
 .ServiceMain {
@@ -286,7 +292,7 @@ text-align: center; */
 
   background-color: #FE602F;
   border-radius: 50%;
-  top: -7%;
+  top: -6%;
   left: 45%
     /* right:40% */
 
@@ -443,7 +449,7 @@ text-align: center; */
   margin-top: 40px;
   /* position: relative; */
   background-color: #F1F1F1;
-  height:250px;
+  height:210px;
   /* z-index: -1; */
     /* margin-top: 20px; */
 
@@ -494,7 +500,7 @@ text-align: center; */
   row-gap: 40px;
   grid-template-columns: repeat(5, 1fr);
   border-radius: 10%;
-  margin-top: 20px;
+  margin-top: 30px;
   /* margin-top: 10px; */
 }
 

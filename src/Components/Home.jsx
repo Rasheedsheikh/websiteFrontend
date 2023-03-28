@@ -76,7 +76,8 @@ const Home = () => {
             const text6 = document.getElementById("text6");
             const text7 = document.getElementById("text7");
 
-            if (video.currentTime >= 0 && video.currentTime < 10) {
+            
+            if (video.currentTime > 0 && video.currentTime < 10) {
                 text1.style.display = "block";
                 text2.style.display = "none";
                 text3.style.display = "none";
@@ -87,6 +88,7 @@ const Home = () => {
             } else if (video.currentTime >= 10 && video.currentTime < 16) {
                 text1.style.display = "none";
                 text2.style.display = "block";
+                text2.style.paddingLeft="30%"
                 text3.style.display = "none";
                 text4.style.display = "none";
                 text5.style.display = "none";
@@ -96,6 +98,7 @@ const Home = () => {
                 text1.style.display = "none";
                 text2.style.display = "none";
                 text3.style.display = "block";
+                text3.style.paddingLeft="30%"
                 text4.style.display = "none";
                 text5.style.display = "none";
                 text6.style.display = "none";
@@ -106,30 +109,33 @@ const Home = () => {
                 text2.style.display = "none";
                 text3.style.display = "none";
                 text4.style.display = "block";
+                text4.style.paddingLeft="25%"
                 text5.style.display = "none";
                 text6.style.display = "none";
                 text7.style.display = "none";
             }
-            else if (video.currentTime >= 27 && video.currentTime < 32) {
+            else if (video.currentTime >= 27 && video.currentTime < 31) {
                 text1.style.display = "none";
                 text2.style.display = "none";
                 text3.style.display = "none";
                 text4.style.display = "none";
                 text5.style.display = "block";
+                text5.style.paddingLeft="30%"
                 text6.style.display = "none";
                 text7.style.display = "none";
             }
-            else if (video.currentTime >=32 && video.currentTime < 37) {
+            else if (video.currentTime >=31 && video.currentTime < 36) {
                 text1.style.display = "none";
                 text2.style.display = "none";
                 text3.style.display = "none";
                 text4.style.display = "none";
                 text5.style.display = "none";
                 text6.style.display = "block";
+                text6.style.paddingLeft="30%"
                 text7.style.display = "none";
             }
 
-            else if (video.currentTime >= 37) {
+            else if (video.currentTime >= 36 && video.currentTime < 41) {
                 text1.style.display = "none";
                 text2.style.display = "none";
                 text3.style.display = "none";
@@ -137,7 +143,9 @@ const Home = () => {
                 text5.style.display = "none";
                 text6.style.display = "none";
                 text7.style.display = "block";
+                // text7.style.paddingLeft="10%"
             }
+           
 
             else {
                 text1.style.display = "none";
@@ -235,13 +243,13 @@ const Home = () => {
                                 {/* <div>{text}</div> */}
 
 
-                                <div id="text1">A leading provider of life scienece and health care solutions</div>
-                                <div id="text2">Patient support programs</div>
-                                <div id="text3">Drug adherence programs</div>
-                                <div id="text4">Decentralized clinical trials</div>
-                                <div id="text5">eBenefit verification</div>
-                                <div id="text6">ePedegree Solutions</div>
-                                <div id="text7">Let Us Drive Patients Outcome Together</div>
+                                <div id="text1" className="vidtx">A leading provider of life scienece and health care solutions</div>
+                                <div id="text2" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Patient support programs</div>
+                                <div id="text3" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Drug adherence programs</div>
+                                <div id="text4" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Decentralized clinical trials</div>
+                                <div id="text5" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>eBenefit verification</div>
+                                <div id="text6" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>ePedegree Solutions</div>
+                                <div id="text7" className="vidtx" style={{width:"180px !important",height:"50px",marginRight:"-10%"}}>Let Us Drive Patients Outcome Together</div>
 
 
                             </div>

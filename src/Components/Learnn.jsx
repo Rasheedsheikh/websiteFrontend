@@ -80,19 +80,19 @@ const Learnn = () => {
 
 
                     </div>
-                    <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "25%", borderRadius: "50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
+                    <div className="LearnRight" style={{marginTop:"5%"}}>
+                    <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1173.jpg" alt="" /></div>
                     </div>
                 </div>
             </div>
 
 
             <div id="tab2">
-                <div style={{ width: "100px", border: "2px solid #FE602F", margin: "auto" }}></div>
+                <div style={{ width: "100px", border: "2px solid #FE602F", marginTop:"10%" ,marginLeft:"50%"}}></div>
                 <div className="LearnFlex2">
                     {/* <center style={{width:"100px",border:"2px solid #FE602F"}}></center> */}
                     <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1173.jpg" alt="" /></div>
+                    <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
                     </div>
 
 
@@ -103,7 +103,7 @@ const Learnn = () => {
                         <div className="ulko" >
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }} >
                                 <li> Our services to emerging biotechnology companies accelerate them to focus on niche areas and aim to disrupt the market with their cutting-edge research and development efforts.</li>
-                                <li>    We partner with leading patient services, logistics, distribution and benefit verification companies to build their commercial strategies and augment with technology to increase the speed to market and reduce cost to market.,</li>
+                                <li> We partner with leading patient services, logistics, distribution and benefit verification companies to build their commercial strategies and augment with technology to increase the speed to market and reduce cost to market.,</li>
                                 <li> Our Pharma IT in a Box solution allows the emerging biotechnology companies to build a strong technology foundation which can scale as the business scales or sets them apart in their M&A pursuit</li>
 
                             </ul>
@@ -132,7 +132,7 @@ const Learnn = () => {
 
                     </div>
                     <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "25%", borderRadius: "50%" }} src="./Images/Group 1174.png" alt="" /></div>
+                    <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "25%", borderRadius: "50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
                     </div>
                 </div>
             </div>
@@ -142,8 +142,8 @@ const Learnn = () => {
                 <div style={{ width: "100px", border: "2px solid #FE602F", margin: "auto" }}></div>
                 <div className="LearnFlex4">
 
-                    <div className="LearnRight">
-                        <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Mask group.jpg" alt="" /></div>
+                    <div className="LearnRight" style={{marginTop:"4%"}}>
+                        <div className="LearnRight4"><img style={{ width: "400px", height: "390px", marginTop: "25%" }} src="./Images/Mask group.jpg" alt="" /></div>
                     </div>
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}

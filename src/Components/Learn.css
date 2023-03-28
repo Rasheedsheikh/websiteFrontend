@@ -134,10 +134,11 @@ top: 234px;
     }
 .LearnRight{
     margin-left: 5%;
-    margin-bottom: 7.35%;
+    margin-bottom: .35%;
   
 
 }
+
 
 
 
@@ -190,6 +191,7 @@ width: 100%;
 .LearnFlex2{
     display: flex;
     margin: auto;
+    margin-top: 2%;
     /* margin-top: 115px; */
     /* margin-top: 239px; */
     /* margin-bottom: 15%; */
@@ -212,7 +214,7 @@ width: 100%;
     margin: auto;
     /* margin-top: 115px;
     margin-top: 239px; */
-    /* margin-bottom: 15%; */
+    margin-bottom: 10%;
     /* justify-content: space-between; */
     /* gap:92px; */
     
