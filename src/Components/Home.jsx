@@ -249,7 +249,7 @@ const Home = () => {
                                 <div id="text4" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Decentralized clinical trials</div>
                                 <div id="text5" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>eBenefit verification</div>
                                 <div id="text6" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>ePedegree Solutions</div>
-                                <div id="text7" className="vidtx" style={{width:"180px !important",height:"50px",marginRight:"-10%"}}>Let Us Drive Patients Outcome Together</div>
+                                <div id="text7" className="vidtx" style={{width:"250px !important",height:"50px"}}>Let Us Drive Patients Outcome Together</div>
 
 
                             </div>

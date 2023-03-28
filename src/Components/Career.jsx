@@ -408,7 +408,7 @@ useEffect(()=>{
                 <div> Location:{e.Location}</div>
               </div>
 
-              <div className="jobdesc">Description:{e.desc}</div>
+              <div className="jobdesc"><span style={{fontWeight:"300"}}>Description:</span>{e.desc}</div>
 
               <div className="buttonmain">
                 <div> <button className="buttons">Learn More</button></div>
