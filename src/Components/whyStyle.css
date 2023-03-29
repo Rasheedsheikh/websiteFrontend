@@ -41,8 +41,8 @@ color: #000000;
 }
 
 .why-oranged{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: orangered;
     justify-content: center;
@@ -64,7 +64,8 @@ margin: auto;
     justify-content: center;
     text-align: center;
     align-items: center; */
-    margin-top: 23px;
+    margin-top: 13px;
+    /* margin: auto; */
 }
 
 .why-img-box img{

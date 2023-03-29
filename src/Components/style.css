@@ -482,16 +482,18 @@ text-align: center; */
   margin-top: 10px;
 
   color: #000000;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .buttons {
   border: 1px solid orangered;
   background-color: white;
   height: 40px;
-  width: 138px;
+  width: 180px !important;
   left: 415px;
   top: 279px;
-  border-radius: 0px;
+  border-radius: 2px !important;
   margin-top: 20px;
   margin-bottom: 20px;
   font-style: normal;
@@ -529,7 +531,7 @@ text-align: center; */
   text-align: center;
   height: auto;
   border-radius: 10px;
-  width:95%;
+  width:96%;
   height:450px;
 }
 
