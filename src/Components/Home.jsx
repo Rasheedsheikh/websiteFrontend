@@ -244,15 +244,29 @@ const Home = () => {
 
 
                                 <div id="text1" className="vidtx">A leading provider of life scienece and health care solutions</div>
-                                <div id="text2" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Patient support programs</div>
-                                <div id="text3" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Drug adherence programs</div>
-                                <div id="text4" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>Decentralized clinical trials</div>
-                                <div id="text5" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>eBenefit verification</div>
-                                <div id="text6" className="vidtx" style={{width:"100px !important",height:"50px",marginRight:"-10%"}}>ePedegree Solutions</div>
-                                <div id="text7" className="vidtx" style={{width:"250px !important",height:"50px"}}>Let Us Drive Patients Outcome Together</div>
+                                </div>
+                                <div className="text-overlay2">
+                                <div id="text2" className="vidtx" >Patient support programs</div>
+                                </div>
 
+                                <div className="text-overlay3">
+                                <div id="text3" className="vidtx" >Drug adherence programs</div>
+                                </div>
 
-                            </div>
+                                <div className="text-overlay4">
+                                <div id="text4" className="vidtx" >Decentralized clinical trials</div>
+                                </div>
+                                <div className="text-overlay5">
+                                <div id="text5" className="vidtx" >eBenefit verification</div>
+                                </div>
+                                <div className="text-overlay6">
+                                <div id="text6" className="vidtx">ePedigree Solutions</div>
+                                </div>
+                                <div className="text-overlay7">
+                                <div id="text7" className="vidtx" style={{marginLeft:"5%"}}>Let Us Drive Patients Outcome Together</div>
+</div>
+
+                        
 
                         </div>
 

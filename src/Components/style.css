@@ -180,8 +180,108 @@
     /* animation: 'slide-in 3s forwards'; */
   /* text-shadow: 2px 2px black; */
 }
+.text-overlay2 {
+  position: absolute;
+  width:400px;
+  /* height:90px; */
+  /* height:auto; */
+  top: 70%;
+/* margin-left: 30px; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+    background: rgba(56, 55, 55, 0.5);
+    /* animation: 'slide-in 3s forwards'; */
+  /* text-shadow: 2px 2px black; */
+}
+.text-overlay3 {
+  position: absolute;
+  width:400px;
+  /* height:90px; */
+  /* height:auto; */
+  top: 70%;
+/* margin-left: 30px; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+    background: rgba(56, 55, 55, 0.5);
+    /* animation: 'slide-in 3s forwards'; */
+  /* text-shadow: 2px 2px black; */
+}
+.text-overlay4 {
+  position: absolute;
+  width:400px;
+  /* height:90px; */
+  /* height:auto; */
+  top: 70%;
+/* margin-left: 30px; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+    background: rgba(56, 55, 55, 0.5);
+    /* animation: 'slide-in 3s forwards'; */
+  /* text-shadow: 2px 2px black; */
+}
+.text-overlay5 {
+  position: absolute;
+  width:400px;
+  /* height:90px; */
+  /* height:auto; */
+  top: 70%;
+/* margin-left: 30px; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+    background: rgba(56, 55, 55, 0.5);
+    /* animation: 'slide-in 3s forwards'; */
+  /* text-shadow: 2px 2px black; */
+}
+.text-overlay6 {
+  position: absolute;
+  width:300px;
+  /* height:90px; */
+  /* height:auto; */
+  top: 70%;
+/* margin-left: 30px; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+    background: rgba(56, 55, 55, 0.5);
+    /* animation: 'slide-in 3s forwards'; */
+  /* text-shadow: 2px 2px black; */
+}
+.text-overlay7 {
+  position: absolute;
+  width:700px;
+  /* height:90px; */
+  /* height:auto; */
+  top: 70%;
+/* margin-left: 30px; */
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+    background: rgba(56, 55, 55, 0.5);
+    /* animation: 'slide-in 3s forwards'; */
+  /* text-shadow: 2px 2px black; */
+}
 .text-overlay div{
   margin-left: 7%;
+  /* margin: auto; */
+}
+.text-overlay6 div{
+  margin-left: 7%;
+  padding-left: 10%;
+  /* margin: auto; */
+}
+.text-overlay7 div{
+  margin-left: 7%;
+  padding-left: 18%;
   /* margin: auto; */
 }
 .vidtx{
