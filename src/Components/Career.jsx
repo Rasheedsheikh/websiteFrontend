@@ -132,7 +132,7 @@ useEffect(()=>{
             <div className="headerdesc"> {e.desc}</div>
           </div>
           <div>
-          <img style={{ height: "320.1400146484375px", width: "450.79998779296875px", borderRadius: "0px",marginTop:"10px" }} src="./Images/career.jpg"  alt=""/>
+          <img style={{ height: "320.1400146484375px", width: "400px", borderRadius: "0px",marginTop:"10px" }} src="./Images/career.jpg"  alt=""/>
           </div>
           </div>
         
@@ -411,7 +411,7 @@ useEffect(()=>{
               <div className="jobdesc"><span style={{fontWeight:"600"}}>Description:</span>{e.desc}</div>
 
               <div className="buttonmain">
-                <div> <button className="buttons">Learn More</button></div>
+                <div> <button className="buttons" style={{    height: "40px",width: "138px"}}>view</button></div>
                 <div> <button onClick={() => { handleClickOpen(e)   }}  className="button2"> Apply </button></div>
               </div>
             </div>
