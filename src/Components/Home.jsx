@@ -88,7 +88,7 @@ const Home = () => {
             } else if (video.currentTime >= 10 && video.currentTime < 16) {
                 text1.style.display = "none";
                 text2.style.display = "block";
-                text2.style.paddingLeft="30%"
+                // text2.style.paddingLeft="30%"
                 text3.style.display = "none";
                 text4.style.display = "none";
                 text5.style.display = "none";
@@ -98,7 +98,7 @@ const Home = () => {
                 text1.style.display = "none";
                 text2.style.display = "none";
                 text3.style.display = "block";
-                text3.style.paddingLeft="30%"
+                // text3.style.paddingLeft="30%"
                 text4.style.display = "none";
                 text5.style.display = "none";
                 text6.style.display = "none";
@@ -109,7 +109,7 @@ const Home = () => {
                 text2.style.display = "none";
                 text3.style.display = "none";
                 text4.style.display = "block";
-                text4.style.paddingLeft="25%"
+                // text4.style.paddingLeft="25%"
                 text5.style.display = "none";
                 text6.style.display = "none";
                 text7.style.display = "none";
@@ -120,7 +120,7 @@ const Home = () => {
                 text3.style.display = "none";
                 text4.style.display = "none";
                 text5.style.display = "block";
-                text5.style.paddingLeft="30%"
+                // text5.style.paddingLeft="30%"
                 text6.style.display = "none";
                 text7.style.display = "none";
             }
@@ -131,7 +131,7 @@ const Home = () => {
                 text4.style.display = "none";
                 text5.style.display = "none";
                 text6.style.display = "block";
-                text6.style.paddingLeft="30%"
+                // text6.style.paddingLeft="30%"
                 text7.style.display = "none";
             }
 
@@ -263,7 +263,7 @@ const Home = () => {
                                 <div id="text6" className="vidtx">ePedigree Solutions</div>
                                 </div>
                                 <div className="text-overlay7">
-                                <div id="text7" className="vidtx" style={{marginLeft:"5%"}}>Let Us Drive Patients Outcome Together</div>
+                                <div id="text7" className="vidtx" >Let Us Drive Patients Outcome Together</div>
 </div>
 
                         
@@ -354,13 +354,14 @@ const Home = () => {
                         </div>
 
                         <div className="Solution-images" >
-                            {data?.Total?.Solutions?.Images?.map((e, i) => (
-                                <div key={i} className="sol-img-abs" >
-                                    <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" />
+                            {/* {data?.Total?.Solutions?.Images?.map((e, i) => ( */}
+                                {/* <div key={i} className="sol-img-abs" > */}
+                                    {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
                                         {/* <div className="solution-images-title">{e.title}</div> */}
-                                    </div>
-                                </div>
-                            ))}
+                                    {/* </div> */}
+                                    <div style={{margin:"auto",alignItems:"center",justifyContent:"center",marginLeft:"9%"}}><img src="/Images/Gr.png"/></div>
+                                  {/* </div> */}
+                            {/* ))} */}
                         </div>
 
                     </div>
