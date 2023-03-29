@@ -403,12 +403,12 @@ useEffect(()=>{
               <div className="jobTitle">{e.title}</div>
               <hr />
               <div className="jobdetails">
-                <div> Experience:{e.Experience}</div>
-                <div>jobtype:{e.jobtype}</div>
-                <div> Location:{e.Location}</div>
+                <div> <span style={{fontWeight:"600"}}>Experience</span>:{e.Experience}</div>
+                <div><span style={{fontWeight:"600"}}>jobtype:</span>{e.jobtype}</div>
+                <div> <span style={{fontWeight:"600"}}>Location:</span>{e.Location}</div>
               </div>
 
-              <div className="jobdesc"><span style={{fontWeight:"300"}}>Description:</span>{e.desc}</div>
+              <div className="jobdesc"><span style={{fontWeight:"600"}}>Description:</span>{e.desc}</div>
 
               <div className="buttonmain">
                 <div> <button className="buttons">Learn More</button></div>
