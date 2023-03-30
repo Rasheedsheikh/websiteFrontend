@@ -418,7 +418,7 @@ useEffect(()=>{
           </div>
         </div>
       ))}
-  <Dialog md={12} open={open1} onClose={handleClose1}>
+  <Dialog xl={12} open={open1} onClose={handleClose1}>
     {console.log(element,"12345")}
     
     <>

@@ -354,6 +354,7 @@ const Home = () => {
                         </div>
 
                         <div className="Solution-images" >
+                          {/* Dont ever delete this never delete this */}
                             {/* {data?.Total?.Solutions?.Images?.map((e, i) => ( */}
                                 {/* <div key={i} className="sol-img-abs" > */}
                                     {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
@@ -457,7 +458,7 @@ const Home = () => {
                                                 <div className="commu-desc">{el.desc}</div>
                                             </div>
                                             <div>
-                                                <center> <Link to="/careerm"><button className="buttons" style={{ marginBottom: "10px" }}>Join us</button></Link>
+                                                <center> <Link to="/careerm"><button className="buttons" style={{ marginBottom: "8px" }}>Join us</button></Link>
                                                 </center>
                                             </div>
                                             <div className="commu-images">

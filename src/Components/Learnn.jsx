@@ -64,7 +64,7 @@ const Learnn = () => {
             <div style={{ border: "1px solid #F1F1F1" }}></div>
             <div id="tab1">
                 <div className="LearnFlex1">
-                    <div className="LearnLeft">
+                    <div className="LearnLeft" >
                         {console.log(db?.Careers?.Learn)}
                         <center style={{ width: "100px", border: "2px solid #FE602F" }}></center>
                         <div className="Learn-title">Life Sciences</div>
@@ -88,17 +88,17 @@ const Learnn = () => {
 
 
             <div id="tab2">
-                <div style={{ width: "100px", border: "2px solid #FE602F", marginTop:"10%" ,marginLeft:"50%"}}></div>
+               
                 <div className="LearnFlex2">
                     {/* <center style={{width:"100px",border:"2px solid #FE602F"}}></center> */}
                     <div className="LearnRight">
-                    <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
+                    <div className="LearnRight"><img style={{ width: "420px", height: "390px", marginTop: "12%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
                     </div>
 
 
-                    <div className="LearnLeft">
+                    <div className="LearnLeft" >
                         {console.log(db?.Careers?.Learn)}
-
+                        <div style={{ width: "100px", border: "2px solid #FE602F" ,marginTop:"1%",marginLeft:"80%"}}></div>
                         <div className="Learn-title">Emerging Biotech</div>
                         <div className="ulko" >
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }} >
@@ -117,7 +117,7 @@ const Learnn = () => {
 
 
             <div id="tab3">
-                <div className="LearnFlex3">
+                <div className="LearnFlex3" style={{marginBottom:"5%"}}>
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}
                         <center style={{ width: "100px", border: "2px solid #FE602F", margin: "auto" }}></center>
@@ -132,21 +132,22 @@ const Learnn = () => {
 
                     </div>
                     <div className="LearnRight">
-                    <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "25%", borderRadius: "50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
+                    <div className="LearnRight"><img style={{ width: "400px", height: "320px", marginTop: "25%", borderRadius: "50%" }} src="./Images/Group 1175.jpg" alt="" /></div>
                     </div>
                 </div>
             </div>
 
 
             <div id="tab4" >
-                <div style={{ width: "100px", border: "2px solid #FE602F", margin: "auto" }}></div>
-                <div className="LearnFlex4">
+                
+                <div className="LearnFlex4" style={{marginTop:"7%"}}>
 
                     <div className="LearnRight" style={{marginTop:"4%"}}>
                         <div className="LearnRight4"><img style={{ width: "400px", height: "390px", marginTop: "25%" }} src="./Images/Mask group.jpg" alt="" /></div>
                     </div>
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}
+                        <div style={{ width: "100px", border: "2px solid #FE602F", marginLeft:"80%" }}></div>
 
                         <div className="Learn-title">Payers</div>
                         <div className="ulko">
