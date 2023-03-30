@@ -88,8 +88,8 @@ const Learnn = () => {
 
 
             <div id="tab2">
-                <div style={{ width: "100px", border: "2px solid #FE602F", marginTop:"10%" ,marginLeft:"50%"}}></div>
-                <div className="LearnFlex2">
+              
+                <div className="LearnFlex2" style={{}}>
                     {/* <center style={{width:"100px",border:"2px solid #FE602F"}}></center> */}
                     <div className="LearnRight">
                     <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
@@ -98,6 +98,7 @@ const Learnn = () => {
 
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}
+                        <div style={{ width: "100px", border: "2px solid #FE602F" ,marginLeft:"80%"}}></div>
 
                         <div className="Learn-title">Emerging Biotech</div>
                         <div className="ulko" >
@@ -117,10 +118,10 @@ const Learnn = () => {
 
 
             <div id="tab3">
-                <div className="LearnFlex3">
+                <div className="LearnFlex3" style={{marginTop:"15%"}}>
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}
-                        <center style={{ width: "100px", border: "2px solid #FE602F", margin: "auto" }}></center>
+                        <center style={{ width: "100px", border: "2px solid #FE602F"}}></center>
                         <div className="Learn-title">Providers</div>
                         <div className="ulko" >
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }}>
@@ -139,15 +140,15 @@ const Learnn = () => {
 
 
             <div id="tab4" >
-                <div style={{ width: "100px", border: "2px solid #FE602F", margin: "auto" }}></div>
-                <div className="LearnFlex4">
+              
+                <div className="LearnFlex4" style={{marginTop:"10%"}}>
 
-                    <div className="LearnRight" style={{marginTop:"4%"}}>
+                    <div className="LearnRight" >
                         <div className="LearnRight4"><img style={{ width: "400px", height: "390px", marginTop: "25%" }} src="./Images/Mask group.jpg" alt="" /></div>
                     </div>
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}
-
+                        <div style={{ width: "100px", border: "2px solid #FE602F", marginLeft:"80%"}}></div>
                         <div className="Learn-title">Payers</div>
                         <div className="ulko">
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }}>
