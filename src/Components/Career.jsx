@@ -240,7 +240,7 @@ useEffect(()=>{
           <Grid item lg={4}
           sm={12}>
               <Stack style={{ paddingLeft: "20px" }}>
-          <Stack style={{ marginTop: "10px" }}>
+          <Stack >
             <Typography style={{ fontSize: "38px", fontWeight: "600" ,color: "#000000"}}>
               Job Openings
             </Typography>
