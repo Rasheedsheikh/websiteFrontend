@@ -45,7 +45,7 @@ z-index: 999;
          width: 239.75px; 
         /* height: 100px;  */
         border-radius: 0px;
-        font-family: 'Poppins';
+        /* font-family: 'Poppins'; */
 font-style: normal;
 font-weight: 500;
 font-size: 22px;
@@ -93,7 +93,7 @@ color: #000000;
         /* margin-left: 10%; */
     }
     .Learn-title{
-        font-family: 'Poppins';
+        /* font-family: 'Poppins'; */
 font-style: normal;
 font-weight: 700;
 font-size: 36px;
@@ -124,7 +124,7 @@ margin-top: 5%;
         
     /* } */
     .LearnLeft{
-    font-family: "poppins";
+    /* font-family: "poppins"; */
         width: 650px;
 height: 368px;
 margin-left: 80px;
