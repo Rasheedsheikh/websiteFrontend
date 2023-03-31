@@ -104,7 +104,15 @@ color: #000000;
 margin-top: 5%;
     }
 
-   .ulko  ul li::before { 
+.ulko ul{
+    list-style: none;
+    /* font-family: 'Poppins'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+}
+   .ulko ul li::before { 
         list-style-type: none;
          content: "\2022"; 
         color: #FE602F !important; 
