@@ -1,5 +1,7 @@
 * {
-  font-family: "nunito";
+ 
+    font-family: 'Nunito', sans-serif;
+
   scroll-behavior: smooth;
 }
 
@@ -182,7 +184,7 @@
 }
 .text-overlay2 {
   position: absolute;
-  width:421px;
+  width:440px;
   /* height:90px; */
   /* height:auto; */
   top: 70%;
@@ -197,7 +199,7 @@
 }
 .text-overlay3 {
   position: absolute;
-  width:430px;
+  width:450px;
   
   /* height:50px; */
   /* height:90px; */
@@ -214,7 +216,7 @@
 }
 .text-overlay4 {
   position: absolute;
-  width:440px;
+  width:460px;
   /* height:90px; */
   /* height:auto; */
   top: 70%;
@@ -244,7 +246,7 @@
 }
 .text-overlay6 {
   position: absolute;
-  width:320px;
+  width:350px;
   /* height:90px; */
   /* height:auto; */
   top: 70%;
@@ -259,7 +261,7 @@
 }
 .text-overlay7 {
   position: absolute;
-  width:670px;
+  width:560px;
   /* height:90px; */
   /* height:auto; */
   top: 70%;
@@ -557,6 +559,7 @@ text-align: center; */
   width: 270px;
   margin: 5px 2px 2px 2px;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .Indus-insder-cont {
@@ -686,6 +689,7 @@ text-align: center; */
   justify-content: center;
   left: 533px;
   top: -171px;
+  object-fit: cover;
 }
 
 .slider-desc {
@@ -797,7 +801,7 @@ text-align: center; */
 .contact {
   /* font-family: 'Poppins'; */
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   line-height: 42px;
   text-align: center;
@@ -816,7 +820,7 @@ text-align: center; */
 .address {
   /* font-family: 'Poppins'; */
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   text-align: center;
@@ -828,7 +832,7 @@ text-align: center; */
 
 .contact-quote {
   display: flex;
-  gap: "5px";
+  gap: "10px";
   /* font-family: 'Poppins'; */
   font-style: normal;
   font-weight: 500;

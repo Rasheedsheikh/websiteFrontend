@@ -134,14 +134,16 @@ gap:20px;
 margin-top: 25px;
     
 }
-.buttons{
+.buttons1{
     border: 1px solid #FE6161;
     color: #FE602F;
     background-color: white;
     height: 40px;
 width: 138px;
 left: 415px;
-top: 279px;
+/* top: 3px; */
+margin-top: 20px;
+margin-bottom: 20px;
 border-radius: 0px;
 
    

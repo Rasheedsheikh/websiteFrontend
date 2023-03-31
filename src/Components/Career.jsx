@@ -411,7 +411,7 @@ useEffect(()=>{
               <div className="jobdesc"><span style={{fontWeight:"600"}}>Description:</span>{e.desc}</div>
 
               <div className="buttonmain">
-                <div> <button className="buttons" style={{    height: "40px",width: "138px"}}>view</button></div>
+                <div> <button className="buttons1" style={{    height: "40px",width: "138px"}}>view</button></div>
                 <div> <button onClick={() => { handleClickOpen(e)   }}  className="button2"> Apply </button></div>
               </div>
             </div>

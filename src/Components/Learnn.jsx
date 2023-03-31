@@ -89,7 +89,7 @@ const Learnn = () => {
 
             <div id="tab2">
               
-                <div className="LearnFlex2" style={{}}>
+                <div className="LearnFlex2">
                     {/* <center style={{width:"100px",border:"2px solid #FE602F"}}></center> */}
                     <div className="LearnRight">
                     <div className="LearnRight"><img style={{ width: "420px", height: "390px", marginTop: "12%",borderRadius:"50%" }} src="./Images/Group 1174.png" alt="" /></div>
