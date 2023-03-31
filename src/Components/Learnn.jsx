@@ -54,7 +54,7 @@ const Learnn = () => {
                 <div className="title-tab">
                     <div className="buttonsmain">
                         <div className="button-ta">
-                            <a style={{ textDecoration: "none", color: "black" }} href="#tab1"><div>Life Sciene</div></a></div>
+                            <a style={{ textDecoration: "none", color: "black" }} href="#tab1"><div>Life Science</div></a></div>
                         <div className="button-ta"> <a style={{ textDecoration: "none", color: "black" }} href="#tab2"><div>Emerging Biotech</div></a></div>
                         <div className="button-ta"> <a style={{ textDecoration: "none", color: "black" }} href="#tab3"><div> Providers</div></a></div>
                         <div className="button-ta"> <a style={{ textDecoration: "none", color: "black" }} href="#tab4"><div>Payers</div></a></div>
@@ -67,7 +67,7 @@ const Learnn = () => {
                     <div className="LearnLeft">
                         {console.log(db?.Careers?.Learn)}
                         <center style={{ width: "100px", border: "2px solid #FE602F" }}></center>
-                        <div className="Learn-title">Life Sciences</div>
+                        <div className="Learn-title">Life Science</div>
                         <div className="ulko" style={{ gap: "20px" }}>
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }} >
                                 <li> We are specialised in building patient services solutions using technologies like Sales Force Health Cloud, bespoke solutions and integration with payers and providers application such as EMR, benefit verification and prior authorization for benefits.,</li>

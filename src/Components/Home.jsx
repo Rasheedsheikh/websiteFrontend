@@ -243,7 +243,7 @@ const Home = () => {
                                 {/* <div>{text}</div> */}
 
 
-                                <div id="text1" className="vidtx">A leading provider of life scienece and health care solutions</div>
+                                <div id="text1" className="vidtx">A leading provider of life science and health care solutions</div>
                                 </div>
                                 <div className="text-overlay2">
                                 <div id="text2" className="vidtx" >Patient support programs</div>
