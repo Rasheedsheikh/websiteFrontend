@@ -89,7 +89,7 @@ const[checked,setChecked]=useState(false);
   }, [])
   const show = async () => {
     try {
-      let res = await fetch(`${Config.host}/jobs`)
+      let res = await fetch(`${Config.host}/get-jobs`)
       let data = await res.json()
       console.log(data)
       setData(data)
