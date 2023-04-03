@@ -1,11 +1,14 @@
 * {
  
-    font-family: 'Nunito';
+    /* font-family: 'Nunito'; */
 
   scroll-behavior: smooth;
   /* overflow-x:auto;    */
   /* height:"auto" */
   /* overflow-y: auto; */
+}
+body{
+      font-family: 'Nunito';
 }
 
 .Nav {

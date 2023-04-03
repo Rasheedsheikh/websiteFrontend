@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import './style.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-
+import "@fontsource/nunito";
 import { TextField } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Grid } from "@material-ui/core";
