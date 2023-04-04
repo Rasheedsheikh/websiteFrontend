@@ -1,1 +1,1 @@
-module.exports={host:'https://apiwebsite.valuemymedicine.com'} 
+module.exports={host:'http://localhost:2233'} 

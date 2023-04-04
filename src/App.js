@@ -14,6 +14,7 @@ import Mui from "./Components/Mui"
 import Mapp from './Components/Mapp';
 import Learnn from './Components/Learnn';
 import Careerm from './Components/Careerm';
+import SolPage from './Components/SolPage';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
        <Route path="/mapp"element={<Mapp/>}/>
        <Route path="/learnn"element={<Learnn/>}/>
        <Route path="/careerm" element={<Careerm/>}/>
+       <Route path="/sol" element={<SolPage/>}/>
       
 
   </Routes>

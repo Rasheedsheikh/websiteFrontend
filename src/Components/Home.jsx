@@ -22,6 +22,7 @@ import Mapp from "./Mapp";
 
 const Home = () => {
     const [data, setData1] = useState([])
+    // const[servdata,setservData]= useState([])
     const [flag, setFlag] = useState(false)
     const [activeItem, setActiveItem] = useState(true)
     const navigate = useNavigate()
@@ -39,6 +40,10 @@ const Home = () => {
     useEffect(() => {
         show()
     }, [])
+
+    // useEffect(()=>{
+    //     service()
+    // })
 
     const [text, setText] = useState(0);
     const texts = ['A leading provider of life scienece and health care solutions', 'Patient support programs', "Drug adherence programs", "Decentralized clinical trials", "eBenefit verification", "ePedegree Solutions", "Let Us Drive Patients Outcome Together"];
@@ -172,7 +177,7 @@ const Home = () => {
         try {
             let res = await fetch(`${Config.host}/home`)
             let dataa = await res.json()
-            console.log(dataa.data)
+            // console.log(dataa.data)
             setData1(dataa.data)
         }
         catch (err) {
@@ -181,7 +186,17 @@ const Home = () => {
     }
     // console.log(db)
 
-
+    // const service = async () => {
+    //     try {
+    //         let res = await fetch(`${Config.host}/get-service`)
+    //         let servicedataa = await res.json()
+    //         console.log(servicedataa)
+    //         setservData(servicedataa)
+    //     }
+    //     catch (err) {
+    //         console.log(err)
+    //     }
+    // }
    
 
 
