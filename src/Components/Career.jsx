@@ -84,20 +84,20 @@ const[checked,setChecked]=useState(false);
   //   navigate(path);
   // }
   useEffect(() => {
-    show()
+    // show()
 
   }, [])
-  const show = async () => {
-    try {
-      let res = await fetch(`${Config.host}/get-jobs`)
-      let data = await res.json()
-      console.log(data)
-      setData(data)
-    }
-    catch (err) {
-      console.log(err)
-    }
-  }
+  // const show = async () => {
+  //   try {
+  //     let res = await fetch(`${Config.host}/get-jobs`)
+  //     let data = await res.json()
+  //     console.log(data)
+  //     setData(data)
+  //   }
+  //   catch (err) {
+  //     console.log(err)
+  //   }
+  // }
   // console.log(db)
 
   const handleImp= async()=>{
