@@ -15,6 +15,7 @@ import Mapp from './Components/Mapp';
 import Learnn from './Components/Learnn';
 import Careerm from './Components/Careerm';
 import SolPage from './Components/SolPage';
+import SolutionDetail from './Components/SolutionDetail';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
        <Route path="/learnn"element={<Learnn/>}/>
        <Route path="/careerm" element={<Careerm/>}/>
        <Route path="/sol" element={<SolPage/>}/>
+       <Route path="/solm" element={<SolutionDetail/>}/>
       
 
   </Routes>

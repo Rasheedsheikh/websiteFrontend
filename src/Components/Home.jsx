@@ -639,7 +639,10 @@ const Home = () => {
                                 <div className="footerLeft">
                                     <div>
                                         {obj?.line1?.map((e, i) => (
-                                            <div key={i} className="footerline1" >{e}</div>
+                                             <a style={{textDecoration:"none"}} href={e.path}>
+                                            <div key={i} className="footerline1">
+                                               {e.name}</div>
+                                               </a>
                                         ))}
                                     </div>
 
@@ -668,7 +671,7 @@ const Home = () => {
                                             <div>
                                                 {e?.icons?.map((ele, i) => (
                                                     <div key={i}>
-                                                        <img style={{ border: "1px solid white", width: "41.75px", height: "46.5px", backgroundColor: "white", borderRadius: "10px" }} src={ele} alt="" />
+                                                        <img style={{ border: "1px solid white", width: "41.75px", height: "45.5px", backgroundColor: "white", borderRadius: "10px" }} src={ele} alt="" />
                                                     </div>
                                                 ))}
                                             </div>

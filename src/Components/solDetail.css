@@ -1,0 +1,99 @@
+.solut-details-first{
+  /* position: relative; */
+    margin-top: 60px;
+    background-color: linear-gradient(rgba(21, 23, 25, 1));
+    /* linear-gradient(rgba(21, 23, 25, 1)) */
+    /* z-index: 2; */
+}
+.solut-details-abso{
+    position: absolute;
+    width: 280px;
+    height: 220px;
+    /* left: 988px;
+    top: 198px; */
+    margin-left: 70%;
+    margin-top: -35%;
+    
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    
+    color: #FFFFFF;
+    /* z-index: 2; */
+}
+.solut-details-imgabso{
+    position: absolute;
+    margin-left: 78%;
+    margin-top: -17%;
+
+}
+.sol-det-mtr{
+    display: flex;
+    gap:10%;
+    margin-top: 60px;
+    width:99%
+    /* margin: auto; */
+    /* justify-content: space-around; */
+}
+
+.sol-det-imgdiv{
+    /* border:1px solid red; */
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sol-det-imgtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #7C8486;
+    width: 300px;
+height: 55px;
+left: 141px;
+/* top: 1608.43px; */
+    
+}
+.sol-detdesctitle{
+    font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+letter-spacing: 0.1em;
+
+color: #000000;
+text-align: center;
+}
+.soldetails-flex1st{
+    display: flex;
+    gap:10%;
+    margin-top: 5%;
+    
+}
+.soldetails-flex1stleft{
+    margin-left: 10%;
+    font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 50px;
+letter-spacing: 0.1em;
+
+color: #000000;
+}
+
+.soldetails-flex2st{
+    /* margin-left: 10%; */
+    display: flex;
+    gap:10%;
+    margin-top: 2%;
+
+}

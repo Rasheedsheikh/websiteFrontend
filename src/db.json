@@ -148,7 +148,6 @@
     "We work with large independent facilities, medical services groups and DSO (Dental Services Organization).",
     " We provide state of the art digital front door experience to our customer which helps reduce the operating cost and opens up doors for new patients and provides phenomenal service to patients 24/7 every single day.",
     "Our SMS based appointment reminder services, referral management, Voice activated front desk service and externalised medical records to patients in a secured way are the few services we are specialised on."
-
   ]
  
 
@@ -164,6 +163,35 @@
  
 
 }
+],
+
+"soldetails":[
+  {
+  "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png",
+  "imgtitle":"Health Cloud",
+  "desctitle":"Salesforce health cloud",
+  "desc":"We are one of the premier partners when it comes to health cloud Implementation. Our approach to implement health cloud for your enterprise is very different from traditional approach of Discover, Design, Build, Test and Deploy. Our proven assets and accelerator model helps you bootstrap your implementation so you can get the health cloud implemented in record time and lot cheaper"
+},
+
+{
+  "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png",
+  "imgtitle":"marketing Cloud",
+  "desctitle":"Salesforce marketing cloud",
+  "desc":"Implementation of marketing cloud in healthcare industry requires a strong PDMA compliance knowledge such as 21 CFR Part 203 Prescription Drug Marketing. Our proven marketing implementation template allows you to get the maximum benefit from Salesforce marketing helps reach faster time to value with real-time data unification across Salesforce and beyond. Reconcile identities and gain a complete view of each customer."
+},
+{
+  "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png",
+  "imgtitle":"datorama",
+  "desctitle":"Salesforce datoroma",
+  "desc":"Implementation of service cloud in healthcare industry requires a strong knowledge of the ecosystem. Integration of service cloud with systems like safety, regulatory and HCP database. The potential of omni channel routing can deliver smarter service by automatically matching cases to the agent with the best skill set to solve them."
+},
+{
+  "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png",
+  "imgtitle":"sales Cloud",
+  "desctitle":"Salesforce sales cloud",
+  "desc":"We have a CRO specific Sales Cloud template which helps all the Clinical Research Organization to take advantage of the market intelligence on studies how they can create opportunities proactively."
+}
+
 ]
 
   

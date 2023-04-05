@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 // import db from "../db.json";
 import "./SolPage.css"
 
 const SolPage = () => {
+
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
     // const[data,setData]=useState([])
     const data = [
         {
@@ -74,21 +78,21 @@ const SolPage = () => {
                 "desc": "IoT devices can range from everyday consumer devices such as Google Home, Alexa, wearable fitness trackers, and sensor based devices, and other medical devices. By connecting these devices to the internet, they can collect, analyze and share data, enabling a variety of new and innovative applications and services. With our IoT expertise coupled with full stack development we can deliver a custom solution for any needs using our IoT framework much faster and cheaper. IoT has the potential to revolutionize many industries, including health care by providing valuable insights and enabling new forms of automation and control.",
                 "subtitle": "IOT Data Collection"
             },
-        
+
 
             ]
         },
 
         {
             "img": ["https://smartbridge.com/digitalinnovation/wp-content/uploads/sites/3/ai-ml.png"],
-            
+
             text: [{
                 "desc": "Artificial Intelligence (AI) and Machine Learning (ML) are having a significant impact on the life sciences industry, providing innovative solutions and driving advancements in various fields such as drug discovery, medical imaging, and personalized medicine. Some examples of AI/ML usage in the life sciences industry                ",
                 "title": "Artificial Intelligence & Machine Learning"
             },
             {
                 "desc": "Regulatory Intelligence: AI can be used to analyze any changes in the regulations around the world and how it can impact clinical trials in any given local market Predict Study Design: Help with study design using various protocol inclusion and exclusion criteria to see how the study can be designed optimally to drive innovation and help patient to get the cure they deserve faster and reduce cost of development",
-            
+
                 "title": ""
             },
             {
@@ -99,12 +103,12 @@ const SolPage = () => {
                 "desc": "In conclusion, AI and ML are transforming the life sciences industry by providing innovative solutions and driving advancements in various fields. The increased use of AI and ML in the life sciences industry is expected to improve patient outcomes and lead to the development of more effective and personalized treatments.",
                 "title": ""
             },
-        
+
 
             ]
         }
 
-        
+
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -120,19 +124,18 @@ const SolPage = () => {
                 <div style={{ marginLeft: "8%" }}>
 
                     <div className="nextimg" style={{ height: "250px", margin: "auto" }}>
-                    {data[currentIndex]?.img?.map((e,i)=>(
-
-                 
-                        <img className="currentimage" style={{ width: "220px", height: "180px", marginTop: "7%" }} src={e} alt="Image" />
+                        {data[currentIndex]?.img?.map((e, i) => (
+                            <img className="currentimage" style={{ width: "220px", height: "180px", marginTop: "7%" }} src={e} alt="Image" />
                         ))
-                    }
-                        </div>
+                        }
+                    </div>
 
 
                     <div style={{ marginTop: "20%", display: "flex", gap: "40%" }}>
 
 
                         <button className="buttoo" style={{ borderRadius: "20px" }} onClick={() => {
+
                             const PrevIndex = currentIndex - 1;
                             if (PrevIndex < 0) {
                                 setCurrentIndex(data.length - 1);
@@ -141,6 +144,8 @@ const SolPage = () => {
                             }
                         }}><span><img style={{ width: "40px", height: "40px" }} src="./Images/leftarrow1.png" /></span></button>
                         <button className="butto" onClick={() => {
+
+
                             const nextIndex = currentIndex + 1;
                             if (nextIndex >= data.length) {
                                 setCurrentIndex(0);
@@ -150,18 +155,16 @@ const SolPage = () => {
                         }}><span><img style={{ width: "40px", height: "40px" }} src="./Images/rightarrow.png" /></span></button>
                     </div>
                 </div>
-                <div style={{ marginTop: "10px", marginRight: "30px", height:"300px",overflow:"scroll",overflowX:"hidden" }}>
-                    {data[currentIndex]?.text.map((e,i)=>(
-<>
-                    <h1 style={{ margin: "auto",marginTop:"10px",color:"blue" }}>{e.title}</h1>
-                    <h3 style={{color:"blue"}}>{e.subtitle}</h3>
-                    <div style={{ textAlign: "left", marginTop: "20px",marginRight:"20px" }}>{e.desc}</div>
-                    </>
+                <div className="rightdesc" style={{ marginTop: "10px", marginRight: "30px", height: "300px", overflow: "scroll", overflowX: "hidden" }}>
+                    {data[currentIndex]?.text.map((e, i) => (
+                        <>
+                            <h1 style={{ margin: "auto", marginTop: "10px", color: "blue" }}>{e.title}</h1>
+                            <h3 style={{ color: "blue" }}>{e.subtitle}</h3>
+                            <div style={{ textAlign: "left", marginTop: "20px", marginRight: "20px" }}>{e.desc}</div>
+                        </>
                     ))}
-               
-                    </div>
+                </div>
             </div>
-
         </>
     )
 }
