@@ -3,6 +3,7 @@ import "./solDetail.css";
 import db from "../db.json"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+
 const SolutionDetail = () => {
     return (
         <>
@@ -28,7 +29,7 @@ const SolutionDetail = () => {
        
      </div>
      <div className="soldetails-flex2st">
-        <div style={{border:"10px solid #FE602F", width:"1200px",height:"0px"}}></div>
+        <div style={{border:"10px solid #FE602F", width:"85%",height:"0px"}}></div>
      <div style={{marginLeft:"-20px",marginTop:"-5%"}}>Our vision is, to help healthcare and life sciences organizations build a true Salesforce ecosystem that enhances all other tools and delivers the desired outcomes at faster pace and significantly lows cost by leveraging our assets. This can only be achieved by truly using our framework and tools we built over the decade of experience.</div>
      </div>
 
@@ -49,8 +50,9 @@ const SolutionDetail = () => {
                     </>
                 ))}
                     {/* <Footer/> */}
+                    
             </div>
-        
+        <Footer/>
         </>
     )
 }

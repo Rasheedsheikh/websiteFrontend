@@ -16,6 +16,9 @@ import Learnn from './Components/Learnn';
 import Careerm from './Components/Careerm';
 import SolPage from './Components/SolPage';
 import SolutionDetail from './Components/SolutionDetail';
+import FullStack from './Components/FullStack';
+import AiMl from './Components/AiMl';
+import Bot from './Components/Bot';
 
 
 function App() {
@@ -40,8 +43,9 @@ function App() {
        <Route path="/careerm" element={<Careerm/>}/>
        <Route path="/sol" element={<SolPage/>}/>
        <Route path="/solm" element={<SolutionDetail/>}/>
-      
-
+       <Route path="/fullstack" element={<FullStack/>}/>
+       <Route path="/ai&ml" element={<AiMl/>}/>
+       <Route path="/bot" element={<Bot/>}/>
   </Routes>
     </div>
   );

@@ -22,7 +22,7 @@ import Mapp from "./Mapp";
 
 const Home = () => {
     const [data, setData1] = useState([])
-    // const[servdata,setservData]= useState([])
+    const [servdata, setservData] = useState([])
     const [flag, setFlag] = useState(false)
     const [activeItem, setActiveItem] = useState(true)
     const navigate = useNavigate()
@@ -81,7 +81,7 @@ const Home = () => {
             const text6 = document.getElementById("text6");
             const text7 = document.getElementById("text7");
 
-            
+
             if (video.currentTime > 0 && video.currentTime < 10) {
                 text1.style.display = "block";
                 text2.style.display = "none";
@@ -129,7 +129,7 @@ const Home = () => {
                 text6.style.display = "none";
                 text7.style.display = "none";
             }
-            else if (video.currentTime >=31 && video.currentTime < 36) {
+            else if (video.currentTime >= 31 && video.currentTime < 36) {
                 text1.style.display = "none";
                 text2.style.display = "none";
                 text3.style.display = "none";
@@ -150,7 +150,7 @@ const Home = () => {
                 text7.style.display = "block";
                 // text7.style.paddingLeft="10%"
             }
-           
+
 
             else {
                 text1.style.display = "none";
@@ -175,10 +175,10 @@ const Home = () => {
 
     const show = async () => {
         try {
-            let res = await fetch(`${Config.host}/home`)
-            let dataa = await res.json()
+            let res = await (await fetch(`${Config.host}/home`)).json();
+            // let dataa = await res.json()
             // console.log(dataa.data)
-            setData1(dataa.data)
+            setData1(res.data)
         }
         catch (err) {
             console.log(err)
@@ -186,19 +186,21 @@ const Home = () => {
     }
     // console.log(db)
 
-    // const service = async () => {
-    //     try {
-    //         let res = await fetch(`${Config.host}/get-service`)
-    //         let servicedataa = await res.json()
-    //         console.log(servicedataa)
-    //         setservData(servicedataa)
-    //     }
-    //     catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-   
+    const service = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-service`)
+            let servicedataa = await res.json()
+            console.log({ servicedataa })
+            setservData(servicedataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
 
+    useEffect(() => {
+        service()
+    }, [])
 
     return (
         <>
@@ -259,29 +261,29 @@ const Home = () => {
 
 
                                 <div id="text1" className="vidtx">A leading provider of life science and health care solutions</div>
-                                </div>
-                                <div className="text-overlay2">
+                            </div>
+                            <div className="text-overlay2">
                                 <div id="text2" className="vidtx" >Patient support programs</div>
-                                </div>
+                            </div>
 
-                                <div className="text-overlay3">
+                            <div className="text-overlay3">
                                 <div id="text3" className="vidtx" >Drug adherence programs</div>
-                                </div>
+                            </div>
 
-                                <div className="text-overlay4">
+                            <div className="text-overlay4">
                                 <div id="text4" className="vidtx" >Decentralized clinical trials</div>
-                                </div>
-                                <div className="text-overlay5">
+                            </div>
+                            <div className="text-overlay5">
                                 <div id="text5" className="vidtx" >eBenefit verification</div>
-                                </div>
-                                <div className="text-overlay6">
+                            </div>
+                            <div className="text-overlay6">
                                 <div id="text6" className="vidtx">ePedigree Solutions</div>
-                                </div>
-                                <div className="text-overlay7">
+                            </div>
+                            <div className="text-overlay7">
                                 <div id="text7" className="vidtx" >Let Us Drive Patients Outcome Together</div>
-</div>
+                            </div>
 
-                        
+
 
                         </div>
 
@@ -290,16 +292,37 @@ const Home = () => {
                 </div>
 
                 <div id="Services" className="Service">
-                    {data?.Total?.Services?.what?.map((e, i) => (
+                    {/* {data?.Total?.Services?.what?.map((e, i) => ( */}
+
+                    {/* {servdata?.what?.map((e, i) => (
+
+
                         <div key={i}>
+
                             <div className="ServiceMain">{e.title}</div>
 
                             <div className="serviceDual">{e.desc}</div>
 
                         </div>
                     )
-                        //    { console.log(e,i)}
-                    )}
+
+                    )} */}
+                    {
+                        servdata?.map((item, i) => (
+                            item.what.map((obj, j) => (
+                                <div key={i}>
+
+                                    <div className="ServiceMain">{obj.title}</div>
+
+                                    <div className="serviceDual">{obj.desc}</div>
+
+                                </div>
+                            ))
+                        ))
+                    }
+                    {console.log(servdata +
+                        "1234567")}
+                    {/* { console.log(e)} */}
                 </div>
 
                 <div className="shapes">
@@ -369,14 +392,14 @@ const Home = () => {
                         </div>
 
                         <div className="Solution-images" >
-                          {/* Dont ever delete this never delete this */}
+                            {/* Dont ever delete this never delete this */}
                             {/* {data?.Total?.Solutions?.Images?.map((e, i) => ( */}
-                                {/* <div key={i} className="sol-img-abs" > */}
-                                    {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
-                                        {/* <div className="solution-images-title">{e.title}</div> */}
-                                    {/* </div> */}
-                                    <div style={{margin:"auto",alignItems:"center",justifyContent:"center",marginLeft:"9%"}}><img src="/Images/Gr.png"/></div>
-                                  {/* </div> */}
+                            {/* <div key={i} className="sol-img-abs" > */}
+                            {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
+                            {/* <div className="solution-images-title">{e.title}</div> */}
+                            {/* </div> */}
+                            <div style={{ margin: "auto", alignItems: "center", justifyContent: "center", marginLeft: "9%" }}><img src="/Images/Gr.png" /></div>
+                            {/* </div> */}
                             {/* ))} */}
                         </div>
 
@@ -427,7 +450,7 @@ const Home = () => {
                                             <div key={i}>
                                                 <div className='why-text-box'>
                                                     <div className='why-oranged'><p>{el.number}</p></div>
-                                                    <div style={{ marginTop: "5%" }}>{el.detail}   </div>
+                                                    <div style={{ marginTop: "5%" }}>{el.detail}</div>
                                                 </div>
                                             </div>
                                         ))
@@ -639,10 +662,10 @@ const Home = () => {
                                 <div className="footerLeft">
                                     <div>
                                         {obj?.line1?.map((e, i) => (
-                                             <a style={{textDecoration:"none"}} href={e.path}>
-                                            <div key={i} className="footerline1">
-                                               {e.name}</div>
-                                               </a>
+                                            <a style={{ textDecoration: "none" }} href={e.route}>
+                                                <div key={i} className="footerline1">
+                                                    {e}</div>
+                                            </a>
                                         ))}
                                     </div>
 

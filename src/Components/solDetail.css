@@ -2,6 +2,7 @@
   /* position: relative; */
     margin-top: 60px;
     background-color: linear-gradient(rgba(21, 23, 25, 1));
+    object-fit: cover;
     /* linear-gradient(rgba(21, 23, 25, 1)) */
     /* z-index: 2; */
 }
@@ -80,7 +81,7 @@ text-align: center;
     
 }
 .soldetails-flex1stleft{
-    margin-left: 10%;
+    margin-left: 8%;
     font-style: normal;
 font-weight: 700;
 font-size: 36px;
@@ -95,5 +96,78 @@ color: #000000;
     display: flex;
     gap:10%;
     margin-top: 2%;
+
+}
+
+/* full stack */
+
+.mernpic{
+    position: absolute;
+    margin-top: -40%;
+    margin-left: 22%;
+    object-fit: cover;
+}
+.mernpic img{
+    object-fit: cover;
+}
+/* AI PAGE */
+
+
+.aicont{
+
+    /* column-gap: 30px; */
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 10%;
+
+margin: auto;
+margin-top: 10%;
+    /* width:400px; */
+    /* border:1px solid red; */
+
+}
+
+.aiimgtit{
+    text-align: center;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+letter-spacing: 0.06em;
+
+color: #000000;
+margin-top: 3%;
+}
+
+.soldetails-flex1stAi{
+    display: flex;
+    gap:3%;
+    margin-top: 5%;
+
+}
+
+/* bot */
+.soldetails-flex1stbot{
+    display: flex;
+    gap:10%;
+    margin-top: 5%;
+    /* width:500px; */
+    /* border: 1px solid red; */
+
+}
+.soldetails-flex1stleftbot{
+    margin-left: 7%;
+    font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 50px;
+letter-spacing: 0.1em;
+text-align: center;
+/* width:700px; */
+/* height:200px; */
+
+color: #000000;
 
 }
