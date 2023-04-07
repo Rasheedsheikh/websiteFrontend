@@ -33,7 +33,7 @@ const AiMl = () => {
 
 <div className="soldetails-flex1stAi">
         <div className="soldetails-flex1stleft">
-            <div style={{width:"320px",border:"1px solid red",marginLeft:"-12%"}}>AI&ML Services </div>
+            <div style={{width:"320px",marginLeft:"-12%"}}>AI&ML Services </div>
            
             </div>
         <div className="soldetails-flex1stright" style={{textAlign:"justify"}}>

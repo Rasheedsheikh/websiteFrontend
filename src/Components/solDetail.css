@@ -171,3 +171,7 @@ text-align: center;
 color: #000000;
 
 }
+.botpicabso{
+position: absolute;
+margin-top: -45%;
+}

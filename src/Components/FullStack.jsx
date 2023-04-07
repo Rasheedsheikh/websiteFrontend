@@ -12,7 +12,7 @@ const FullStack = () => {
                 <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="https://www.larchitecturedaujourdhui.fr/wp-content/uploads/2021/10/sigmund-rWE7bTqgMJE-unsplash-scaled.jpg" />
             </div>
             <div className="mernpic">
-                <img style={{objectFit:"cover",width:"700px"}} src="./Images/mern.png" alt=""/>
+                <img style={{objectFit:"cover",width:"700px"}} src="./Images/Mern.png" alt=""/>
             </div>
 
 
