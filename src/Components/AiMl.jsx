@@ -9,7 +9,7 @@ const AiMl = () => {
         <>
       <Navbar/>
             <div className="solut-details-first">
-                <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="https://img.freepik.com/free-photo/concentrated-businessman-clicking-virtual-3d-icon_651396-906.jpg?w=2000" />
+                <img style={{ width: "100%", height: "590px" ,position:"relative",objectFit:"cover"}} src="https://img.freepik.com/free-photo/concentrated-businessman-clicking-virtual-3d-icon_651396-906.jpg?w=2000" />
             </div>
             
 

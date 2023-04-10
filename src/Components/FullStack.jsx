@@ -52,7 +52,7 @@ const FullStack = () => {
             <div>
                 {db?.Careers?.FullStack?.map((e, i) => (
                     <>
-                        <div className="sol-det-mtr" style={{gap:"5%"}}>
+                        <div className="sol-det-mtr" style={{gap:"5%",border:"none"}}>
                             <div className="sol-det-imgdiv">
                                 <div><img style={{width:"330px",height:"210px",justifyContent:"center",margin:"auto",borderRadius:"10px"}} src={e.img} /></div>
                                 

@@ -7,6 +7,7 @@ import "@fontsource/nunito";
 import { TextField } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Grid } from "@material-ui/core";
+
 // import video from "./video.mp4"
 
 import "./Fill.css";
@@ -22,7 +23,16 @@ import Mapp from "./Mapp";
 
 const Home = () => {
     const [data, setData1] = useState([])
+
     const [servdata, setservData] = useState([])
+    const[ industries,setIndu]=useState([])
+    const[testimonials,setTesti]=useState([])
+    const[solution,setSolu]=useState([])
+    const[community,setCommu]=useState([])
+    const[contact,setContact]=useState([])
+    const[whychoose,setWhy]=useState([])
+
+
     const [flag, setFlag] = useState(false)
     const [activeItem, setActiveItem] = useState(true)
     const navigate = useNavigate()
@@ -190,7 +200,7 @@ const Home = () => {
         try {
             let res = await fetch(`${Config.host}/get-service`)
             let servicedataa = await res.json()
-            console.log({ servicedataa })
+            // console.log({ servicedataa })
             setservData(servicedataa)
         }
         catch (err) {
@@ -201,6 +211,114 @@ const Home = () => {
     useEffect(() => {
         service()
     }, [])
+
+
+
+
+    // testimonials
+    const Testimonials = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-testimonials`)
+            let Testimonialsdataa = await res.json()
+            // console.log({ Testimonialsdataa })
+            setTesti(Testimonialsdataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        Testimonials()
+    }, [])
+
+    // industries
+    const Industries = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-Industries`)
+            let Industriesdataa = await res.json()
+            // console.log({ Industriesdataa })
+            setIndu(Industriesdataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        Industries()
+    }, [])
+
+
+    // solutions
+
+    const solutions = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-solutions`)
+            let solutionsdataa = await res.json()
+            // console.log({ solutionsdataa })
+            setSolu(solutionsdataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        solutions()
+    }, [])
+
+    // community
+    const Community = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-community`)
+            let communitydataa = await res.json()
+            // console.log({ communitydataa })
+            setCommu(communitydataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        Community()
+    }, [])
+
+    // contact
+
+    const Contact = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-contact`)
+            let Contactdataa = await res.json()
+            console.log({ Contactdataa })
+            setContact(Contactdataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        Contact()
+    }, [])
+    // why choose us
+
+    const whyChoose = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-whyChoose`)
+            let whyChoosedataa = await res.json()
+            console.log({ whyChoosedataa })
+            setWhy(whyChoosedataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        whyChoose()
+},[])
 
     return (
         <>
@@ -307,8 +425,7 @@ const Home = () => {
                     )
 
                     )} */}
-                    {
-                        servdata?.map((item, i) => (
+                    { servdata?.map((item, i) => (
                             item.what.map((obj, j) => (
                                 <div key={i}>
 
@@ -320,8 +437,8 @@ const Home = () => {
                             ))
                         ))
                     }
-                    {console.log(servdata +
-                        "1234567")}
+                    {/* {console.log(servdata +
+                        "1234567")} */}
                     {/* { console.log(e)} */}
                 </div>
 
@@ -329,8 +446,11 @@ const Home = () => {
 
 
                     {/* {data?.Total.Services.shapes.map((e, i) => ( */}
-                    {data?.Total?.Services?.shapes?.map((obj, i) => (
-                        <div key={i} className="shapes1" style={{ backgroundColor: "white" }}>
+                    {/* {data?.Total?.Services?.shapes?.map((obj, i) => ( */}
+
+                    { servdata?.map((item, i) => (
+                            item.shapes.map((obj, j) => (
+                        <div key={j} className="shapes1" style={{ backgroundColor: "white" }}>
                             <div className="numb">{obj.number}</div>
 
                             <div className="abso">
@@ -350,22 +470,24 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                            ))
                         //    { console.log(e,i)}    
                     ))}
                 </div>
 
                 <div id="Industriess">
-                    {data?.Total?.Industries?.heading?.map((e, i) => (
+                    {industries?.map((e, i) => (
                         <div key={i} >
-                            <div className="Indus-heading"> {e}</div>
+                            <div className="Indus-heading"> {e.heading}</div>
 
                         </div>
                     ))}
                 </div>
 
                 <div style={{ width: "95%", margin: "auto" }} className="Indus-insder-cont">
-                    {data?.Total?.Industries?.insider?.map((e, i) => (
-                        <div key={i} className="Indus-insder-cont-child">
+                    {industries?.map((item, i) => (
+                        item?.insider?.map((e,j)=>(
+                        <div key={j} className="Indus-insder-cont-child">
                             <div><img className="insiderimg" src={e.img} alt="" /></div>
                             <div className="indus-title"> {e.title}</div>
                             <div className="indus-desc"> {e.desc}</div>
@@ -374,13 +496,15 @@ const Home = () => {
                             {/* </Link> */}
 
                         </div>
+                        ))
                     ))}
                 </div>
                 <div >
                     <div id="Solution" className="Solution" style={{ width: "99%", margin: "auto" }}>
                         <div className="Solution-heading-cont" >
-                            {data?.Total?.Solutions?.heading?.map((e, i) => (
-                                <div key={i} className="solu-back">
+                            {solution?.map((item, i) => (
+                                item?.heading?.map((e,j)=>(
+                                <div key={j} className="solu-back">
                                     <div className="sol-heading-title">
                                         <div className="sol-heading-title-div">{e.title}</div>
                                     </div>
@@ -388,6 +512,7 @@ const Home = () => {
                                         <div className="sol-desc"> {e.desc}</div>
                                     </div>
                                 </div>
+                                ))
                             ))}
                         </div>
 
@@ -406,18 +531,21 @@ const Home = () => {
                     </div>
                 </div>
 
-                {data?.Total?.Testimonials?.main?.map((e, i) => (
+                {/* {data?.Total?.Testimonials?.main?.map((e, i) => ( */}
+
+                { testimonials?.map((obj, i) => (
+                            
                     <div key={i}>
-                        <div className="testimo-title">{e.title}</div>
+                        <div className="testimo-title">{obj.title}</div>
                         <center >
-                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%" }} src={e.img} alt="" /></center>
+                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%" }} src={obj.img} alt="" /></center>
                         <div className="carouse">
                             <Carousel
                                 showThumbs={true}
                                 infiniteLoop={true}
                                 swipeable={false}
                                 dynamicHeight={false} >
-                                {e?.slide.map((el, i) =>
+                                {obj?.slide.map((el, i) =>
                                 (
                                     <div key={i} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "3%" }}>
                                         <div className="slider-desc">{el.desc}</div>
@@ -433,10 +561,11 @@ const Home = () => {
                         </div>
 
                     </div>
+                            
                 ))}
 
                 <div className='why-main-box' style={{ width: "99%", margin: "auto" }}>
-                    {data?.Total?.Testimonials?.why?.map((e, i) => (
+                    {whychoose?.map((e, i) => (
                         <div key={i} >
 
 
@@ -476,7 +605,7 @@ const Home = () => {
 
 
                     <div id="Community">
-                        {data?.Total?.community?.map((e, i) => (
+                        {community?.map((e, i) => (
 
                             <div key={i} className="community-title">
                                 <div className="community">
@@ -517,7 +646,7 @@ const Home = () => {
 
                     <Stack className="contact-parent" flexDirection={"row"} style={{ width: "95%" }}>
                         <Grid container spacing={4}>
-                            {data?.Total?.Testimonials?.contact?.map((e, i) => (
+                            {contact?.map((e, i) => (
                                 <Grid key={i} item xl={6} lg={6} md={6} sm={12} xs={12} style={{ marginTop: "20px" }}>
                                     <div className="contact">{e.title}</div>
 
@@ -540,7 +669,7 @@ const Home = () => {
                                 </Grid>
                             ))}
 
-                            <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="email">{data?.Total?.Testimonials?.contact &&
+                            <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="email">{contact &&
                                 <Stack
                                     style={{
                                         width: "70%",
@@ -560,15 +689,15 @@ const Home = () => {
                                         >
 
 
-                                            <TextField
+<TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"
-                                                //   id="Lastname"
+                                                id="firstname"
                                                 label={"First Name"}
                                                 autoComplete="something-unsupported"
                                                 required
-                                                value={""}
+                                                //   value={""}
                                                 fullWidth
 
                                             />
@@ -584,7 +713,7 @@ const Home = () => {
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"
-                                                id="firstname"
+                                                id="lastname"
                                                 label={"Last Name"}
                                                 autoComplete="something-unsupported"
                                                 required
@@ -719,4 +848,4 @@ const Home = () => {
         </>
     )
 }
-export default Home
+export default Home;

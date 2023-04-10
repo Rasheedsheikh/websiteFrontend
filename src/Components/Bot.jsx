@@ -9,7 +9,7 @@ const Bot = () => {
         <>
       <Navbar/>
             <div className="solut-details-first">
-                <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="https://previews.123rf.com/images/alphaspirit/alphaspirit1307/alphaspirit130700086/21139567-teamwork-works-together-to-build-a-gear-system.jpg" />
+                <img style={{ width: "100%", height: "590px" ,position:"relative",objectFit:"cover"}} src="https://previews.123rf.com/images/alphaspirit/alphaspirit1307/alphaspirit130700086/21139567-teamwork-works-together-to-build-a-gear-system.jpg" />
             </div>
             <div className="botpicabso">
                 <img style={{width:"350px",height:"250px"}} src="/Images/Group 1345.png" alt=""/>

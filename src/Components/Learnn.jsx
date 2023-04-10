@@ -52,13 +52,18 @@ const Learnn = () => {
                     </div>
                 </div>
                 <div className="title-tab">
+
                     <div className="buttonsmain">
+                    
                         <div className="button-ta">
+                           
                      <a style={{ textDecoration: "none", color: "black" }} href="#tab1"><div>Life Science</div></a></div>
                         <div className="button-ta"> <a style={{ textDecoration: "none", color: "black" }} href="#tab2"><div>Emerging Biotech</div></a></div>
                         <div className="button-ta"> <a style={{ textDecoration: "none", color: "black" }} href="#tab3"><div> Providers</div></a></div>
                         <div className="button-ta"> <a style={{ textDecoration: "none", color: "black" }} href="#tab4"><div>Payers</div></a></div>
-                    </div>
+                    
+                        </div>
+                     
                 </div>
     
             <div style={{ border: "1px solid #F1F1F1" }}></div>
