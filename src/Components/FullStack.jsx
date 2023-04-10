@@ -9,7 +9,7 @@ const FullStack = () => {
         <>
       <Navbar/>
             <div className="solut-details-first">
-                <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="https://www.larchitecturedaujourdhui.fr/wp-content/uploads/2021/10/sigmund-rWE7bTqgMJE-unsplash-scaled.jpg" />
+                <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="https://www.larchitecturedaujourdhui.fr/wp-content/uploads/2021/10/sigmund-rWE7bTqgMJE-unsplash-scaled.jpg" alt="" />
             </div>
             <div className="mernpic">
                 <img style={{objectFit:"cover",width:"700px"}} src="./Images/Mern.png" alt=""/>
@@ -54,7 +54,7 @@ const FullStack = () => {
                     <>
                         <div className="sol-det-mtr" style={{gap:"5%",border:"none"}}>
                             <div className="sol-det-imgdiv">
-                                <div><img style={{width:"330px",height:"210px",justifyContent:"center",margin:"auto",borderRadius:"10px"}} src={e.img} /></div>
+                                <div><img style={{width:"330px",height:"210px",justifyContent:"center",margin:"auto",borderRadius:"10px"}} src={e.img} alt="" /></div>
                                 
                             </div>
                             <div className="sol-det-descdiv">
