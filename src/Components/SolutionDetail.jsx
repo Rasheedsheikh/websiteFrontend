@@ -65,7 +65,7 @@ const SolutionDetail = () => {
                             </div>
                             <div className="sol-det-descdiv">
                                 <div className="sol-detdesctitle">{el.desctitle}</div>
-                                <div style={{marginTop:"2%"}}>{el.desc}</div>
+                                <div style={{marginTop:"2%",marginRight:"4%"}}>{el.desc}</div>
                             </div>
                         </div>
                     </>
