@@ -4,6 +4,16 @@ import Config from "../Config";
 
 const Navbar=()=>{
     const [data ,setData1]=useState([])
+    const [flag, setFlag] = useState(false)
+    const [activeItem, setActiveItem] = useState(true)
+    const handleItemEnter = (index) => {
+
+        setActiveItem(index);
+    };
+
+    const handleItemLeave = () => {
+        setActiveItem(null);
+    };
     useEffect(()=>{
         show()
     },[])
@@ -32,7 +42,7 @@ const Navbar=()=>{
                         <div key={i}>
                      <Link style={{textDecoration:"none",color:"black"}} to={e.direct}><div>{e.name}</div></Link> 
                            {/* { console.log(e,i)} */}
-                        </div>
+                     </div>
                     ))}
                 </div>
             </div>

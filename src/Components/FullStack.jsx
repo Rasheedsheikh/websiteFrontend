@@ -52,12 +52,12 @@ const FullStack = () => {
             <div>
                 {db?.Careers?.FullStack?.map((e, i) => (
                     <>
-                        <div className="sol-det-mtr" style={{gap:"5%",border:"none"}}>
-                            <div className="sol-det-imgdiv">
+                        <div className="sol-det-mtr" style={{gap:"5%"}}>
+                            <div className="sol-det-imgdiv" style={{marginTop:"3%",marginBottom:"3%"}}>
                                 <div><img style={{width:"330px",height:"210px",justifyContent:"center",margin:"auto",borderRadius:"10px"}} src={e.img} alt="" /></div>
                                 
                             </div>
-                            <div className="sol-det-descdiv">
+                            <div className="sol-det-descdiv" >
                                 <div className="sol-detdesctitle">{e.desctitle}</div>
                                 <div style={{marginTop:"2%"}}>{e.desc}</div>
                             </div>
