@@ -442,7 +442,7 @@ useEffect(()=>{
       </div>
       
       <hr/>
-
+    
       <div>
           <div>Full Job Description</div>
          {element?.desc2.map((el,i)=>(
