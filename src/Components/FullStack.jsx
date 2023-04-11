@@ -3,11 +3,12 @@ import "./solDetail.css";
 import db from "../db.json"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Navbar2 from "./Navbar2";
 
 const FullStack = () => {
     return (
         <>
-      <Navbar/>
+      <Navbar2/>
             <div className="solut-details-first">
                 <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="https://www.larchitecturedaujourdhui.fr/wp-content/uploads/2021/10/sigmund-rWE7bTqgMJE-unsplash-scaled.jpg" alt="" />
             </div>

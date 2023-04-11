@@ -3,11 +3,12 @@ import "./solDetail.css";
 import db from "../db.json"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Navbar2 from "./Navbar2";
 
 const SolutionDetail = () => {
     return (
         <>
-      <Navbar/>
+      <Navbar2/>
             <div className="solut-details-first">
                 <img style={{ width: "100%", height: "590px" ,position:"relative"}} src="./Images/pix.jpg" />
             </div>

@@ -3,11 +3,12 @@ import "./solDetail.css";
 import db from "../db.json"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Navbar2 from "./Navbar2";
 
 const Bot = () => {
     return (
         <>
-      <Navbar/>
+      <Navbar2/>
             <div className="solut-details-first">
                 <img style={{ width: "100%", height: "590px" ,position:"relative",objectFit:"cover"}} src="https://previews.123rf.com/images/alphaspirit/alphaspirit1307/alphaspirit130700086/21139567-teamwork-works-together-to-build-a-gear-system.jpg" />
             </div>
