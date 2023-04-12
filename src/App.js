@@ -19,6 +19,7 @@ import SolutionDetail from './Components/SolutionDetail';
 import FullStack from './Components/FullStack';
 import AiMl from './Components/AiMl';
 import Bot from './Components/Bot';
+import HomeNav from './Components/HomeNav';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
        <Route path="/fullstack" element={<FullStack/>}/>
        <Route path="/ai&ml" element={<AiMl/>}/>
        <Route path="/bot" element={<Bot/>}/>
+       <Route path="/homenav" element={<HomeNav/>}/>
   </Routes>
     </div>
   );

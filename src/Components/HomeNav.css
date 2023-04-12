@@ -1,0 +1,73 @@
+.Navbar {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    /* position: fixed !important; */
+    width: 99%;
+    height: 68px;
+    z-index: 1234567890;
+    top: 9999;
+    /* background: rgb(137 123 123 / 50%); */
+    /* margin-top: 10px; */
+    opacity: 100%;
+    height:64px;
+    /* background-color: #FFFFFF; */
+    position: absolute;
+    margin-top: -5%;
+  
+  
+  
+    /* background: rgb(78 74 74 / 50%); */
+  
+  }
+  .NavLe {
+    margin-left: 20px;
+  }
+  .NavRi {
+    margin-top: 2px; 
+    margin-right: 2%;
+    display: flex;
+    gap:6%;
+    margin-top: 2%;
+    margin-right: 9%;
+  }
+   .NavRi .navrightchild{
+    display: flex;
+    justify-content: space-around;
+    height:40px;
+    /* gap: 20px; */
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    /* color: white !important; */
+    color: fff;
+    
+    /* background-color: #fff; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    /* display: none; */
+    /* left: 0; */
+    /* padding: 10px; */
+    /* position: absolute; */
+    /* top: 100%; */
+    /* transition: all 0.3s ease; */
+    /* width: 200px; */
+    /* z-index: 1; */
+    
+  
+   }
+   .NavRi .navrightchild :hover{
+    border-bottom: 2px solid #FE602F;
+    /* display: block; */
+    /* transform: translateY(20px); */
+   }
+  
+  
+  .NavRi :hover {
+    color: #FE602F;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    /* overflow: hidden; */
+  } 

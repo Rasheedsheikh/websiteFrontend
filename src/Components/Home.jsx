@@ -19,18 +19,19 @@ import { Link, useNavigate } from "react-router-dom";
 import Career from "./Career";
 
 import Mapp from "./Mapp";
+import HomeNav from "./HomeNav";
 
 
 const Home = () => {
     const [data, setData1] = useState([])
 
     const [servdata, setservData] = useState([])
-    const[ industries,setIndu]=useState([])
-    const[testimonials,setTesti]=useState([])
-    const[solution,setSolu]=useState([])
-    const[community,setCommu]=useState([])
-    const[contact,setContact]=useState([])
-    const[whychoose,setWhy]=useState([])
+    const [industries, setIndu] = useState([])
+    const [testimonials, setTesti] = useState([])
+    const [solution, setSolu] = useState([])
+    const [community, setCommu] = useState([])
+    const [contact, setContact] = useState([])
+    const [whychoose, setWhy] = useState([])
 
 
     const [flag, setFlag] = useState(false)
@@ -57,7 +58,7 @@ const Home = () => {
 
     const [text, setText] = useState(0);
     const texts = ['A leading provider of life scienece and health care solutions', 'Patient support programs', "Drug adherence programs", "Decentralized clinical trials", "eBenefit verification", "ePedegree Solutions", "Let Us Drive Patients Outcome Together"];
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(false);
 
     // useEffect(() => {
     //     // const interval = setInterval(() => {
@@ -318,47 +319,58 @@ const Home = () => {
 
     useEffect(() => {
         whyChoose()
-},[])
+    }, [])
 
+    const handlenavbar=()=>{
+        setIndex(true)
+    }
+    const handlenavbarleave=()=>{
+        setIndex(false)
+    }
     return (
         <>
-            <div className="Nav">
-                <div className="NavLeft">
-                    <img style={{ width: "253px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
+            <nav onMouseEnter={handlenavbar}  onMouseLeave={handlenavbarleave}>{index ?
+                <div className="Nav">
+                    <div className="NavLeft">
+                        <img style={{ width: "253px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
+                    </div>
+
+                    <div className="NavRight">
+                        {data?.Total?.NavRoutes?.map((e, i) => (
+                            <div key={i} onMouseEnter={() => handleItemEnter(i)}
+                                onMouseLeave={handleItemLeave}
+                            >
+
+                                {/* <Link style={{textDecoration:"none", color:"#000000"}} to={e.path} ><div>{e.name}</div></Link>  */}
+                                <a style={{ textDecoration: "none", color: "#FFFFFF" }}
+
+                                    href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}>
+                                    <div className="navrightchild">
+                                        <div>{e.name}</div>
+                                    </div></a>
+
+
+                                {activeItem === i && (
+                                    <div className={activeItem ? "dropdown-menu" : ""} style={{ textDecoration: "none" }}>
+                                        {e?.options.map((option, optionIndex) => (
+                                            <>
+                                                <a style={{ textDecoration: "none", color: "#000000" }} onClick={() => setActiveItem(null)} href={option.url}>
+                                                    <div style={{ gap: "10%" }} className="hoveroptions" key={optionIndex}>{option.label}
+                                                    </div>
+                                                </a>
+                                            </>
+                                        ))}
+                                    </div>
+                                )}
+                                {/* { console.log(e,i)} */}
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                :
+                <HomeNav />}
+            </nav>
 
-                <div className="NavRight">
-                    {data?.Total?.NavRoutes?.map((e, i) => (
-                        <div key={i} onMouseEnter={() => handleItemEnter(i)}
-                            onMouseLeave={handleItemLeave}
-                        >
-
-                            {/* <Link style={{textDecoration:"none", color:"#000000"}} to={e.path} ><div>{e.name}</div></Link>  */}
-                            <a style={{ textDecoration: "none", color: "#FFFFFF" }}
-
-                                href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}>
-                                <div className="navrightchild">
-                                    <div>{e.name}</div>
-                                </div></a>
-
-
-                            {activeItem === i && (
-                                <div className={activeItem ? "dropdown-menu" : ""} style={{ textDecoration: "none" }}>
-                                    {e?.options.map((option, optionIndex) => (
-                                        <>
-                                            <a style={{ textDecoration: "none", color: "#000000" }} onClick={() => setActiveItem(null)} href={option.url}>
-                                                <div style={{ gap: "10%" }} className="hoveroptions" key={optionIndex}>{option.label}
-                                                </div>
-                                            </a>
-                                        </>
-                                    ))}
-                                </div>
-                            )}
-                            {/* { console.log(e,i)} */}
-                        </div>
-                    ))}
-                </div>
-            </div>
             {!flag && <div>
 
 
@@ -370,7 +382,7 @@ const Home = () => {
                         <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
                         </div> */}
                         <div >
-                            <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-5%", height: "800px", width: "100%", zIndex: "-2" }}>
+                            <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "800px", width: "100%", zIndex: "-2", position: "relative" }}>
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>
                             <div className="text-overlay">
@@ -425,17 +437,17 @@ const Home = () => {
                     )
 
                     )} */}
-                    { servdata?.map((item, i) => (
-                            item.what.map((obj, j) => (
-                                <div key={i}>
+                    {servdata?.map((item, i) => (
+                        item.what.map((obj, j) => (
+                            <div key={i}>
 
-                                    <div className="ServiceMain">{obj.title}</div>
+                                <div className="ServiceMain">{obj.title}</div>
 
-                                    <div className="serviceDual">{obj.desc}</div>
+                                <div className="serviceDual">{obj.desc}</div>
 
-                                </div>
-                            ))
+                            </div>
                         ))
+                    ))
                     }
                     {/* {console.log(servdata +
                         "1234567")} */}
@@ -448,29 +460,29 @@ const Home = () => {
                     {/* {data?.Total.Services.shapes.map((e, i) => ( */}
                     {/* {data?.Total?.Services?.shapes?.map((obj, i) => ( */}
 
-                    { servdata?.map((item, i) => (
-                            item.shapes.map((obj, j) => (
-                        <div key={j} className="shapes1" style={{ backgroundColor: "white" }}>
-                            <div className="numb">{obj.number}</div>
+                    {servdata?.map((item, i) => (
+                        item.shapes.map((obj, j) => (
+                            <div key={j} className="shapes1" style={{ backgroundColor: "white" }}>
+                                <div className="numb">{obj.number}</div>
 
-                            <div className="abso">
+                                <div className="abso">
 
-                                <div className="service-heading">{obj.heading}</div>
+                                    <div className="service-heading">{obj.heading}</div>
 
-                                <div>
-                                    {obj?.desc?.map((el, i) => (
-                                        <div key={i} className="service-desc">
-                                            <ul style={{}}>
-                                                <li style={{}}>{el}
-                                                </li></ul>
-                                            {/* <div style={{ margin: "auto", marginLeft: "15px" }}>{el}</div> */}
-                                        </div>
-                                    ))}
+                                    <div>
+                                        {obj?.desc?.map((el, i) => (
+                                            <div key={i} className="service-desc">
+                                                <ul style={{}}>
+                                                    <li style={{}}>{el}
+                                                    </li></ul>
+                                                {/* <div style={{ margin: "auto", marginLeft: "15px" }}>{el}</div> */}
+                                            </div>
+                                        ))}
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                            ))
+                        ))
                         //    { console.log(e,i)}    
                     ))}
                 </div>
@@ -486,16 +498,16 @@ const Home = () => {
 
                 <div style={{ width: "95%", margin: "auto" }} className="Indus-insder-cont">
                     {industries?.map((item, i) => (
-                        item?.insider?.map((e,j)=>(
-                        <div key={j} className="Indus-insder-cont-child">
-                            <div><img className="insiderimg" src={e.img} alt="" /></div>
-                            <div className="indus-title"> {e.title}</div>
-                            <div className="indus-desc"> {e.desc}</div>
-                            {/* <Link to="/learnn">   */}
-                            <div> <button onClick={() => navigate("/learnn")} className="buttons">Learn More</button></div>
-                            {/* </Link> */}
+                        item?.insider?.map((e, j) => (
+                            <div key={j} className="Indus-insder-cont-child">
+                                <div><img className="insiderimg" src={e.img} alt="" /></div>
+                                <div className="indus-title"> {e.title}</div>
+                                <div className="indus-desc"> {e.desc}</div>
+                                {/* <Link to="/learnn">   */}
+                                <div> <button onClick={() => navigate("/learnn")} className="buttons">Learn More</button></div>
+                                {/* </Link> */}
 
-                        </div>
+                            </div>
                         ))
                     ))}
                 </div>
@@ -503,15 +515,15 @@ const Home = () => {
                     <div id="Solution" className="Solution" style={{ width: "99%", margin: "auto" }}>
                         <div className="Solution-heading-cont" >
                             {solution?.map((item, i) => (
-                                item?.heading?.map((e,j)=>(
-                                <div key={j} className="solu-back">
-                                    <div className="sol-heading-title">
-                                        <div className="sol-heading-title-div">{e.title}</div>
+                                item?.heading?.map((e, j) => (
+                                    <div key={j} className="solu-back">
+                                        <div className="sol-heading-title">
+                                            <div className="sol-heading-title-div">{e.title}</div>
+                                        </div>
+                                        <div>
+                                            <div className="sol-desc"> {e.desc}</div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div className="sol-desc"> {e.desc}</div>
-                                    </div>
-                                </div>
                                 ))
                             ))}
                         </div>
@@ -533,8 +545,8 @@ const Home = () => {
 
                 {/* {data?.Total?.Testimonials?.main?.map((e, i) => ( */}
 
-                { testimonials?.map((obj, i) => (
-                            
+                {testimonials?.map((obj, i) => (
+
                     <div key={i}>
                         <div className="testimo-title">{obj.title}</div>
                         <center >
@@ -551,9 +563,10 @@ const Home = () => {
                                         <div className="slider-desc">{el.desc}</div>
                                         <div className="slider-role-name" style={{ marginTop: "5%" }}>
                                             <div>{el.name}</div>
-                                            <div>{el.role}</div>
+
                                         </div>
-                                        <div style={{ marginBottom: "5%" }}>{el.at}</div>
+                                        <div style={{ marginBottom: "5%", fontSize: "20px", fontWeight: "700" }}>{el.role}</div>
+                                        {/* <div >{el.at}</div> */}
                                     </div>
                                 ))}
 
@@ -561,7 +574,7 @@ const Home = () => {
                         </div>
 
                     </div>
-                            
+
                 ))}
 
                 <div className='why-main-box' style={{ width: "99%", margin: "auto" }}>
@@ -689,7 +702,7 @@ const Home = () => {
                                         >
 
 
-<TextField
+                                            <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"

@@ -25,6 +25,7 @@ body{
   opacity: 100%;
   height:64px;
   background-color: #FFFFFF;
+  position: absolute;
 
 
 
@@ -37,10 +38,8 @@ body{
 }
 
 .NavRight {
-  margin-top: 2px;
-  
+  margin-top: 2px; 
   margin-right: 2%;
-
 }
  .NavRight .navrightchild{
   display: flex;
@@ -51,7 +50,8 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 16px !important;
-  color: black !important;
+  /* color: white !important; */
+  color: #000000;
   
   /* background-color: #fff; */
   /* border: 1px solid #ccc; */
@@ -124,7 +124,6 @@ body{
   transform: perspective(1000px);
    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  
 }
 
 
@@ -136,11 +135,9 @@ body{
   font-size: 18px;
   float: bottom;
   transform: translateY(20px);
-  
   content: '';
- 
-
 }
+
 
 
 .text-overlay {
@@ -171,7 +168,7 @@ body{
   font-weight: bold;
     background: rgba(56, 55, 55, 0.5);
     /* animation: 'slide-in 3s forwards'; */
-  /* text-shadow: 2px 2px black; */
+  /* text-shadow: 2px 2px black; */  
 }
 .text-overlay3 {
   position: absolute;
@@ -671,9 +668,9 @@ text-align: center; */
 .slider-desc {
   /* font-family: 'Poppins'; */
   font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 48px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
   text-align: center;
   color: #222222;
 }
