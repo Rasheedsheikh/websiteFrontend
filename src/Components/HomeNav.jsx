@@ -32,7 +32,7 @@ show()
         <>
          <div className="Navbar">
                 <div className="NavLe">
-                    <img style={{ width: "253px", height: "50px", marginTop: "2px",objectFit:"cover" }} src="./Images/Logo SVG(white).png" alt="/" />
+                    <img style={{ width: "253px", height: "50px", marginTop: "2px",objectFit:"cover" }} src="./Images/Logo SVG(White).png" alt="/" />
                 </div>
 
                 <div className="NavRi">
