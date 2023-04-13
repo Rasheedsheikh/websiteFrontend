@@ -221,7 +221,7 @@ const Home = () => {
         try {
             let res = await fetch(`${Config.host}/get-testimonials`)
             let Testimonialsdataa = await res.json()
-            // console.log({ Testimonialsdataa })
+            console.log({ Testimonialsdataa })
             setTesti(Testimonialsdataa)
         }
         catch (err) {
@@ -292,7 +292,7 @@ const Home = () => {
         try {
             let res = await fetch(`${Config.host}/get-contact`)
             let Contactdataa = await res.json()
-            console.log({ Contactdataa })
+            // console.log({ Contactdataa })
             setContact(Contactdataa)
         }
         catch (err) {
@@ -309,7 +309,7 @@ const Home = () => {
         try {
             let res = await fetch(`${Config.host}/get-whyChoose`)
             let whyChoosedataa = await res.json()
-            console.log({ whyChoosedataa })
+            // console.log({ whyChoosedataa })
             setWhy(whyChoosedataa)
         }
         catch (err) {
@@ -385,6 +385,7 @@ const Home = () => {
                             <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "800px", width: "100%", zIndex: "-2", position: "relative" }}>
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>
+                            <div className="txt-ovr"></div>
                             <div className="text-overlay">
                                 {/* <div>A leading provider of life scienece and health care solutions</div> */}
                                 {/* <div>{text}</div> */}
@@ -500,9 +501,9 @@ const Home = () => {
                     {industries?.map((item, i) => (
                         item?.insider?.map((e, j) => (
                             <div key={j} className="Indus-insder-cont-child">
-                                <div><img className="insiderimg" src={e.img} alt="" /></div>
+                                <div><img className="insiderimg" src={e.img} alt="" /></div>    
                                 <div className="indus-title"> {e.title}</div>
-                                <div className="indus-desc"> {e.desc}</div>
+                                <div className="indus-desc" style={{height:"100px"}}> {e.desc}</div>
                                 {/* <Link to="/learnn">   */}
                                 <div> <button onClick={() => navigate("/learnn")} className="buttons">Learn More</button></div>
                                 {/* </Link> */}
@@ -546,24 +547,29 @@ const Home = () => {
                 {/* {data?.Total?.Testimonials?.main?.map((e, i) => ( */}
 
                 {testimonials?.map((obj, i) => (
-
+                 
                     <div key={i}>
                         <div className="testimo-title">{obj.title}</div>
-                        <center >
-                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%" }} src={obj.img} alt="" /></center>
+
                         <div className="carouse">
                             <Carousel
+
                                 showThumbs={true}
                                 infiniteLoop={true}
                                 swipeable={false}
                                 dynamicHeight={false} >
+                           
+
                                 {obj?.slide.map((el, i) =>
                                 (
-                                    <div key={i} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "3%" }}>
-                                        <div className="slider-desc">{el.desc}</div>
+                                    <div key={i} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "%" }}>
+                                        <div>
+                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%" }} src={el.img} alt="" /></div>
+                               
+                                        <div className="slider-desc" style={{marginTop:"2%"}}>{el.desc}</div>
                                         <div className="slider-role-name" style={{ marginTop: "5%" }}>
                                             <div>{el.name}</div>
-
+                                         
                                         </div>
                                         <div style={{ marginBottom: "5%", fontSize: "20px", fontWeight: "700" }}>{el.role}</div>
                                         {/* <div >{el.at}</div> */}
@@ -741,9 +747,6 @@ const Home = () => {
                                             style={{ padding: "10px" }}
                                         //  className="textborder"
                                         >
-
-
-
                                             <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
@@ -754,7 +757,6 @@ const Home = () => {
                                                 required
                                                 //   value={""}
                                                 fullWidth
-
                                             />
                                         </Grid>
 
@@ -763,9 +765,6 @@ const Home = () => {
                                             style={{ padding: "10px" }}
                                         //  className="textborder"
                                         >
-
-
-
                                             <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
@@ -776,14 +775,11 @@ const Home = () => {
                                                 required
                                                 //   value={""}
                                                 fullWidth
-
                                             />
                                         </Grid>
                                     </Grid>
                                 </Stack>
-
                             }
-
                                 <button className="Emailbutt">Submit</button>
                             </Grid>
                         </Grid>
@@ -795,8 +791,6 @@ const Home = () => {
                         <Mapp />
                     </div>
 
-
-
                     {data?.Total?.Footer?.map((obj, i) => (
                         <div key={i} className="footerParent">
                             <div className="footerMain">
@@ -805,8 +799,9 @@ const Home = () => {
                                     <div>
                                         {obj?.line1?.map((e, i) => (
                                             <a style={{ textDecoration: "none" }} href={e.route}>
-                                                <div key={i} className="footerline1">
-                                                    {e}</div>
+                                                 <div key={i} className="footerline1">
+                                                    {e}
+                                                    </div>
                                             </a>
                                         ))}
                                     </div>
@@ -844,9 +839,7 @@ const Home = () => {
                                         </div>
                                     ))}
                                 </div>
-
-
-
+                               
                             </div>
                         </div>
 
