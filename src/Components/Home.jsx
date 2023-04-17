@@ -536,7 +536,7 @@ const Home = () => {
                             {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
                             {/* <div className="solution-images-title">{e.title}</div> */}
                             {/* </div> */}
-                            <div style={{ margin: "auto", alignItems: "center", justifyContent: "center",textAlign:"center",marginLeft:"4%" }}><img style={{width:"1200px", alignItems: "center"}} src="/Images/copy.png" /></div>
+                            <div style={{ margin: "auto", alignItems: "center", justifyContent: "center",textAlign:"center",marginLeft:"4%" }}><img style={{width:"1200px", alignItems: "center"}} src="./Images/copy.png" /></div>
                             {/* </div> */}
                             {/* ))} */}
                         </div>
