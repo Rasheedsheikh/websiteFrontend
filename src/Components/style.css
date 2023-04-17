@@ -631,7 +631,10 @@ text-align: center; */
   /* border-radius: 10px; */
   /* margin-top: 20px; */
   /* width: 100%; */
-  margin: auto;
+  margin: auto !important;
+  align-items: center !important;
+  align-content: center !important;
+
 }
 
 

@@ -530,14 +530,14 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className="Solution-images" >
+                        <div className="Solution-images" style={{justifyItems:"center",justifyContent:"center",alignItems:"center",margin:"auto"}} >
                             {/* Dont ever delete this never delete this */}
                             {/* {data?.Total?.Solutions?.Images?.map((e, i) => ( */}
                             {/* <div key={i} className="sol-img-abs" > */}
                             {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
                             {/* <div className="solution-images-title">{e.title}</div> */}
                             {/* </div> */}
-                            <div style={{ margin: "auto", alignItems: "center", justifyContent: "center",textAlign:"center",marginLeft:"4%" }}><img style={{width:"1200px", alignItems: "center"}} src="./Images/copy.png" /></div>
+                            <div style={{ margin: "auto",width:"90%"  }}><img style={{width:"500%", alignItems: "center",margin:"auto",marginLeft:"20%",height:"aut"}} src="./Images/copy.png" /></div>
                             {/* </div> */}
                             {/* ))} */}
                         </div>
