@@ -141,8 +141,9 @@ body{
 .txt-ovr{
   position: absolute;
   width: 100%;
-  height: 120%;
+  height: 112%;
   background: rgba(56, 55, 55, 0.3);
+  /* border:1px solid red; */
   top:0%
 
 }
@@ -892,6 +893,7 @@ text-align: center; */
 .footerParent {
   background-color: #000000;
   margin-top: 10px;
+  width:100% !important
 }
 
 .footerMain {
@@ -909,6 +911,7 @@ text-align: center; */
   color: #FFFFFF;
   gap: 20px;
   margin-top: 10px;
+  margin-left: -5px;
 }
 
 .footerline1 {
@@ -936,6 +939,7 @@ text-align: center; */
   color: #FFFFFF;
   justify-content: center;
   margin-top: 50%;
+  margin-left: -5%;
 }
 
 /* .carousel-control-prev-icon {

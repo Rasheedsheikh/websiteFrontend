@@ -329,10 +329,13 @@ const Home = () => {
     }
     return (
         <>
-            <nav onMouseEnter={handlenavbar}  onMouseLeave={handlenavbarleave}>{index ?
+       
+
+            {!flag && <div>
+                <nav onMouseEnter={handlenavbar}  onMouseLeave={handlenavbarleave}>{index ?
                 <div className="Nav">
                     <div className="NavLeft">
-                        <img style={{ width: "253px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
+                        <img style={{ width: "250px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
                     </div>
 
                     <div className="NavRight">
@@ -371,8 +374,6 @@ const Home = () => {
                 <HomeNav />}
             </nav>
 
-            {!flag && <div>
-
 
                 <div className="main-box-1" >
 
@@ -382,7 +383,7 @@ const Home = () => {
                         <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
                         </div> */}
                         <div >
-                            <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "800px", width: "100%", zIndex: "-2", position: "relative" }}>
+                            <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "75%", width: "100%", zIndex: "-2", position: "relative" }}>
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>
                             <div className="txt-ovr"></div>
@@ -650,7 +651,7 @@ const Home = () => {
                                             <div className="commu-images">
                                                 {e?.images?.map((element, i) => (
                                                     <div key={i}>
-                                                        <div><img style={{ width: "350px", height: "244px" }} src={element} alt="" /></div></div>
+                                                        <div><img style={{ width: "350px", height: "244px" ,objectFit:"cover"}} src={element} alt="" /></div></div>
                                                 ))}
                                             </div>
 
@@ -817,7 +818,7 @@ const Home = () => {
 
                                     {obj?.line3?.map((e, i) => (
                                         <div key={i}>
-                                            {/* <div> <img style={{width:"30px", height:"20px"}} src="./Images/n.jpg"/></div> */}
+                                            {/* <div> <img style={{width:"50px", height:"90px"}} src="./Images/n.jpg"/></div> */}
                                             <div className="footerline2">{e}</div>
                                         </div>
                                     ))}

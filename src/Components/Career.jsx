@@ -17,6 +17,9 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Dialog from '@mui/material/Dialog';
 
 import Config from "../Config";
+// import Navbar2 from "./Navbar2";
+import Navbar3 from "./Navbar3";
+
 const Career = () => {
   const [data, setData] = useState([])
   // const[ searchdata, setSearchdata]=useState([])
@@ -120,7 +123,7 @@ useEffect(()=>{
   return (
     <>
 
-      {/* <Navbar/> */}
+      <Navbar3/>
       {db.Careers.header.map((e, i) => (
 
         <div   key={i} className="headerMain">

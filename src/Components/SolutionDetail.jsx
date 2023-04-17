@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./solDetail.css";
 import db from "../db.json"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Navbar2 from "./Navbar2";
+import Config from "../Config";
 
 const SolutionDetail = () => {
+    const [soldata,setSoldata]=useState([])
+    const sol = async () => {
+        try {
+            let res = await fetch(`${Config.host}/get-salesforce`)
+            let soldataa = await res.json()
+            // console.log({ soldataa })
+            setSoldata(soldataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        sol()
+    }, [])
     return (
         <>
       <Navbar2/>
