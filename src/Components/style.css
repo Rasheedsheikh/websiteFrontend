@@ -706,12 +706,15 @@ text-align: center; */
 }
 
 .com-mainParent {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   gap: 14px;
   /* width:95%; */
   margin: auto;
   margin-top: 50px;
   margin-left: 10px;
+  height:90%;
+  /* border: 1px solid red; */
 
   /* width:1338px; */
   /* height:743px  */
@@ -766,7 +769,9 @@ text-align: center; */
   row-gap: 2px;
   margin-top: 5px;
   /* width: 752px; */
-  height: 508.66px;
+  height: 65%;
+  margin: auto;
+  /* border: 1px solid blue; */
 }
 
 .contact-parent {

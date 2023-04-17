@@ -651,7 +651,7 @@ const Home = () => {
                                             <div className="commu-images">
                                                 {e?.images?.map((element, i) => (
                                                     <div key={i}>
-                                                        <div><img style={{ width: "350px", height: "244px" ,objectFit:"cover"}} src={element} alt="" /></div></div>
+                                                        <div><img style={{ width: "350px", height: "245px" }} src={element} alt="" /></div></div>
                                                 ))}
                                             </div>
 
