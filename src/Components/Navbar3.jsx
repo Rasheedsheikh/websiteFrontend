@@ -42,7 +42,7 @@ const Navbar3=()=>{
           }
     return(
         <>
-         <nav onMouseEnter={handlenavbar}  onMouseLeave={handlenavbarleave}>{index ?
+        
                 <div className="Nav">
                     <div className="NavLeft">
                         <img style={{ width: "253px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
@@ -80,9 +80,8 @@ const Navbar3=()=>{
                         ))}
                     </div>
                 </div>
-                :
-                <HomeNav />}
-            </nav>
+               
+            
         </>
     )
 }

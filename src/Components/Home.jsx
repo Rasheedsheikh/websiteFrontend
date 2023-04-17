@@ -39,6 +39,15 @@ const Home = () => {
     const navigate = useNavigate()
     const videoRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(0);
+
+    const [formData, setFormData] = useState({
+        FirstName: "",
+        LastName: "",
+        Email: "",
+      Message:""
+      })
+
+
     const handleItemEnter = (index) => {
 
         setActiveItem(index);
@@ -327,6 +336,57 @@ const Home = () => {
     const handlenavbarleave=()=>{
         setIndex(false)
     }
+
+
+
+
+    //Email
+    
+  const handledetails = (e) => {
+    console.log(formData)
+    // e.preventDefault()
+    const data = {
+
+      "FirstName": formData.FirstName,
+      "LastName": formData.LastName,
+      "Email": formData.Email,
+      "Message":formData.Message,
+
+
+    }
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    };
+    fetch(`${Config.host}/post-email`, requestOptions)
+
+      .then(data => {
+        return data.json();
+      })
+      .then(post => {
+        alert("sucesss")
+      });
+
+
+  }
+
+
+  const updateFormData = (event) =>
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
+
+  const {
+    FirstName,
+    LastName,
+    Email,
+    Message
+     } = formData;
+
+
     return (
         <>
        
@@ -530,7 +590,7 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className="Solution-images" style={{justifyItems:"center",justifyContent:"center",alignItems:"center",margin:"auto"}} >
+                        <div className="Solution-images" style={{justifyItems:"center",justifyContent:"center",alignItems:"center",margin:"auto",objectFit:"cover"}} >
                             {/* Dont ever delete this never delete this */}
                             {/* {data?.Total?.Solutions?.Images?.map((e, i) => ( */}
                             {/* <div key={i} className="sol-img-abs" > */}
@@ -555,7 +615,7 @@ const Home = () => {
                         <div className="carouse">
                             <Carousel
 
-                                showThumbs={true}
+                                showThumbs={false}
                                 infiniteLoop={true}
                                 swipeable={false}
                                 dynamicHeight={false} >
@@ -709,18 +769,39 @@ const Home = () => {
                                         >
 
 
-                                            <TextField
+                                            {/* <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"
-                                                id="firstname"
-                                                label={"First Name"}
+                                                id="Firstname"
+                                                label={"Email"}
+                                                onChange={e => updateFormData(e)}
+                                                value={firstName}
                                                 autoComplete="something-unsupported"
                                                 required
                                                 //   value={""}
                                                 fullWidth
 
-                                            />
+                                            /> */}
+                                            <TextField className="text"
+                 variant="filled"
+                  style={{ borderBottom: "#FE602F" }}
+                  // variant="filled"
+                  color="info"
+                  // variant="outlined"
+                  // id="firstname"
+                  label="First Name"
+                  onChange={e => updateFormData(e)}
+
+                  autoComplete="something-unsupported"
+                  name="FirstName"
+
+                  value={FirstName}
+                  required 
+
+                  fullWidth
+
+                />
                                         </Grid>
                                         <Grid item xl={6} lg={6} md={6} sm={12} xs={12}
                                             style={{ padding: "10px" }}
@@ -729,18 +810,41 @@ const Home = () => {
 
 
 
-                                            <TextField
+                                            {/* <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"
-                                                id="lastname"
-                                                label={"Last Name"}
+                                                id="Lastname"
+                                                label="Last Name"
+                                                onChange={e => updateFormData(e)}
+                                                value={LastName}
                                                 autoComplete="something-unsupported"
                                                 required
                                                 //   value={""}
                                                 fullWidth
 
-                                            />
+                                            /> */}
+
+
+<TextField className="text"
+                 variant="filled"
+                  style={{ borderBottom: "#FE602F" }}
+                  // variant="filled"
+                  color="info"
+                  // variant="outlined"
+                  // id="firstname"
+                  label="Last Name"
+                  onChange={e => updateFormData(e)}
+
+                  autoComplete="something-unsupported"
+                  name="LastName"
+
+                  value={LastName}
+                  required 
+
+                  fullWidth
+
+                />
                                         </Grid>
 
 
@@ -748,17 +852,40 @@ const Home = () => {
                                             style={{ padding: "10px" }}
                                         //  className="textborder"
                                         >
-                                            <TextField
+                                            {/* <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"
                                                 //   id="firstname"
                                                 label={"Email"}
+                                                onChange={e => updateFormData(e)}
+                                                value={Email}
                                                 autoComplete="something-unsupported"
                                                 required
                                                 //   value={""}
                                                 fullWidth
-                                            />
+                                            /> */}
+
+
+<TextField className="text"
+                 variant="filled"
+                  style={{ borderBottom: "#FE602F" }}
+                  // variant="filled"
+                  color="info"
+                  // variant="outlined"
+                  // id="firstname"
+                  label="Email"
+                  onChange={e => updateFormData(e)}
+
+                  autoComplete="something-unsupported"
+                  name="Email"
+
+                  value={Email}
+                  required 
+
+                  fullWidth
+
+                />
                                         </Grid>
 
 
@@ -766,22 +893,44 @@ const Home = () => {
                                             style={{ padding: "10px" }}
                                         //  className="textborder"
                                         >
-                                            <TextField
+                                            {/* <TextField
                                                 className="text"
                                                 style={{ borderBottom: "#FE602F" }}
                                                 variant="filled"
                                                 //   id="firstname"
-                                                label={"Leave Your message"}
+                                                label={"Message"}
+                                                onChange={e => updateFormData(e)}
+                                                value={Message}
                                                 autoComplete="something-unsupported"
                                                 required
                                                 //   value={""}
                                                 fullWidth
-                                            />
+                                            /> */}
+
+<TextField className="text"
+                 variant="filled"
+                  style={{ borderBottom: "#FE602F" }}
+                  // variant="filled"
+                  color="info"
+                  // variant="outlined"
+                  // id="firstname"
+                  label="Message"
+                  onChange={e => updateFormData(e)}
+
+                  autoComplete="something-unsupported"
+                  name="Message"
+
+                  value={Message}
+                  required 
+
+                  fullWidth
+
+                />
                                         </Grid>
                                     </Grid>
                                 </Stack>
                             }
-                                <button className="Emailbutt">Submit</button>
+                                <button className="Emailbutt" onClick={() => handledetails()}>Submit</button>
                             </Grid>
                         </Grid>
                     </Stack>
