@@ -536,7 +536,7 @@ const Home = () => {
                             {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
                             {/* <div className="solution-images-title">{e.title}</div> */}
                             {/* </div> */}
-                            <div style={{ margin: "auto", alignItems: "center", justifyContent: "center", marginLeft: "9%" }}><img src="/Images/Gr.png" /></div>
+                            <div style={{ margin: "auto", alignItems: "center", justifyContent: "center",textAlign:"center",marginLeft:"4%" }}><img style={{width:"1200px", alignItems: "center"}} src="/Images/Copy.png" /></div>
                             {/* </div> */}
                             {/* ))} */}
                         </div>
@@ -564,7 +564,7 @@ const Home = () => {
                                 (
                                     <div key={i} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "%" }}>
                                         <div>
-                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%" }} src={el.img} alt="" /></div>
+                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%",objectFit:"cover" }} src={el.img} alt="" /></div>
                                
                                         <div className="slider-desc" style={{marginTop:"2%"}}>{el.desc}</div>
                                         <div className="slider-role-name" style={{ marginTop: "5%" }}>
