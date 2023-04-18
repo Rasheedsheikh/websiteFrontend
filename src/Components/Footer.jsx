@@ -41,7 +41,11 @@ const Footer=()=>{
                             <div>
 
                                 {obj?.line3?.map((e, i) => (
-                                    <div  key={i} className="footerline2">{e}</div>
+                                       <div className="footerline2">
+                                       <div> <img style={{width:"60px", height:"45px",objectFit:"cover",justifyContent:"center",margin:"auto",alignContent:"center",marginLeft:"30%",marginBottom:"2%"}} src="./Images/valueFooter.png"/></div>
+                                      
+                                       <div>{e}</div>
+                                       </div>
                                 ))}
                             </div>
 

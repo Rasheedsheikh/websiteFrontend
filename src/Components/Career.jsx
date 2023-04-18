@@ -123,7 +123,7 @@ useEffect(()=>{
   return (
     <>
 
-      <Navbar3/>
+      {/* <Navbar3/> */}
       {db.Careers.header.map((e, i) => (
 
         <div   key={i} className="headerMain">

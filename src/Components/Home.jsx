@@ -44,8 +44,8 @@ const Home = () => {
         FirstName: "",
         LastName: "",
         Email: "",
-      Message:""
-      })
+        Message: ""
+    })
 
 
     const handleItemEnter = (index) => {
@@ -330,10 +330,10 @@ const Home = () => {
         whyChoose()
     }, [])
 
-    const handlenavbar=()=>{
+    const handlenavbar = () => {
         setIndex(true)
     }
-    const handlenavbarleave=()=>{
+    const handlenavbarleave = () => {
         setIndex(false)
     }
 
@@ -341,58 +341,55 @@ const Home = () => {
 
 
     //Email
-    
-  const handledetails = (e) => {
-    console.log(formData)
-    // e.preventDefault()
-    const data = {
 
-      "FirstName": formData.FirstName,
-      "LastName": formData.LastName,
-      "Email": formData.Email,
-      "Message":formData.Message,
+    const handledetails = (e) => {
+        console.log(formData)
+        // e.preventDefault()
+        const data = {
+
+            "FirstName": formData.FirstName,
+            "LastName": formData.LastName,
+            "Email": formData.Email,
+            "Message": formData.Message,
+
+
+        }
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        };
+        fetch(`${Config.host}/post-email`, requestOptions)
+
+            .then(data => {
+                return data.json();
+            })
+            .then(post => {
+                alert("sucesss")
+            });
 
 
     }
 
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    };
-    fetch(`${Config.host}/post-email`, requestOptions)
 
-      .then(data => {
-        return data.json();
-      })
-      .then(post => {
-        alert("sucesss")
-      });
+    const updateFormData = (event) =>
+        setFormData({
+            ...formData,
+            [event.target.name]: event.target.value
+        });
 
-
-  }
-
-
-  const updateFormData = (event) =>
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value
-    });
-
-  const {
-    FirstName,
-    LastName,
-    Email,
-    Message
-     } = formData;
+    const {
+        FirstName,
+        LastName,
+        Email,
+        Message
+    } = formData;
 
 
     return (
         <>
-       
-
-            {!flag && <div>
-                <nav onMouseEnter={handlenavbar}  onMouseLeave={handlenavbarleave}>{index ?
+            <nav onMouseEnter={handlenavbar} onMouseLeave={handlenavbarleave}>{index ?
                 <div className="Nav">
                     <div className="NavLeft">
                         <img style={{ width: "250px", height: "50px", marginTop: "10px" }} src="./Images/logo (1).jpg" alt="/" />
@@ -407,7 +404,16 @@ const Home = () => {
                                 {/* <Link style={{textDecoration:"none", color:"#000000"}} to={e.path} ><div>{e.name}</div></Link>  */}
                                 <a style={{ textDecoration: "none", color: "#FFFFFF" }}
 
-                                    href={e.path} onClick={() => e.path === "#career" ? setFlag(true) : setFlag(false)}>
+                                    href={e.path} onClick={() => {
+                                        if (e.path === "#career") {
+                                            setFlag(true)
+                                          
+                                            
+
+                                        } else {
+                                            setFlag(false)
+                                        }
+                                    }} >
                                     <div className="navrightchild">
                                         <div>{e.name}</div>
                                     </div></a>
@@ -433,6 +439,10 @@ const Home = () => {
                 :
                 <HomeNav />}
             </nav>
+
+
+            {!flag && <div>
+
 
 
                 <div className="main-box-1" >
@@ -562,9 +572,9 @@ const Home = () => {
                     {industries?.map((item, i) => (
                         item?.insider?.map((e, j) => (
                             <div key={j} className="Indus-insder-cont-child">
-                                <div><img className="insiderimg" src={e.img} alt="" /></div>    
+                                <div><img className="insiderimg" src={e.img} alt="" /></div>
                                 <div className="indus-title"> {e.title}</div>
-                                <div className="indus-desc" style={{height:"100px"}}> {e.desc}</div>
+                                <div className="indus-desc" style={{ height: "100px" }}> {e.desc}</div>
                                 {/* <Link to="/learnn">   */}
                                 <div> <button onClick={() => navigate("/learnn")} className="buttons">Learn More</button></div>
                                 {/* </Link> */}
@@ -590,14 +600,14 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className="Solution-images" style={{justifyItems:"center",justifyContent:"center",alignItems:"center",margin:"auto",objectFit:"cover"}} >
+                        <div className="Solution-images" style={{ justifyItems: "center", justifyContent: "center", alignItems: "center", marginTop: "2%", objectFit: "cover" }} >
                             {/* Dont ever delete this never delete this */}
                             {/* {data?.Total?.Solutions?.Images?.map((e, i) => ( */}
                             {/* <div key={i} className="sol-img-abs" > */}
                             {/* <div className="solImgdiv"><img style={{ width: "130px", height: "60px" }} src={e.img} alt="" /> */}
                             {/* <div className="solution-images-title">{e.title}</div> */}
                             {/* </div> */}
-                            <div style={{ margin: "auto",width:"90%"  }}><img style={{width:"500%", alignItems: "center",margin:"auto",marginLeft:"20%",height:"aut"}} src="./Images/copy.png" /></div>
+                            <div style={{ margin: "auto", width: "90%" }}><img style={{ width: "500%", alignItems: "center", margin: "auto", marginLeft: "25%", height: "aut" }} src="./Images/copy.png" /></div>
                             {/* </div> */}
                             {/* ))} */}
                         </div>
@@ -608,7 +618,7 @@ const Home = () => {
                 {/* {data?.Total?.Testimonials?.main?.map((e, i) => ( */}
 
                 {testimonials?.map((obj, i) => (
-                 
+
                     <div key={i}>
                         <div className="testimo-title">{obj.title}</div>
 
@@ -619,18 +629,18 @@ const Home = () => {
                                 infiniteLoop={true}
                                 swipeable={false}
                                 dynamicHeight={false} >
-                           
+
 
                                 {obj?.slide.map((el, i) =>
                                 (
                                     <div key={i} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "%" }}>
                                         <div>
-                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%",objectFit:"cover" }} src={el.img} alt="" /></div>
-                               
-                                        <div className="slider-desc" style={{marginTop:"2%"}}>{el.desc}</div>
+                                            <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%", objectFit: "cover" }} src={el.img} alt="" /></div>
+
+                                        <div className="slider-desc" style={{ marginTop: "2%" }}>{el.desc}</div>
                                         <div className="slider-role-name" style={{ marginTop: "5%" }}>
                                             <div>{el.name}</div>
-                                         
+
                                         </div>
                                         <div style={{ marginBottom: "5%", fontSize: "20px", fontWeight: "700" }}>{el.role}</div>
                                         {/* <div >{el.at}</div> */}
@@ -684,44 +694,60 @@ const Home = () => {
 
 
 
-                    <div id="Community">
+                    <Stack id="Community">
                         {community?.map((e, i) => (
 
-                            <div key={i} className="community-title">
-                                <div className="community">
+                            <Stack key={i}
+                                className="community-title"
+                            >
+                                <div
+                                    className="community">
 
                                     <div>{e.title}</div>
                                 </div>
-                                <div className="com-mainParent">
-                                    <div><img style={{ width: "500px", height: "740px", marginTop: "15px" }} src={e.IMG} alt="" /></div>
+                                <Grid container spacing={2} style={{ marginTop: "2%" }}
+                                //   className="com-mainParent" 
+                                >
+                                    <Grid item md={5} sm={12} lg={5} >
+                                        <img style={{ width: "100%", height: "95%", marginTop: "15px" }} src={e.IMG} alt="" /></Grid>
                                     {e?.details?.map((el, i) => (
-                                        <div key={i}>
+                                        <Grid item md={7} sm={12} lg={7} key={i} >
+                                            <Grid container>
+                                                <Grid item md={12} sm={12} lg={12}
+                                                    className="commu-heading"
+                                                >
+                                                    <div>{el.heading1}</div>
+                                                    <div style={{ color: "#FE602F" }}>{el.heading2}</div>
+                                                </Grid>
+                                                <div>
+                                                    <div className="commu-desc">{el.desc}</div>
+                                                </div>
+                                                <div>
+                                                    <Stack style={{ alignSelf: "center", justifyContent: "center", alignItems: "center", marginLeft: "100%" }}> <Link to="/careerm">
+                                                        <center><button className="buttons" style={{ margin: "auto", alignSelf: "center", justifyContent: "center", alignItems: "center", marginLeft: "100%" }}>Join us</button>
+                                                        </center></Link>
+                                                    </Stack>
+                                                </div>
+                                                <div
+                                                    className="commu-images"
+                                                >
+                                                    {e?.images?.map((element, i) => (
+                                                        <Grid item sm={12} md={6} lg={6} key={i}>
+                                                            <Stack style={{ padding: "5px" }}>
+                                                                <div  ><img style={{ width: "350px", height: "240px" }} src={element} alt="" /></div>
+                                                            </Stack>
+                                                        </Grid>
+                                                    ))}
+                                                </div>
+                                            </Grid>
 
-                                            <div className="commu-heading">
-                                                <div>{el.heading1}</div>
-                                                <div style={{ color: "#FE602F" }}>{el.heading2}</div>
-                                            </div>
-                                            <div>
-                                                <div className="commu-desc">{el.desc}</div>
-                                            </div>
-                                            <div>
-                                                <center> <Link to="/careerm"><button className="buttons" style={{ marginBottom: "8px" }}>Join us</button></Link>
-                                                </center>
-                                            </div>
-                                            <div className="commu-images">
-                                                {e?.images?.map((element, i) => (
-                                                    <div key={i}>
-                                                        <div><img style={{ width: "350px", height: "245px" }} src={element} alt="" /></div></div>
-                                                ))}
-                                            </div>
-
-                                        </div>
+                                        </Grid>
                                     ))}
 
-                                </div>
-                            </div>
+                                </Grid>
+                            </Stack>
                         ))}
-                    </div>
+                    </Stack>
 
 
                     <Stack className="contact-parent" flexDirection={"row"} style={{ width: "95%" }}>
@@ -784,24 +810,24 @@ const Home = () => {
 
                                             /> */}
                                             <TextField className="text"
-                 variant="filled"
-                  style={{ borderBottom: "#FE602F" }}
-                  // variant="filled"
-                  color="info"
-                  // variant="outlined"
-                  // id="firstname"
-                  label="First Name"
-                  onChange={e => updateFormData(e)}
+                                                variant="filled"
+                                                style={{ borderBottom: "#FE602F" }}
+                                                // variant="filled"
+                                                color="info"
+                                                // variant="outlined"
+                                                // id="firstname"
+                                                label="First Name"
+                                                onChange={e => updateFormData(e)}
 
-                  autoComplete="something-unsupported"
-                  name="FirstName"
+                                                autoComplete="something-unsupported"
+                                                name="FirstName"
 
-                  value={FirstName}
-                  required 
+                                                value={FirstName}
+                                                required
 
-                  fullWidth
+                                                fullWidth
 
-                />
+                                            />
                                         </Grid>
                                         <Grid item xl={6} lg={6} md={6} sm={12} xs={12}
                                             style={{ padding: "10px" }}
@@ -826,25 +852,25 @@ const Home = () => {
                                             /> */}
 
 
-<TextField className="text"
-                 variant="filled"
-                  style={{ borderBottom: "#FE602F" }}
-                  // variant="filled"
-                  color="info"
-                  // variant="outlined"
-                  // id="firstname"
-                  label="Last Name"
-                  onChange={e => updateFormData(e)}
+                                            <TextField className="text"
+                                                variant="filled"
+                                                style={{ borderBottom: "#FE602F" }}
+                                                // variant="filled"
+                                                color="info"
+                                                // variant="outlined"
+                                                // id="firstname"
+                                                label="Last Name"
+                                                onChange={e => updateFormData(e)}
 
-                  autoComplete="something-unsupported"
-                  name="LastName"
+                                                autoComplete="something-unsupported"
+                                                name="LastName"
 
-                  value={LastName}
-                  required 
+                                                value={LastName}
+                                                required
 
-                  fullWidth
+                                                fullWidth
 
-                />
+                                            />
                                         </Grid>
 
 
@@ -867,25 +893,25 @@ const Home = () => {
                                             /> */}
 
 
-<TextField className="text"
-                 variant="filled"
-                  style={{ borderBottom: "#FE602F" }}
-                  // variant="filled"
-                  color="info"
-                  // variant="outlined"
-                  // id="firstname"
-                  label="Email"
-                  onChange={e => updateFormData(e)}
+                                            <TextField className="text"
+                                                variant="filled"
+                                                style={{ borderBottom: "#FE602F" }}
+                                                // variant="filled"
+                                                color="info"
+                                                // variant="outlined"
+                                                // id="firstname"
+                                                label="Email"
+                                                onChange={e => updateFormData(e)}
 
-                  autoComplete="something-unsupported"
-                  name="Email"
+                                                autoComplete="something-unsupported"
+                                                name="Email"
 
-                  value={Email}
-                  required 
+                                                value={Email}
+                                                required
 
-                  fullWidth
+                                                fullWidth
 
-                />
+                                            />
                                         </Grid>
 
 
@@ -907,25 +933,25 @@ const Home = () => {
                                                 fullWidth
                                             /> */}
 
-<TextField className="text"
-                 variant="filled"
-                  style={{ borderBottom: "#FE602F" }}
-                  // variant="filled"
-                  color="info"
-                  // variant="outlined"
-                  // id="firstname"
-                  label="Message"
-                  onChange={e => updateFormData(e)}
+                                            <TextField className="text"
+                                                variant="filled"
+                                                style={{ borderBottom: "#FE602F" }}
+                                                // variant="filled"
+                                                color="info"
+                                                // variant="outlined"
+                                                // id="firstname"
+                                                label="Message"
+                                                onChange={e => updateFormData(e)}
 
-                  autoComplete="something-unsupported"
-                  name="Message"
+                                                autoComplete="something-unsupported"
+                                                name="Message"
 
-                  value={Message}
-                  required 
+                                                value={Message}
+                                                required
 
-                  fullWidth
+                                                fullWidth
 
-                />
+                                            />
                                         </Grid>
                                     </Grid>
                                 </Stack>
@@ -949,9 +975,9 @@ const Home = () => {
                                     <div>
                                         {obj?.line1?.map((e, i) => (
                                             <a style={{ textDecoration: "none" }} href={e.route}>
-                                                 <div key={i} className="footerline1">
+                                                <div key={i} className="footerline1">
                                                     {e}
-                                                    </div>
+                                                </div>
                                             </a>
                                         ))}
                                     </div>
@@ -967,8 +993,12 @@ const Home = () => {
 
                                     {obj?.line3?.map((e, i) => (
                                         <div key={i}>
-                                            {/* <div> <img style={{width:"50px", height:"90px"}} src="./Images/n.jpg"/></div> */}
-                                            <div className="footerline2">{e}</div>
+
+                                            <div className="footerline2">
+                                                <div> <img style={{ width: "60px", height: "45px", objectFit: "cover", justifyContent: "center", margin: "auto", alignContent: "center", marginLeft: "30%", marginBottom: "2%" }} src="./Images/valueFooter.png" /></div>
+
+                                                <div>{e}</div>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
@@ -989,7 +1019,7 @@ const Home = () => {
                                         </div>
                                     ))}
                                 </div>
-                               
+
                             </div>
                         </div>
 

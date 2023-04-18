@@ -661,6 +661,7 @@ text-align: center; */
   color: #000000;
   margin: auto;
   margin-top: 5%;
+  margin-bottom: 2%;
   text-align: center;
  
 }
@@ -769,11 +770,12 @@ text-align: center; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1px;
-  row-gap: 2px;
+  /* row-gap: 2px; */
   margin-top: 5px;
   /* width: 752px; */
   height: 65%;
-  margin: auto;
+  /* margin: auto; */
+  
   /* border: 1px solid blue; */
 }
 
@@ -877,6 +879,7 @@ text-align: center; */
   font-size: 28px;
   line-height: 42px;
   margin-top: 10px;
+  margin-bottom: 1%;
 
   /* identical to box height */
 
@@ -910,6 +913,7 @@ text-align: center; */
   background-color: #000000;
   margin-top: 30px;
   padding-bottom: 20px;
+  margin-left: -5%;
 }
 
 .footerLeft {
@@ -946,9 +950,12 @@ text-align: center; */
 .footerline2 {
   color: #FFFFFF;
   justify-content: center;
-  margin-top: 50%;
+  margin-top: 30%;
   margin-left: -5%;
+  /* border:1px solid red; */
+  /* margin: auto; */
 }
+
 
 /* .carousel-control-prev-icon {
 
