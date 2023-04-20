@@ -452,7 +452,7 @@ const Home = () => {
                         <div className="POWEROF">THE POWER OF</div>
                         <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
                         </div> */}
-                        <div >
+                        <div>
                             <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "75%", width: "100%", zIndex: "-2", position: "relative" }}>
                                 <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
                             </video>

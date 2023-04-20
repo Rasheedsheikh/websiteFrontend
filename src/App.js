@@ -20,6 +20,8 @@ import FullStack from './Components/FullStack';
 import AiMl from './Components/AiMl';
 import Bot from './Components/Bot';
 import HomeNav from './Components/HomeNav';
+import AdminLogin from './Admin/AdminLogin';
+import Login from './Admin/Login';
 
 
 function App() {
@@ -48,6 +50,9 @@ function App() {
        <Route path="/ai&ml" element={<AiMl/>}/>
        <Route path="/bot" element={<Bot/>}/>
        <Route path="/homenav" element={<HomeNav/>}/>
+       <Route path="/adminlogin" element={<AdminLogin/>}/>
+       <Route path="/login" element={<Login/>}/>
+
   </Routes>
     </div>
   );
