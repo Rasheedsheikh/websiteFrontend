@@ -117,7 +117,7 @@ const ServiceMainEdit = () => {
 
 
             <div className="inputmainbo3">
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 2</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box" value={desc} onChange={(e)=>setDesc(e.target.value)} />

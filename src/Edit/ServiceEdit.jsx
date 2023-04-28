@@ -129,7 +129,7 @@ const ServiceEdit = () => {
 
 
             <div className="inputmainbo3">
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 2</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 1</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box" value={desc0} onChange={(e)=>setDesc0(e.target.value)} />
@@ -141,7 +141,7 @@ const ServiceEdit = () => {
             </div>
 
             <div className="inputmainbo3">
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 3</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 2</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box" value={desc1}  onChange={(e)=>setDesc1(e.target.value)}/>
@@ -152,7 +152,7 @@ const ServiceEdit = () => {
                 </div>
             </div>
               <div className="inputmainbo2" style={{width:"500px"}}>
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 3</label></div>
                 <div className="input-container">
 
                     <input  style={{width:"430px"}}type="text" className="input-box" value={desc2} onChange={(e)=>setDesc2(e.target.value)} />
