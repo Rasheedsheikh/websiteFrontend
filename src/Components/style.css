@@ -460,6 +460,7 @@ text-align: center; */
   margin-top: 20px;
 }
 
+
 .Indus-heading {
 
   margin-top: 50px;
@@ -509,7 +510,7 @@ text-align: center; */
   background-color: white;
   height: 40px;
   width: 180px !important;
-  left: 415px;
+  /* left: 415px; */
   top: 279px;
   border-radius: 2px !important;
   margin-top: 20px;
@@ -520,6 +521,7 @@ text-align: center; */
   line-height: 21px;
   color: #FE602F
 }
+
 
 .buttons:hover {
   border: 1px solid #FE6161;
@@ -536,11 +538,13 @@ text-align: center; */
 }
 
 .insiderimg {
+  position: relative;
   height: 180px;
   width: 270px;
   margin: 5px 2px 2px 2px;
   border-radius: 5px;
   object-fit: cover;
+  z-index: 2;
 }
 
 .Indus-insder-cont {

@@ -1,0 +1,127 @@
+.adminnav{
+    border-bottom:1px solid rgba(216, 213, 213, 1)
+    /* border:  1px solid rgba(216, 213, 213, 1); */
+}
+.edbuttons{
+    border: 1px solid orangered;
+  background-color:#FE602F;
+  height: 40px;
+  width: 180px !important;
+  /* left: 415px; */
+  top: 279px;
+  border-radius: 2px !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: white
+}
+
+
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+   
+    border-radius: 5px;
+    margin: auto;
+    
+  }
+  
+  .input-box {
+    border: none;
+    border:1.5px solid #FE602F;
+    /* padding: 10px; */
+    width: 570px;
+    height:50px;
+    /* margin: auto; */
+ 
+  }
+  .navadm{
+    font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 21px;
+margin: auto;
+margin-right: 15px;
+/* identical to box height */
+
+
+color: #444444
+  }
+  .inputmainbo{
+    margin: auto;
+    /* border: 1px solid red; */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+    margin-top: 6%;
+    
+  }
+  
+  .inputmainbo2{
+    margin: auto;
+    /* border: 1px solid red; */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+    margin-top: 3%;
+    
+  }
+  .inputmainbo3{
+    margin: auto;
+    /* border: 1px solid red; */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+    margin-top: 3%;
+    
+  }
+  .icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* width:90%; */
+  }
+  
+  .edit-icon {
+  
+    margin-right: 10px;
+    cursor: pointer;
+    width:16px;
+    height:18px
+  }
+  
+  .delete-icon {
+    color: black;
+    cursor: pointer;
+    width:16px;
+    height:18px
+  }
+  

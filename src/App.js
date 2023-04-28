@@ -22,6 +22,10 @@ import Bot from './Components/Bot';
 import HomeNav from './Components/HomeNav';
 import AdminLogin from './Admin/AdminLogin';
 import Login from './Admin/Login';
+import IndustriesEdit from './Edit/IndustriesEdit';
+import ServiceEdit from './Edit/ServiceEdit';
+import ServiceMainEdit from './Edit/serviceMain';
+import WhyChooseEdit from './Edit/WhyChooseEdit';
 
 
 function App() {
@@ -52,6 +56,11 @@ function App() {
        <Route path="/homenav" element={<HomeNav/>}/>
        <Route path="/adminlogin" element={<AdminLogin/>}/>
        <Route path="/login" element={<Login/>}/>
+       <Route path="/industriesedit" element={<IndustriesEdit/>}/>
+       <Route path="/serviceedit" element={<ServiceEdit/>}/>
+       <Route path="/servicemainEdit" element={<ServiceMainEdit/>}/>
+       <Route path="/whychooseedit" element={<WhyChooseEdit/>}/>
+       
 
   </Routes>
     </div>

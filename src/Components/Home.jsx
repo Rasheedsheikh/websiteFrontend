@@ -32,7 +32,7 @@ const Home = () => {
     const [community, setCommu] = useState([])
     const [contact, setContact] = useState([])
     const [whychoose, setWhy] = useState([])
-
+    const [isAdmin, setisAdmin] = useState(false)
 
     const [flag, setFlag] = useState(false)
     const [activeItem, setActiveItem] = useState(true)
@@ -68,6 +68,10 @@ const Home = () => {
     const [text, setText] = useState(0);
     const texts = ['A leading provider of life scienece and health care solutions', 'Patient support programs', "Drug adherence programs", "Decentralized clinical trials", "eBenefit verification", "ePedegree Solutions", "Let Us Drive Patients Outcome Together"];
     const [index, setIndex] = useState(false);
+    const [indus, setIndus] = useState({
+        index: null,
+        isHover: false
+    })
 
     // useEffect(() => {
     //     // const interval = setInterval(() => {
@@ -247,7 +251,7 @@ const Home = () => {
         try {
             let res = await fetch(`${Config.host}/get-Industries`)
             let Industriesdataa = await res.json()
-            // console.log({ Industriesdataa })
+            console.log({ Industriesdataa })
             setIndu(Industriesdataa)
         }
         catch (err) {
@@ -407,8 +411,8 @@ const Home = () => {
                                     href={e.path} onClick={() => {
                                         if (e.path === "#career") {
                                             setFlag(true)
-                                          
-                                            
+
+
 
                                         } else {
                                             setFlag(false)
@@ -511,13 +515,26 @@ const Home = () => {
                     )} */}
                     {servdata?.map((item, i) => (
                         item.what.map((obj, j) => (
-                            <div key={i}>
+                            <div onMouseEnter={() => setIndus({ index: j, isHover: true })}
+                                onMouseLeave={() => setIndus({ index: null, isHover: false })} key={i}>
 
                                 <div className="ServiceMain">{obj.title}</div>
 
                                 <div className="serviceDual">{obj.desc}</div>
 
+                                {indus.index == j && indus.isHover && (
+                                    <>
+
+                                        <Link to={`/servicemainedit?id=${item._id}&id2=${obj._id}`}  >  <button style={{ marginLeft: "5%" }} className="edbuttons" >
+                                            Edit
+                                        </button>
+                                        </Link>
+                                    </>
+                                )}
+
                             </div>
+
+
                         ))
                     ))
                     }
@@ -534,7 +551,8 @@ const Home = () => {
 
                     {servdata?.map((item, i) => (
                         item.shapes.map((obj, j) => (
-                            <div key={j} className="shapes1" style={{ backgroundColor: "white" }}>
+                            <div onMouseEnter={() => setIndus({ index: j, isHover: true })}
+                                onMouseLeave={() => setIndus({ index: null, isHover: false })} key={j} className="shapes1" style={{ backgroundColor: "white" }}>
                                 <div className="numb">{obj.number}</div>
 
                                 <div className="abso">
@@ -547,10 +565,21 @@ const Home = () => {
                                                 <ul style={{}}>
                                                     <li style={{}}>{el}
                                                     </li></ul>
+
                                                 {/* <div style={{ margin: "auto", marginLeft: "15px" }}>{el}</div> */}
                                             </div>
+
                                         ))}
 
+                                        {indus.index == j && indus.isHover && (
+                                            <>
+
+                                                <Link to={`/serviceedit?id=${item._id}&id2=${obj._id}`}  >  <button style={{ marginLeft: "5%" }} className="edbuttons" >
+                                                    Edit
+                                                </button>
+                                                </Link>
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -559,29 +588,62 @@ const Home = () => {
                     ))}
                 </div>
 
-                <div id="Industriess">
+                <div id="Industriess" >
+
                     {industries?.map((e, i) => (
-                        <div key={i} >
-                            <div className="Indus-heading"> {e.heading}</div>
+                        <div key={i} className="indusmainheading">
+                            <div onMouseEnter={() => setIndus({ index: i, isHover: true })}
+                                onMouseLeave={() => setIndus({ index: null, isHover: false })} className="Indus-heading"> {e.heading}
+                                {indus.index == i && indus.isHover && (
+                                    <>
+
+                                        <button style={{ marginLeft: "5%" }} className="buttons" >
+                                            Edit
+                                        </button>
+                                    </>
+                                )}
+
+                            </div>
+
+
+
 
                         </div>
                     ))}
                 </div>
 
                 <div style={{ width: "95%", margin: "auto" }} className="Indus-insder-cont">
+
                     {industries?.map((item, i) => (
                         item?.insider?.map((e, j) => (
-                            <div key={j} className="Indus-insder-cont-child">
+                            <div onMouseEnter={() => setIndus({ index: j, isHover: true })}
+                                onMouseLeave={() => setIndus({ index: null, isHover: false })} key={j} className="Indus-insder-cont-child">
                                 <div><img className="insiderimg" src={e.img} alt="" /></div>
+                                {indus.index == j && indus.isHover && (
+                                    <>
+                                        <button className="buttons" style={{ marginTop: "-50%" }} >
+                                            Change Image
+                                        </button>
+                                        <Link to={`/industriesedit?id=${item._id}&id2=${e._id}`}  > <button className="buttons" style={{ marginTop: "-50%" }} >
+                                            Edit
+                                        </button>
+                                        </Link>
+                                    </>
+                                )}
+
                                 <div className="indus-title"> {e.title}</div>
                                 <div className="indus-desc" style={{ height: "100px" }}> {e.desc}</div>
                                 {/* <Link to="/learnn">   */}
                                 <div> <button onClick={() => navigate("/learnn")} className="buttons">Learn More</button></div>
                                 {/* </Link> */}
 
+
                             </div>
                         ))
+
                     ))}
+
+
                 </div>
                 <div >
                     <div id="Solution" className="Solution" style={{ width: "99%", margin: "auto" }}>
@@ -619,7 +681,7 @@ const Home = () => {
 
                 {testimonials?.map((obj, i) => (
 
-                    <div key={i}>
+                    <div>
                         <div className="testimo-title">{obj.title}</div>
 
                         <div className="carouse">
@@ -633,17 +695,31 @@ const Home = () => {
 
                                 {obj?.slide.map((el, i) =>
                                 (
-                                    <div key={i} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "%" }}>
+                                    <div  key={i} onMouseEnter={() => setIndus({ index: i, isHover: true })}
+                                    onMouseLeave={() => setIndus({ index: null, isHover: false })} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "%" }}>
                                         <div>
                                             <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%", objectFit: "cover" }} src={el.img} alt="" /></div>
+                                            {indus.index == i && indus.isHover && (
+                                                        <>
 
+                                                            <Link to={`/whychooseedit?id=${obj._id}&id2=${el._id}`}  >  <button style={{}} className="edbuttons" >
+                                                                Edit
+                                                            </button>
+                                                            </Link>
+                                                        </>
+                                                    )}
                                         <div className="slider-desc" style={{ marginTop: "2%" }}>{el.desc}</div>
                                         <div className="slider-role-name" style={{ marginTop: "5%" }}>
                                             <div>{el.name}</div>
 
                                         </div>
+
+                                      
                                         <div style={{ marginBottom: "5%", fontSize: "20px", fontWeight: "700" }}>{el.role}</div>
                                         {/* <div >{el.at}</div> */}
+
+
+                                      
                                     </div>
                                 ))}
 
@@ -656,7 +732,7 @@ const Home = () => {
 
                 <div className='why-main-box' style={{ width: "99%", margin: "auto" }}>
                     {whychoose?.map((e, i) => (
-                        <div key={i} >
+                        <div >
 
 
                             <h1>{e.title}</h1>
@@ -666,14 +742,37 @@ const Home = () => {
                                     <div>
 
                                         {e?.desc?.map((el, i) => (
-                                            <div key={i}>
+                                            <div   key={i} onMouseEnter={() => setIndus({ index: i, isHover: true })}
+                                            onMouseLeave={() => setIndus({ index: null, isHover: false })}>
                                                 <div className='why-text-box'>
                                                     <div className='why-oranged'><p>{el.number}</p></div>
-                                                    <div style={{ marginTop: "5%" }}>{el.detail}</div>
+                                                    <div style={{ marginTop: "5%" }}>{el.detail}
+                                                    {indus.index == i && indus.isHover && (
+                                                        <>
+
+                                                            <Link to={`/whychooseedit?id=${e._id}&id2=${el._id}`}  >  <button style={{marginLeft:"10%"}} className="edbuttons" >
+                                                                Edit
+                                                            </button>
+                                                            </Link>
+                                                        </>
+                                                    )}
+
+                                                    
+                                                    </div>
+                                                   
                                                 </div>
+
+
+
+
                                             </div>
+
+
+
+
                                         ))
                                         }
+
 
 
                                     </div>
