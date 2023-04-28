@@ -131,7 +131,7 @@ const IndustriesEdit = () => {
                     <input type="text" className="input-box" value={button}  onChange={(e)=>setButton(e.target.value)} />
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"  onClick={e => updateFormData1('editButton')} />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setDesc("")}/>
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setButton("")}/>
                     </div>
                 </div>
             </div>

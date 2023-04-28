@@ -118,7 +118,7 @@ const ServiceEdit = () => {
                     <input type="text" className="input-box" value={heading}  onChange={(e)=>setHeading(e.target.value)}/>
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"   />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  />
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" onClick={(e)=>setHeading("")} />
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@ const ServiceEdit = () => {
                     <input type="text" className="input-box" value={desc0} onChange={(e)=>setDesc0(e.target.value)} />
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit" />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" />
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" onClick={(e)=>setDesc0("")} />
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@ const ServiceEdit = () => {
                     <input type="text" className="input-box" value={desc1}  onChange={(e)=>setDesc1(e.target.value)}/>
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit" />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" />
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setDesc1("")}/>
                     </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@ const ServiceEdit = () => {
                     <input  style={{width:"430px"}}type="text" className="input-box" value={desc2} onChange={(e)=>setDesc2(e.target.value)} />
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"   on />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  />
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setDesc2("")} />
                     </div>
                 </div>
             </div>

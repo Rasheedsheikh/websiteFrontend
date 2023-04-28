@@ -130,7 +130,7 @@ const WhyChooseEdit = () => {
                     <input type="text" className="input-box" value={name}  onChange={(e)=>setName(e.target.value)} />
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"   />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setDesc("")}/>
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setName("")}/>
                     </div>
                 </div>
             </div>
