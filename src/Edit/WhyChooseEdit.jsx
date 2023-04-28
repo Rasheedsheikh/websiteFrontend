@@ -97,7 +97,7 @@ const WhyChooseEdit = () => {
             {/* {indu.map((e,i)=>(
                 <> */}
             <div className="inputmainbo" >
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Header 1</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Role</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box"  value={role} onChange={(e)=>setRole(e.target.value)}/>
@@ -124,7 +124,7 @@ const WhyChooseEdit = () => {
 
 
            <div className="inputmainbo3">
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Button</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Name</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box" value={name}  onChange={(e)=>setName(e.target.value)} />

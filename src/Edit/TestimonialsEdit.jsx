@@ -100,7 +100,7 @@ const TestimonialsEdit = () => {
             {/* {indu.map((e,i)=>(
                 <> */}
             <div className="inputmainbo" >
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Header 1</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Title</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box" value={title}  onChange={(e)=>setTitle(e.target.value)}/>
@@ -117,7 +117,7 @@ const TestimonialsEdit = () => {
 
 
             <div className="inputmainbo3">
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase 2</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Description</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box" value={desc} onChange={(e)=>setDesc(e.target.value)} />

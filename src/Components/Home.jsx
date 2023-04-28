@@ -592,16 +592,18 @@ const Home = () => {
 
                     {industries?.map((e, i) => (
                         <div key={i} className="indusmainheading">
-                            <div onMouseEnter={() => setIndus({ index: i, isHover: true })}
-                                onMouseLeave={() => setIndus({ index: null, isHover: false })} className="Indus-heading"> {e.heading}
-                                {indus.index == i && indus.isHover && (
+                            <div 
+                            // onMouseEnter={() => setIndus({ index: i, isHover: true })}
+                            //     onMouseLeave={() => setIndus({ index: null, isHover: false })} 
+                                className="Indus-heading"> {e.heading}
+                                {/* {indus.index == i && indus.isHover && (
                                     <>
 
                                         <button style={{ marginLeft: "5%" }} className="buttons" >
                                             Edit
                                         </button>
                                     </>
-                                )}
+                                )} */}
 
                             </div>
 
