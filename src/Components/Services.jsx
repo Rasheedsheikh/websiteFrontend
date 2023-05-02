@@ -86,7 +86,7 @@ const Services = () => {
                                 onMouseLeave={() => setIndus({ index: null, isHover: false })} key={j} className="shapes1" style={{ backgroundColor: "white" }}>
                                 <div className="numb">{obj.number}</div>
 
-                                <div className="abso">
+                                <div className="abso" style={{width:"90%"}}>
 
                                     <div className="service-heading">{obj.heading}</div>
 
