@@ -783,6 +783,40 @@ text-align: center; */
   /* border: 1px solid blue; */
 }
 
+
+@media all and (min-width: 1440px) {
+  .commu-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1px;
+    /* row-gap: 2px; */
+    margin-top: 5px;
+    /* width: 752px; */
+    height: 65%;
+    margin-left: 0px !important;
+    /* margin: auto; */
+    
+    /* border: 1px solid blue; */
+  }
+}
+  @media all and (min-width: 1800px) {
+    .commu-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1px;
+      /* row-gap: 2px; */
+      margin-top: 5px;
+      /* width: 752px; */
+      height: 65%;
+      margin-left: 0px !important;
+      /* margin: auto; */
+      
+      /* border: 1px solid blue; */
+    }
+  
+    
+}
+
 .contact-parent {
   width: 95%;
   justify-content: center;

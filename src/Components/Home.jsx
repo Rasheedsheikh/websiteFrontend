@@ -587,7 +587,7 @@ const Home = () => {
                                                 >
                                                     {e?.images?.map((element, i) => (
                                                         <Grid item sm={12} md={12} lg={12} key={i}>
-                                                            <Stack style={{padding:"5px" ,marginLeft:"-20px"}}>
+                                                            <Stack style={{padding:"10px" ,marginLeft:"-20px"}}>
                                                                 <div><img style={{ width: "380px", height: "240px" }} src={element} alt="" /></div>
                                                             </Stack>
                                                         </Grid>
