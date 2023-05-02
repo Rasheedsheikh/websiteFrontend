@@ -3,8 +3,9 @@ import "./industries.css"
 import { useSearchParams,useLocation } from "react-router-dom";
 
 import Config from "../Config";
-const WhyChooseEdit = () => {
-    const [number, setNumber] = useState("");
+const CommunityEdit = () => {
+    const [heading1, setHeading1] = useState("");
+    const[ heading2,setHeading2]=useState("")
     const [desc, setDesc] = useState("");
   
         
@@ -20,11 +21,12 @@ const WhyChooseEdit = () => {
 
     const whychoose = async () => {
         try {
-            let res = await fetch(`http://localhost:2233/${id}/slide/${id2}`)
+            let res = await fetch(`http://localhost:2233/${id}/details/${id2}`)
             let whychoosedataa = await res.json()
             console.log({ whychoosedataa })
           
-            setNumber(whychoosedataa.number)
+            setHeading1(whychoosedataa.heading1)
+            setHeading2(whychoosedataa.heading2)
             setDesc(whychoosedataa.desc)
             // setButton(whychoosedataa.button)
         }
@@ -50,7 +52,7 @@ const WhyChooseEdit = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ number, desc })
+            body: JSON.stringify({ heading1, desc })
         });
 
         // handle response from API
@@ -97,10 +99,21 @@ const WhyChooseEdit = () => {
                 <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Header 1</label></div>
                 <div className="input-container">
 
-                    <input type="text" className="input-box"  value={number} onChange={(e)=>setNumber(e.target.value)}/>
+                    <input type="text" className="input-box"  value={heading1} onChange={(e)=>setHeading1(e.target.value)}/>
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"   />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" onClick={(e)=>setNumber("")} />
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" onClick={(e)=>setHeading1("")} />
+                    </div>
+                </div>
+            </div>
+            <div className="inputmainbo" >
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Header 1</label></div>
+                <div className="input-container">
+
+                    <input type="text" className="input-box"  value={heading2} onChange={(e)=>setHeading2(e.target.value)}/>
+                    <div className="icon-container">
+                        <img className="edit-icon" src="./Images/edi.png" alt="Edit"   />
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete" onClick={(e)=>setHeading2("")} />
                     </div>
                 </div>
             </div>
@@ -132,4 +145,4 @@ const WhyChooseEdit = () => {
         </>
     )
 }
-export default WhyChooseEdit;
+export default CommunityEdit;

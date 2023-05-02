@@ -26,6 +26,8 @@ import IndustriesEdit from './Edit/IndustriesEdit';
 import ServiceEdit from './Edit/ServiceEdit';
 import ServiceMainEdit from './Edit/serviceMain';
 import WhyChooseEdit from './Edit/WhyChooseEdit';
+import TestimonialsEdit from './Edit/TestimonialsEdit';
+import CommunityEdit from './Edit/CommunityEdit';
 
 
 function App() {
@@ -60,6 +62,9 @@ function App() {
        <Route path="/serviceedit" element={<ServiceEdit/>}/>
        <Route path="/servicemainEdit" element={<ServiceMainEdit/>}/>
        <Route path="/whychooseedit" element={<WhyChooseEdit/>}/>
+       <Route path="/testimonialsedit" element={<TestimonialsEdit/>}/>
+       <Route path="/communityedit" element={<CommunityEdit/>}/>
+
        
 
   </Routes>
