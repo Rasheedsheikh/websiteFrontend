@@ -88,7 +88,7 @@ const Fill = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     };
-    fetch('http://localhost:2233/upload', requestOptions)
+    fetch('http://localhost:3000/post-upload', requestOptions)
 
       .then(data => {
         return data.json();
@@ -123,7 +123,7 @@ const Fill = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(e.target.files[0])
     };
-    fetch('http://localhost:2233/fileUpload', requestOptions)
+    fetch('http://localhost:3000/Upload', requestOptions)
 
       .then(data => {
         return data.json();
@@ -418,6 +418,7 @@ const Fill = () => {
 onChange={(e)=>uploadResume(e)}
 type="file"/>
 </div>
+
 
           </Stack>
           <Stack style={{ margin: "auto", marginTop: "10px" }}>

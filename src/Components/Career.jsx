@@ -22,9 +22,15 @@ import Navbar3 from "./Navbar3";
 
 const Career = () => {
   const [data, setData] = useState([])
+  const [descdata,setDescdata]=useState([])
   // const[ searchdata, setSearchdata]=useState([])
   const [searchQuery, setSearchQuery] = useState('');
   const [anchorEl, setAnchorEl] = useState(null);
+
+  const [indus, setIndus] = useState({
+    index: null,
+    isHover: false
+})
   // const [checked, setChecked] = useState(false);
 
 const [open1, setOpen] = React.useState(false);
@@ -87,21 +93,39 @@ const[checked,setChecked]=useState(false);
   //   navigate(path);
   // }
   useEffect(() => {
-    // show()
-
+    show()
+    // workwithus()
   }, [])
-  // const show = async () => {
-  //   try {
-  //     let res = await fetch(`${Config.host}/get-jobs`)
-  //     let data = await res.json()
-  //     console.log(data)
-  //     setData(data)
-  //   }
-  //   catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-  // console.log(db)
+  const show = async () => {
+    try {
+      let res = await fetch(`${Config.host}/get-jobs`)
+      let data = await res.json()
+      // console.log(data)
+      setData(data)
+    }
+    catch (err) {
+      console.log(err)
+    }
+  }
+  console.log(db)
+
+
+useEffect(()=>{
+workwithus()
+},[])
+
+  const workwithus = async () => {
+    try {
+      let res = await fetch("http://localhost:2233/get-workwithus")
+      let data = await res.json()
+      // console.log(data)
+      setDescdata(data)
+    }
+    catch (err) {
+      console.log(err)
+    }
+  }
+  console.log(db)
 
   const handleImp= async()=>{
     try{
@@ -124,15 +148,28 @@ useEffect(()=>{
     <>
 
       {/* <Navbar3/> */}
-      {db.Careers.header.map((e, i) => (
+      {descdata?.map((e, i) => (
 
-        <div   key={i} className="headerMain">
+        <div   key={i} className="headerMain" 
+         onMouseEnter={() => setIndus({ index: i, isHover: true })}
+            onMouseLeave={() => setIndus({ index: null, isHover: false })} 
+        >
           <div className="headerleft">
             <div className="headerlefttitle">
               <div>{e.title1}</div>
               <div style={{ color: "#FE602F" }}> {e.title2}</div>
             </div>
+            {indus.index == i && indus.isHover && (
+                <>
+                         
+                    <Link to={`/whyworkedit?id=${e._id}`}  > <button className="buttons" style={{ marginTop: "-50%" }} >
+                        Edit
+                    </button>
+                    </Link>
+                </>
+            )}
             <div className="headerdesc"> {e.desc}</div>
+
           </div>
           <div>
           <img style={{ height: "320.1400146484375px", width: "400px", borderRadius: "0px",marginTop:"10px" }} src="./Images/career.jpg"  alt=""/>
@@ -400,25 +437,44 @@ useEffect(()=>{
 
       {data?.map((e, i) => (
 
-        <div  key={i}>
-          <div className="jobparent">
-            <div className="jobs">
-              <div className="jobTitle">{e.title}</div>
+        <div  key={i} onMouseEnter={() => setIndus({ index: i, isHover: true })}
+        onMouseLeave={() => setIndus({ index: null, isHover: false })}>
+          <Grid container className="jobparent">
+            <div className="jobs" style={{border:"1px solid red"}}>
+              <Grid item sm={12} md={12} lg={12} className="jobTitle">{e.title}</Grid>
               <hr />
-              <div className="jobdetails">
-                <div> <span style={{fontWeight:"600"}}>Experience</span>:{e.Experience}</div>
-                <div><span style={{fontWeight:"600"}}>jobtype:</span>{e.jobtype}</div>
-                <div> <span style={{fontWeight:"600"}}>Location:</span>{e.Location}</div>
-              </div>
+              <Grid container>
+              {/* // className="jobdetails"  */}
+             
+                <Grid item sm={12} md={4} lg={4}> <span style={{fontWeight:"600"}}>Experience</span>:{e.Experience}</Grid>
+                <Grid item sm={12} md={4} lg={4}><Typography style={{textAlign:{ lg:"center"} }}><span style={{fontWeight:"600"}}>jobtype:</span> {e.jobtype} </Typography></Grid>
+                <Grid style={{textAlign:"end"}} item sm={12} md={4} lg={4}> <span style={{fontWeight:"600"}}>Location:</span>{e.Location}</Grid>
+              </Grid>
 
               <div className="jobdesc"><span style={{fontWeight:"600"}}>Description:</span>{e.desc}</div>
+              
+              {indus.index == i && indus.isHover && (
+          <>
 
+              <Link to={`/careeredit?id=${e._id}`}  > <center><button className="buttons" style={{marginTop:"10px"  }} >
+                  Edit
+              </button>
+              </center>
+              </Link>
+          </>
+      )}
               <div className="buttonmain">
-                <div> <button className="buttons1" style={{    height: "40px",width: "138px"}}>view</button></div>
-                <div> <button onClick={() => { handleClickOpen(e)   }}  className="button2"> Apply </button></div>
+              {/* <Grid container style={{margin:"auto",justifyContent:"center",border:"1px solid red",alignItems:"center"}}> */}
+               {/* <Grid item sm={12} md={6} lg={6 }>  */}
+                <button className="buttons1" style={{height: "40px",width: "138px"}}>view</button>
+                {/* </Grid>  */}
+                {/* <Grid item sm={12} md={6} lg={6}>  */}
+                <button onClick={() => { handleClickOpen(e)}}  className="button2"> Apply </button>
+                {/* </Grid>  */}
               </div>
+              {/* </Grid> */}
             </div>
-          </div>
+          </Grid>
         </div>
       ))}
   <Dialog xl={12} open={open1} onClose={handleClose1}>

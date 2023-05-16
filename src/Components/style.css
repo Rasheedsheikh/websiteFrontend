@@ -13,7 +13,7 @@ body{
 
 .Nav {
   display: flex;
-  padding-left: 0;
+  /* padding-left: 0; */
   justify-content: space-between;
   /* position: fixed !important; */
   width: 99%;
@@ -681,6 +681,7 @@ text-align: center; */
   object-fit: cover;
 }
 
+
 .slider-desc {
   /* font-family: 'Poppins'; */
   font-style: normal;
@@ -690,6 +691,7 @@ text-align: center; */
   text-align: center;
   color: #222222;
 }
+
 
 .slider-role-name {
   display: flex;
@@ -712,6 +714,7 @@ text-align: center; */
   align-items: center;
   margin-top: 30px;
 }
+
 
 .com-mainParent {
   display: grid;

@@ -29,6 +29,7 @@ import Newsroom from "./Newsroom";
 const Home = () => {
     const [data, setData1] = useState([])
 
+    const [videoh, setVideoh] = useState([])
     const [servdata, setservData] = useState([])
     const [industries, setIndu] = useState([])
     const [testimonials, setTesti] = useState([])
@@ -96,108 +97,105 @@ const Home = () => {
     // useEffect(() => {
     //     setText(texts[index]);
     // }, [index]);
+    // const updateTextElements = () => {
+    //     const video = videoRef.current;
+    //     const text1 = document.getElementById("text1");
+    //     const text2 = document.getElementById("text2");
+    //     const text3 = document.getElementById("text3");
+    //     const text4 = document.getElementById("text4");
+    //     const text5 = document.getElementById("text5");
+    //     const text6 = document.getElementById("text6");
+    //     const text7 = document.getElementById("text7");
 
 
-    useEffect(() => {
-        const updateTextElements = () => {
-            const video = videoRef.current;
-            const text1 = document.getElementById("text1");
-            const text2 = document.getElementById("text2");
-            const text3 = document.getElementById("text3");
-            const text4 = document.getElementById("text4");
-            const text5 = document.getElementById("text5");
-            const text6 = document.getElementById("text6");
-            const text7 = document.getElementById("text7");
+    //     if (video.currentTime > 0 && video.currentTime < 10) {
+    //         text1.style.display = "block";
+    //         text2.style.display = "none";
+    //         text3.style.display = "none";
+    //         text4.style.display = "none";
+    //         text5.style.display = "none";
+    //         text6.style.display = "none";
+    //         text7.style.display = "none";
+    //     } else if (video.currentTime >= 10 && video.currentTime < 16) {
+    //         text1.style.display = "none";
+    //         text2.style.display = "block";
+    //         // text2.style.paddingLeft="30%"
+    //         text3.style.display = "none";
+    //         text4.style.display = "none";
+    //         text5.style.display = "none";
+    //         text6.style.display = "none";
+    //         text7.style.display = "none";
+    //     } else if (video.currentTime > 16 && video.currentTime < 22) {
+    //         text1.style.display = "none";
+    //         text2.style.display = "none";
+    //         text3.style.display = "block";
+    //         // text3.style.paddingLeft="30%"
+    //         text4.style.display = "none";
+    //         text5.style.display = "none";
+    //         text6.style.display = "none";
+    //         text7.style.display = "none";
+    //     }
+    //     else if (video.currentTime >= 22 && video.currentTime < 27) {
+    //         text1.style.display = "none";
+    //         text2.style.display = "none";
+    //         text3.style.display = "none";
+    //         text4.style.display = "block";
+    //         // text4.style.paddingLeft="25%"
+    //         text5.style.display = "none";
+    //         text6.style.display = "none";
+    //         text7.style.display = "none";
+    //     }
+    //     else if (video.currentTime >= 27 && video.currentTime < 31) {
+    //         text1.style.display = "none";
+    //         text2.style.display = "none";
+    //         text3.style.display = "none";
+    //         text4.style.display = "none";
+    //         text5.style.display = "block";
+    //         // text5.style.paddingLeft="30%"
+    //         text6.style.display = "none";
+    //         text7.style.display = "none";
+    //     }
+    //     else if (video.currentTime >= 31 && video.currentTime < 36) {
+    //         text1.style.display = "none";
+    //         text2.style.display = "none";
+    //         text3.style.display = "none";
+    //         text4.style.display = "none";
+    //         text5.style.display = "none";
+    //         text6.style.display = "block";
+    //         // text6.style.paddingLeft="30%"
+    //         text7.style.display = "none";
+    //     }
+
+    //     else if (video.currentTime >= 36 && video.currentTime < 41) {
+    //         text1.style.display = "none";
+    //         text2.style.display = "none";
+    //         text3.style.display = "none";
+    //         text4.style.display = "none";
+    //         text5.style.display = "none";
+    //         text6.style.display = "none";
+    //         text7.style.display = "block";
+    //         // text7.style.paddingLeft="10%"
+    //     }
 
 
-            if (video.currentTime > 0 && video.currentTime < 10) {
-                text1.style.display = "block";
-                text2.style.display = "none";
-                text3.style.display = "none";
-                text4.style.display = "none";
-                text5.style.display = "none";
-                text6.style.display = "none";
-                text7.style.display = "none";
-            } else if (video.currentTime >= 10 && video.currentTime < 16) {
-                text1.style.display = "none";
-                text2.style.display = "block";
-                // text2.style.paddingLeft="30%"
-                text3.style.display = "none";
-                text4.style.display = "none";
-                text5.style.display = "none";
-                text6.style.display = "none";
-                text7.style.display = "none";
-            } else if (video.currentTime > 16 && video.currentTime < 22) {
-                text1.style.display = "none";
-                text2.style.display = "none";
-                text3.style.display = "block";
-                // text3.style.paddingLeft="30%"
-                text4.style.display = "none";
-                text5.style.display = "none";
-                text6.style.display = "none";
-                text7.style.display = "none";
-            }
-            else if (video.currentTime >= 22 && video.currentTime < 27) {
-                text1.style.display = "none";
-                text2.style.display = "none";
-                text3.style.display = "none";
-                text4.style.display = "block";
-                // text4.style.paddingLeft="25%"
-                text5.style.display = "none";
-                text6.style.display = "none";
-                text7.style.display = "none";
-            }
-            else if (video.currentTime >= 27 && video.currentTime < 31) {
-                text1.style.display = "none";
-                text2.style.display = "none";
-                text3.style.display = "none";
-                text4.style.display = "none";
-                text5.style.display = "block";
-                // text5.style.paddingLeft="30%"
-                text6.style.display = "none";
-                text7.style.display = "none";
-            }
-            else if (video.currentTime >= 31 && video.currentTime < 36) {
-                text1.style.display = "none";
-                text2.style.display = "none";
-                text3.style.display = "none";
-                text4.style.display = "none";
-                text5.style.display = "none";
-                text6.style.display = "block";
-                // text6.style.paddingLeft="30%"
-                text7.style.display = "none";
-            }
-
-            else if (video.currentTime >= 36 && video.currentTime < 41) {
-                text1.style.display = "none";
-                text2.style.display = "none";
-                text3.style.display = "none";
-                text4.style.display = "none";
-                text5.style.display = "none";
-                text6.style.display = "none";
-                text7.style.display = "block";
-                // text7.style.paddingLeft="10%"
-            }
+    //     else {
+    //         text1.style.display = "none";
+    //         text2.style.display = "none";
+    //         text3.style.display = "none";
+    //         text4.style.display = "none";
+    //         text5.style.display = "none";
+    //         text6.style.display = "none";
+    //         text7.style.display = "none";
+    //     }
+    // };
 
 
-            else {
-                text1.style.display = "none";
-                text2.style.display = "none";
-                text3.style.display = "none";
-                text4.style.display = "none";
-                text5.style.display = "none";
-                text6.style.display = "none";
-                text7.style.display = "none";
-            }
-        };
+    // const video = videoRef.current;
+    // video.addEventListener('timeupdate', updateTextElements);
 
-        const video = videoRef.current;
-        video.addEventListener('timeupdate', updateTextElements);
-
-        return () => {
-            video.removeEventListener('timeupdate', updateTextElements);
-        };
-    }, []);
+    // return () => {
+    //     video.removeEventListener('timeupdate', updateTextElements);
+    // };
 
 
 
@@ -234,6 +232,24 @@ const Home = () => {
 
     useEffect(() => {
         Testimonials()
+    }, [])
+
+
+
+    const mainvideo = async () => {
+        try {
+            let res = await fetch("http://localhost:2233/get-video")
+            let mainvideodataa = await res.json()
+            console.log({ mainvideodataa })
+            setVideoh(mainvideodataa)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        mainvideo()
     }, [])
 
     // industries
@@ -419,9 +435,13 @@ const Home = () => {
                         <div className="TECH" style={{color:"#FE602F"}}>TECHNOLOGY</div>
                         </div> */}
                         <div>
-                            <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "75%", width: "100%", zIndex: "-2", position: "relative" }}>
-                                <source src="https://vhs-overview-video.s3.amazonaws.com/media/Final%20Video.mp4" type='video/mp4' />
-                            </video>
+                            {videoh?.map((e, i) => (
+
+
+                                <video ref={videoRef} className='videoTag' autoPlay loop muted style={{ marginTop: "-9%", height: "75%", width: "100%", zIndex: "-2", position: "relative" }}>
+                                    <source src={e.vid} type='video/mp4' />
+                                </video>
+                            ))}
                             <div className="txt-ovr"></div>
                             <div className="text-overlay">
                                 {/* <div>A leading provider of life scienece and health care solutions</div> */}
@@ -459,16 +479,16 @@ const Home = () => {
 
                 </div>
 
-          <Services/>
+                <Services />
 
-   <Industries/>
-   <Solutions/>
+                <Industries />
+                <Solutions />
 
-             <Newsroom/>
+                <Newsroom />
 
                 {/* {data?.Total?.Testimonials?.main?.map((e, i) => ( */}
 
-              
+
 
                 <div className='why-main-box' style={{ width: "99%", margin: "auto" }}>
                     {whychoose?.map((e, i) => (
@@ -482,24 +502,24 @@ const Home = () => {
                                     <div>
 
                                         {e?.desc?.map((el, i) => (
-                                            <div   key={i} onMouseEnter={() => setIndus({ index: i, isHover: true })}
-                                            onMouseLeave={() => setIndus({ index: null, isHover: false })}>
+                                            <div key={i} onMouseEnter={() => setIndus({ index: i, isHover: true })}
+                                                onMouseLeave={() => setIndus({ index: null, isHover: false })}>
                                                 <div className='why-text-box'>
                                                     <div className='why-oranged'><p>{el.number}</p></div>
                                                     <div style={{ marginTop: "5%" }}>{el.detail}
-                                                    {/* {indus.index == i && indus.isHover && (
-                                                        <>
+                                                        {indus.index == i && indus.isHover && (
+                                                            <>
 
-                                                            <Link to={`/whychooseedit?id=${e._id}&id2=${el._id}`}><button style={{marginLeft:"10%"}} className="edbuttons" >
-                                                                Edit
-                                                            </button>
-                                                            </Link>
-                                                        </>
-                                                    )} */}
+                                                                <Link to={`/whychooseedit?id=${e._id}&id2=${el._id}`}><button style={{ marginLeft: "10%" }} className="edbuttons" >
+                                                                    Edit
+                                                                </button>
+                                                                </Link>
+                                                            </>
+                                                        )}
 
-                                                    
+
                                                     </div>
-                                                   
+
                                                 </div>
 
 
@@ -555,19 +575,19 @@ const Home = () => {
                                                 <Grid item md={12} sm={12} lg={12}
                                                     className="commu-heading"
                                                     key={i} onMouseEnter={() => setIndus({ index: i, isHover: true })}
-                                            onMouseLeave={() => setIndus({ index: null, isHover: false })}
+                                                    onMouseLeave={() => setIndus({ index: null, isHover: false })}
                                                 >
                                                     <div>{el.heading1}</div>
                                                     <div style={{ color: "#FE602F" }}>{el.heading2}</div>
-                                                    {/* {indus.index == i && indus.isHover && (
+                                                    {indus.index == i && indus.isHover && (
                                                         <>
 
-                                                            <Link  to={`/communityedit?id=${e._id}&id2=${el._id}`}><button style={{marginLeft:"10%",marginTop:"-15%"}} className="edbuttons" >
+                                                            <Link to={`/communityedit?id=${e._id}&id2=${el._id}`}><button style={{ marginLeft: "10%", marginTop: "-15%" }} className="edbuttons" >
                                                                 Edit
                                                             </button>
                                                             </Link>
                                                         </>
-                                                    )} */}
+                                                    )}
                                                 </Grid>
                                                 <div>
                                                     <div className="commu-desc">{el.desc}</div>
@@ -577,22 +597,23 @@ const Home = () => {
                                                         <center><button className="buttons" style={{ margin: "auto", alignSelf: "center", justifyContent: "center", alignItems: "center", marginLeft: "100%" }}>Join us</button>
                                                         </center></Link>
 
-                                                       
-                                                  
+
+
                                                     </Stack>
-                                                   
+
                                                 </div>
-                                                <div
-                                                    className="commu-images"
-                                                >
+                                                <Grid container className="commu-images">
+
+
+
                                                     {e?.images?.map((element, i) => (
-                                                        <Grid item sm={12} md={12} lg={12} key={i}>
-                                                            <Stack style={{padding:"10px" ,marginLeft:"-20px"}}>
-                                                                <div><img style={{ width: "380px", height: "240px" }} src={element} alt="" /></div>
+                                                        <Grid item md={5} lg={5.5} sm={12} key={i}>
+                                                            <Stack style={{ padding: "10px", marginLeft: "-20px" }}>
+                                                                <div><img style={{ width: "360px", height: "240px" }} src={element} alt="" /></div>
                                                             </Stack>
                                                         </Grid>
                                                     ))}
-                                                </div>
+                                                </Grid>
                                             </Grid>
 
                                         </Grid>
@@ -607,25 +628,44 @@ const Home = () => {
                     <Stack className="contact-parent" flexDirection={"row"} style={{ width: "95%" }}>
                         <Grid container spacing={4}>
                             {contact?.map((e, i) => (
-                                <Grid key={i} item xl={6} lg={6} md={6} sm={12} xs={12} style={{ marginTop: "20px" }}>
+                                <Grid key={i} item xl={6} lg={6} md={6} sm={12} xs={12} style={{ marginTop: "20px" }}
+                                    onMouseEnter={() => setIndus({ index: i, isHover: true })}
+                                    onMouseLeave={() => setIndus({ index: null, isHover: false })}
+                                >
                                     <div className="contact">{e.title}</div>
 
-                                    {e?.quote?.map((el, i) => (
-                                        <div key={i} className="contact-quote">
-                                            <div>{el.line1}</div>
-                                            <div style={{ color: "#FE602F" }}>{el.line2}</div>
-                                        </div>
-                                    ))}
+                                    <div key={i} className="contact-quote">
+                                        <div>{e.heading1}</div>
+                                        <div style={{ color: "#FE602F" }}>{e.heading2}</div>
 
-                                    {e?.address?.map((ele, i) => (
-                                        <div key={i} className="address">
-                                            <div>{ele.line1}</div>
-                                            <div>{ele.line2}</div>
-                                            <div>{ele.Email}</div>
-                                            <div>{ele.telephone}</div>
-                                        </div>
-                                    ))}
+
+                                    </div>
+
+
+
+                                    <div key={i} className="address">
+                                        <div>{e.line1}</div>
+                                        <div>{e.line2}</div>
+                                        <div>{e.Email}</div>
+                                        <div>{e.telephone}</div>
+
+
+
+                                        {indus.index == i && indus.isHover && (
+                                            <>
+
+                                                <Link to={`/contactedit?id=${e._id}`}><button style={{ marginLeft: "10%", marginTop: "-15%" }} className="edbuttons" >
+                                                    Edit
+                                                </button>
+                                                </Link>
+                                            </>
+                                        )}
+                                    </div>
+
+
                                     <hr style={{ width: "393px", height: "10px", left: "116px", top: "5969.78px", background: "#FE602F" }} />
+
+
                                 </Grid>
                             ))}
 
@@ -822,7 +862,7 @@ const Home = () => {
                     </div>
 
                     {data?.Total?.Footer?.map((obj, i) => (
-                        <div key={i} className="footerParent">
+                        <div key={i} className="footerParent" style={{ margin: "auto" }}>
                             <div className="footerMain">
                                 {/* <div><img style={{width:"264px", height:"248px"}} src={e.img}/> </div> */}
                                 <div className="footerLeft">
@@ -883,6 +923,7 @@ const Home = () => {
             </div>}
             <div>
                 {flag &&
+
                     <div><Career /></div>}
             </div>
         </>

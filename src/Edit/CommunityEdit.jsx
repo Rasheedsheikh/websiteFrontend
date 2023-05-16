@@ -47,12 +47,12 @@ const CommunityEdit = () => {
         e.preventDefault();
 
         // make PATCH request to API endpoint
-        const response = await fetch(`http://localhost:2233/whychoose/${id2}`, {
+        const response = await fetch(`http://localhost:2233/community/${id2}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ heading1, desc })
+            body: JSON.stringify({ heading1,heading2, desc })
         });
 
         // handle response from API
@@ -107,7 +107,7 @@ const CommunityEdit = () => {
                 </div>
             </div>
             <div className="inputmainbo" >
-                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Header 1</label></div>
+                <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Header 2</label></div>
                 <div className="input-container">
 
                     <input type="text" className="input-box"  value={heading2} onChange={(e)=>setHeading2(e.target.value)}/>

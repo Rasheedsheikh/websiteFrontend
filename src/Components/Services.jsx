@@ -52,7 +52,7 @@ const Services = () => {
                                 <div className="ServiceMain">{obj.title}</div>
 
                                 <div className="serviceDual">{obj.desc}</div>
-{/* 
+
                                 {indus.index == j && indus.isHover && (
                                     <>
 
@@ -61,7 +61,7 @@ const Services = () => {
                                         </button>
                                         </Link>
                                     </>
-                                )} */}
+                                )}
 
                             </div>
 
@@ -102,7 +102,7 @@ const Services = () => {
 
                                         ))}
 
-                                        {/* {indus.index == j && indus.isHover && (
+                                        {indus.index == j && indus.isHover && (
                                             <>
 
                                                 <Link to={`/serviceedit?id=${item._id}&id2=${obj._id}`}  >  <button style={{ marginLeft: "5%" }} className="edbuttons" >
@@ -110,7 +110,7 @@ const Services = () => {
                                                 </button>
                                                 </Link>
                                             </>
-                                        )} */}
+                                        )}
                                     </div>
                                 </div>
                             </div>

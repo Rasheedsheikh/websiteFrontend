@@ -4,27 +4,28 @@ import db from "../db.json"
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-import Config from "../Config";
+// import Config from "../Config";
 
 const Learnn = () => {
-
+    
     const [active, setActive] = useState(false)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
 
-    const [data, setData1] = useState([])
+    const [data, setData] = useState([])
     useEffect(() => {
         show()
     }, [])
 
     const show = async () => {
         try {
-            let res = await fetch(`${Config.host}/home`)
+            let res = await fetch("http://localhost:2233/get-learnmore")
+            console.log("12345u")
             let dataa = await res.json()
-            console.log(dataa.data)
-            setData1(dataa.data)
+            console.log(dataa)
+            setData(dataa)
         }
         catch (err) {
             console.log(err)
@@ -68,19 +69,29 @@ const Learnn = () => {
     
             <div style={{ border: "1px solid #F1F1F1" }}></div>
             <div id="tab1">
+               
+             
                 <div className="LearnFlex1">
+                {data?.map((e,i)=>(
+                    <>
+                    {e.life.map((el,i)=>(
+                        <>
+                   
                     <div className="LearnLeft" >
-                        {console.log(db?.Careers?.Learn)}
+                        {/* {console.log(db?.Careers?.Learn)} */}
                         <center style={{ width: "100px", border: "2px solid #FE602F" }}></center>
-                        <div className="Learn-title">Life Sciences</div>
+                        <div className="Learn-title">{el.title}</div>
+                        {el.desc?.map((ob,i)=>(
+                    
                         <div className="ulko" style={{ gap: "20px" }}>
                             <ul style={{ gap: "20px", marginTop: "10px", lineHeight: "30px" }} >
-                                <li> We are specialised in building patient services solutions using technologies like Sales Force Health Cloud, bespoke solutions and integration with payers and providers application such as EMR, benefit verification and prior authorization for benefits.,</li>
-                                <li> We help drive life sciences companies in research and development (R&D) by helping them to optimize clinical trials so they can stay ahead of the curve in developing new products and technologies</li>
-                                <li> We help them embrace digital technology in order to streamline processes, improve data analysis, and accelerate discovery and development.</li>
-                                <li> Submission of Investigational New Drug (IND) application or NDA to the regulatory agency and managing all ongoing reporting processes for FDA, MHRA and European Agencies. Help companies to meet IDMP standards and provide accurate and complete information on their products to regulatory agencies.</li>
+                                <li>{ob}</li>
+                              
                             </ul>
+                                    
+                       
                         </div>
+                         ))}
 
 
 
@@ -88,6 +99,10 @@ const Learnn = () => {
                     <div className="LearnRight" style={{marginTop:"5%"}}>
                     <div className="LearnRight"><img style={{ width: "400px", height: "390px", marginTop: "15%" }} src="./Images/Group 1173.jpg" alt="" /></div>
                     </div>
+                    </>
+                    ))}
+                    </>
+                ))}
                 </div>
             </div>
 
@@ -102,7 +117,7 @@ const Learnn = () => {
 
 
                     <div className="LearnLeft" >
-                        {console.log(db?.Careers?.Learn)}
+                        {/* {console.log(db?.Careers?.Learn)} */}
                         <div style={{ width: "100px", border: "2px solid #FE602F" ,marginLeft:"80%"}}></div>
 
                         <div className="Learn-title">Emerging Biotech</div>
@@ -125,7 +140,7 @@ const Learnn = () => {
             <div id="tab3">
                 <div className="LearnFlex3" style={{marginTop:"15%"}}>
                     <div className="LearnLeft">
-                        {console.log(db?.Careers?.Learn)}
+                        {/* {console.log(db?.Careers?.Learn)} */}
                         <center style={{ width: "100px", border: "2px solid #FE602F"}}></center>
                         <div className="Learn-title">Providers</div>
                         <div className="ulko" >
@@ -152,7 +167,7 @@ const Learnn = () => {
                         <div className="LearnRight4"><img style={{ width: "400px", height: "390px", marginTop: "25%" }} src="./Images/Mask group.jpg" alt="" /></div>
                     </div>
                     <div className="LearnLeft">
-                        {console.log(db?.Careers?.Learn)}
+                        {/* {console.log(db?.Careers?.Learn)} */}
                         <div style={{ width: "100px", border: "2px solid #FE602F", marginLeft:"80%"}}></div>
                         <div className="Learn-title">Payers</div>
                         <div className="ulko">
@@ -169,6 +184,8 @@ const Learnn = () => {
                 </div>
             </div>
 
+
+
             <Footer />
 
 
@@ -178,3 +195,5 @@ const Learnn = () => {
     )
 }
 export default Learnn;
+
+

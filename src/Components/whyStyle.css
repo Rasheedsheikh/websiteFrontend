@@ -24,15 +24,15 @@ color: #000000;
 
 .why-main-box-1{
     display: grid;
-    grid-template-columns: 58% 42%;
-    padding: 0%;
+    grid-template-columns: 58% 32%;
+    /* padding: 0%; */
     margin: auto;
     gap: 10px;
 }
 
 .why-text-box{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 18% 78%;
     gap: 0px;
 }
 

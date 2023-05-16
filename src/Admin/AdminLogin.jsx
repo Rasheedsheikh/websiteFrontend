@@ -18,7 +18,7 @@ const AdminLogin=()=>{
         e.preventDefault();
     
         try {
-          const res = await axios.post('http://localhost:2233/post-user', { email, password });
+          const res = await axios.post('http://localhost:3000/post-user', { email, password });
           localStorage.setItem('token', res.data.token);
               console.log(res)
         } catch (err) {

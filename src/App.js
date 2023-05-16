@@ -28,6 +28,18 @@ import ServiceMainEdit from './Edit/serviceMain';
 import WhyChooseEdit from './Edit/WhyChooseEdit';
 import TestimonialsEdit from './Edit/TestimonialsEdit';
 import CommunityEdit from './Edit/CommunityEdit';
+import SolutionsEdit from './Edit/SolutionsEdit';
+import Whyworkwithus from './Edit/Whyworkwithus';
+import CareerEdit from './Edit/CareerEdit';
+import ContactEdit from './Edit/ContactEdit';
+import SalesforceEdit from './Edit/salesforceEdit';
+import FullStackEdit from './Edit/FullStackEdit';
+import BotEdit from './Edit/BotEdit';
+import AimlEdit from './Edit/AimlEdit';
+import SalesMain from './Edit/SalesMain';
+import FullstackMain from './Edit/FullstackMain';
+import RN from './Components/RN';
+// import RN from './Components/RN';
 
 
 function App() {
@@ -64,6 +76,19 @@ function App() {
        <Route path="/whychooseedit" element={<WhyChooseEdit/>}/>
        <Route path="/testimonialsedit" element={<TestimonialsEdit/>}/>
        <Route path="/communityedit" element={<CommunityEdit/>}/>
+       <Route path="/solutionsedit" element={<SolutionsEdit/>}/>
+       <Route path="/whyworkedit" element={<Whyworkwithus/>}/>
+       <Route path="/careeredit" element={<CareerEdit/>}/>
+       <Route path="/contactedit" element={<ContactEdit/>}/>
+       <Route path="/salesforceedit" element={<SalesforceEdit/>}/>
+       <Route path="/salesmainedit" element={<SalesMain/>}/>
+       <Route path="/fullstackedit" element={<FullStackEdit/>}/>
+       <Route path="/fullstackmainedit" element={<FullstackMain/>}/>
+       <Route path="/botedit" element={<BotEdit/>}/>
+       <Route path="/aimledit" element={<AimlEdit/>}/>
+
+       <Route path="/rn" element={<RN/>}/>
+
 
        
 

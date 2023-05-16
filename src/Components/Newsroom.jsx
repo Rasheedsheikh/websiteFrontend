@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import './style.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import { TextField } from "@mui/material";
+import { Stack } from "@mui/material";
+import { Grid } from "@material-ui/core";
 
 const Newsroom = () => {
     const [testimonials, setTesti] = useState([])
@@ -15,7 +18,7 @@ const Newsroom = () => {
         try {
             let res = await fetch(`${Config.host}/get-testimonials`)
             let Testimonialsdataa = await res.json()
-            console.log({ Testimonialsdataa })
+            // console.log({ Testimonialsdataa })
             setTesti(Testimonialsdataa)
         }
         catch (err) {
@@ -35,7 +38,7 @@ const Newsroom = () => {
 <div>
     <div className="testimo-title">{obj.title}</div>
 
-    <div className="carouse">
+    <Grid container className="carouse">
         <Carousel
 
             showThumbs={false}
@@ -50,7 +53,7 @@ const Newsroom = () => {
                 onMouseLeave={() => setIndus({ index: null, isHover: false })} style={{ width: "85%", justifyContent: "center", margin: "auto", marginTop: "%" }}>
                     <div>
                         <img className="testimoImg" style={{ width: "151px", height: "151px", borderRadius: "50%", objectFit: "cover" }} src={el.img} alt="" /></div>
-                        {/* {indus.index == i && indus.isHover && (
+                        {indus.index == i && indus.isHover && (
                                     <>
 
                                         <Link to={`/testimonialsedit?id=${obj._id}&id2=${el._id}`}  >  <button style={{}} className="edbuttons" >
@@ -58,7 +61,7 @@ const Newsroom = () => {
                                         </button>
                                         </Link>
                                     </>
-                                )} */}
+                                )}
                     <div className="slider-desc" style={{ marginTop: "2%" }}>{el.desc}</div>
                     <div className="slider-role-name" style={{ marginTop: "5%" }}>
                         <div>{el.name}</div>
@@ -75,7 +78,7 @@ const Newsroom = () => {
             ))}
 
         </Carousel>
-    </div>
+    </Grid>
 
 </div>
 

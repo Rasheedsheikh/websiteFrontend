@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./industries.css"
 import { useSearchParams,useLocation } from "react-router-dom";
 
-import Config from "../Config";
-const IndustriesEdit = () => {
+// import Config from "../Config";
+const FullstackMain = () => {
     const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    const [button, setButton] = useState("");
+    const [para1, setPara1] = useState("");
+    // const [img, setImg] = useState("");
+    const [para2, setPara2] = useState("");
+
 
     const [title1, setTitle1] = useState(false);
-    const [desc1, setDesc1] = useState(false);
+    const [para11, setPara11] = useState(false);
     const [button1, setButton1] = useState(false);
         
     const[indu,setIndu]=useState([])
@@ -22,15 +24,15 @@ const IndustriesEdit = () => {
     const id2=params.get("id2")
     console.log({id2,id})
 
-    const Industries = async () => {
+    const fullStackMain = async () => {
         try {
-            let res = await fetch(`http://localhost:2233/${id}/insider/${id2}`)
-            let Industriesdataa = await res.json()
-            console.log({ Industriesdataa })
-            setIndu(Industriesdataa)
-            setTitle(Industriesdataa.title)
-            setDesc(Industriesdataa.desc)
-            setButton(Industriesdataa.button)
+            let res = await fetch(`http://localhost:2233/${id}/fullStack`)
+            let fullStackMaindataa = await res.json()
+            console.log({ fullStackMaindataa })
+            setIndu(fullStackMaindataa)
+            setTitle(fullStackMaindataa.title)
+            setPara1(fullStackMaindataa.para1)
+            setPara2(fullStackMaindataa.para2)
         }
         catch (err) {
             console.log(err)
@@ -40,7 +42,7 @@ const IndustriesEdit = () => {
     
 
     useEffect(() => {
-        Industries()
+        fullStackMain()
     }, [])
  
 
@@ -49,12 +51,12 @@ const IndustriesEdit = () => {
         e.preventDefault();
 
         // make PATCH request to API endpoint
-        const response = await fetch(`http://localhost:2233/industries/${id2}`, {
+        const response = await fetch(`http://localhost:2233/fullStack/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ title, desc, button})
+            body: JSON.stringify({ title, para2,para1})
         });
 
         // handle response from API
@@ -71,13 +73,13 @@ const IndustriesEdit = () => {
     const updateFormData1 = (e) =>{
         setTitle1(false)
         setButton1(false)
-        setDesc1(false)
+        setPara11(false)
 
        if(e=="editTitle"){
         setTitle1(true)
        }
        if(e=="editDesc"){
-        setDesc1(true)
+        setPara11(true)
 
        }
        if(e=="editButton"){
@@ -113,10 +115,10 @@ const IndustriesEdit = () => {
                 <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Phrase</label></div>
                 <div className="input-container">
 
-                    <input  style={{width:"430px"}}type="text" className="input-box" value={desc}  onChange={(e)=>setDesc(e.target.value)}/>
+                    <input  style={{width:"430px"}}type="text" className="input-box" value={para1}  onChange={(e)=>setPara1(e.target.value)}/>
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"  onClick={e => updateFormData1('editDesc')} on />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setDesc("")}/>
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setPara1("")}/>
                     </div>
                 </div>
             </div>
@@ -125,10 +127,10 @@ const IndustriesEdit = () => {
                 <div style={{ margin: "auto", width: "500px" }}> <label style={{ margin: "auto", textAlign: "center" }}>Button</label></div>
                 <div className="input-container">
 
-                    <input type="text" className="input-box" value={button}  onChange={(e)=>setButton(e.target.value)} />
+                    <input type="text" className="input-box" value={para2}  onChange={(e)=>setPara2(e.target.value)} />
                     <div className="icon-container">
                         <img className="edit-icon" src="./Images/edi.png" alt="Edit"  onClick={e => updateFormData1('editButton')} />
-                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setButton("")}/>
+                        <img className="delete-icon" src="./Images/dlt.png" alt="Delete"  onClick={(e)=>setPara2("")}/>
                     </div>
                 </div>
             </div>
@@ -143,4 +145,4 @@ const IndustriesEdit = () => {
         </>
     )
 }
-export default IndustriesEdit;
+export default FullstackMain;
